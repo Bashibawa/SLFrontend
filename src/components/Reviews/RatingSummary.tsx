@@ -58,7 +58,7 @@ function StarRow({ rating, size = 'md' }: { rating: number; size?: 'sm' | 'md' |
  *
  * States:
  *  - Default: all bars shown at their natural fill levels.
- *  - Filtered: highlighted star bar uses hamplard-primary fill; others are muted.
+ *  - Filtered: highlighted star bar uses sorobanlard-primary fill; others are muted.
  */
 export function RatingSummary({
   averageRating,
@@ -89,7 +89,7 @@ export function RatingSummary({
         {/* ── Left: Overall score ── */}
         <div className="flex flex-col items-center text-center shrink-0 min-w-[100px]">
           <span
-            className="font-display text-5xl font-bold text-hamplard-deep tracking-tight leading-none"
+            className="font-display text-5xl font-bold text-sorobanlard-deep tracking-tight leading-none"
             aria-label={`Average rating ${averageRating.toFixed(1)} out of 5`}
           >
             {averageRating.toFixed(1)}
@@ -136,13 +136,13 @@ export function RatingSummary({
                   aria-label={`${stars} stars — ${count} reviews (${reviewPct}%)${isHighlighted ? ', currently filtered' : ''}`}
                   className={cn(
                     'group flex items-center gap-2.5 py-0.5 rounded-lg transition-colors',
-                    isActive && 'cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary focus-visible:ring-offset-1',
-                    isActive && !isHighlighted && 'hover:bg-hamplard-lilac/40 px-1 -mx-1',
-                    isHighlighted && 'bg-hamplard-lilac px-1 -mx-1',
+                    isActive && 'cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-offset-1',
+                    isActive && !isHighlighted && 'hover:bg-sorobanlard-lilac/40 px-1 -mx-1',
+                    isHighlighted && 'bg-sorobanlard-lilac px-1 -mx-1',
                   )}
                 >
                   {/* Star label */}
-                  <span className="text-xs font-semibold text-hamplard-deep w-5 text-right shrink-0">
+                  <span className="text-xs font-semibold text-sorobanlard-deep w-5 text-right shrink-0">
                     {stars}
                   </span>
 
@@ -151,7 +151,7 @@ export function RatingSummary({
                     className={cn(
                       'w-3.5 h-3.5 shrink-0 transition-colors',
                       isHighlighted
-                        ? 'fill-hamplard-primary text-hamplard-primary'
+                        ? 'fill-sorobanlard-primary text-sorobanlard-primary'
                         : 'fill-amber-400 text-amber-400',
                     )}
                     aria-hidden="true"
@@ -163,10 +163,10 @@ export function RatingSummary({
                       className={cn(
                         'h-full rounded-full transition-all duration-500',
                         isHighlighted
-                          ? 'bg-hamplard-primary'
+                          ? 'bg-sorobanlard-primary'
                           : highlightedStar !== null
-                          ? 'bg-hamplard-primary/30'
-                          : 'bg-hamplard-primary/70',
+                          ? 'bg-sorobanlard-primary/30'
+                          : 'bg-sorobanlard-primary/70',
                       )}
                       style={{ width: `${reviewPct}%` }}
                       role="progressbar"
@@ -180,7 +180,7 @@ export function RatingSummary({
                   <span
                     className={cn(
                       'text-xs w-16 text-right shrink-0 tabular-nums transition-colors',
-                      isHighlighted ? 'text-hamplard-mid font-semibold' : 'text-semantic-text-muted',
+                      isHighlighted ? 'text-sorobanlard-mid font-semibold' : 'text-semantic-text-muted',
                     )}
                   >
                     {count} ({reviewPct}%)
@@ -196,14 +196,14 @@ export function RatingSummary({
       {highlightedStar !== null && onStarFilter && (
         <div className="mt-4 flex items-center gap-2 pt-4 border-t border-semantic-border">
           <span className="text-xs text-semantic-text-muted">Filtering by:</span>
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-hamplard-primary text-white text-xs font-semibold">
+          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-sorobanlard-primary text-white text-xs font-semibold">
             <Star className="w-3 h-3 fill-white" aria-hidden="true" />
             {highlightedStar} star{highlightedStar !== 1 ? 's' : ''}
           </span>
           <button
             type="button"
             onClick={() => onStarFilter(null)}
-            className="ml-auto text-xs text-hamplard-primary hover:text-hamplard-mid hover:underline underline-offset-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary rounded"
+            className="ml-auto text-xs text-sorobanlard-primary hover:text-sorobanlard-mid hover:underline underline-offset-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary rounded"
           >
             Clear filter
           </button>

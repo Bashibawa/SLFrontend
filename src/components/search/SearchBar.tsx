@@ -30,9 +30,9 @@ interface Suggestion {
 }
 
 const TYPE_META: Record<SuggestionType, { icon: React.ReactNode; badge: string }> = {
-  course: { icon: <BookOpen className="h-4 w-4 text-hamplard-primary" />, badge: 'Course' },
-  category: { icon: <FolderOpen className="h-4 w-4 text-hamplard-primary" />, badge: 'Category' },
-  instructor: { icon: <User className="h-4 w-4 text-hamplard-primary" />, badge: 'Instructor' },
+  course: { icon: <BookOpen className="h-4 w-4 text-sorobanlard-primary" />, badge: 'Course' },
+  category: { icon: <FolderOpen className="h-4 w-4 text-sorobanlard-primary" />, badge: 'Category' },
+  instructor: { icon: <User className="h-4 w-4 text-sorobanlard-primary" />, badge: 'Instructor' },
 };
 
 interface SearchBarProps {
@@ -89,7 +89,7 @@ export function SearchBar({
         type: 'course',
         id: `course-${course.id}`,
         label: course.title,
-        subtitle: course.instructor?.name || 'Hamplard Instructor',
+        subtitle: course.instructor?.name || 'SorobanLard Instructor',
         data: course,
       }));
 
@@ -260,7 +260,7 @@ export function SearchBar({
             className={cn(
               'w-full rounded-lg border bg-white py-2.5 pl-10 pr-10 text-sm transition-all',
               'text-ink-900 placeholder:text-ink-400',
-              'border-ink-200 focus:border-hamplard-primary focus:outline-none focus:ring-2 focus:ring-hamplard-primary/20',
+              'border-ink-200 focus:border-sorobanlard-primary focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary/20',
             )}
             aria-autocomplete="list"
             aria-expanded={isOpen}
@@ -269,7 +269,7 @@ export function SearchBar({
           />
 
           {isLoading && (
-            <Loader2 className="absolute right-3 h-5 w-5 animate-spin text-hamplard-primary" />
+            <Loader2 className="absolute right-3 h-5 w-5 animate-spin text-sorobanlard-primary" />
           )}
 
           {localQuery && !isLoading && (
@@ -333,7 +333,7 @@ export function SearchBar({
                       onClick={() => handleSavedSelect(saved)}
                       className="flex flex-1 items-center gap-2 rounded px-2 py-1.5 text-left text-sm text-ink-700 transition-colors hover:bg-ink-50"
                     >
-                      <Bookmark className="h-3.5 w-3.5 text-hamplard-primary" />
+                      <Bookmark className="h-3.5 w-3.5 text-sorobanlard-primary" />
                       <span className="truncate">{saved.query}</span>
                     </button>
                     <button
@@ -419,7 +419,7 @@ export function SearchBar({
               <button
                 type="button"
                 onClick={handleSaveCurrentSearch}
-                className="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm text-hamplard-primary transition-colors hover:bg-ink-50"
+                className="flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-sm text-sorobanlard-primary transition-colors hover:bg-ink-50"
               >
                 <Bookmark className="h-3.5 w-3.5" />
                 Save this search

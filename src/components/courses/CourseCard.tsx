@@ -20,8 +20,8 @@ const BLUR_DATA_URL =
 type BadgeVariant = 'bestseller' | 'new' | 'hot';
 
 const BADGE_STYLES: Record<BadgeVariant, string> = {
-  bestseller: 'bg-hamplard-lilac text-hamplard-deep',
-  new:        'bg-hamplard-lilac text-hamplard-deep',
+  bestseller: 'bg-sorobanlard-lilac text-sorobanlard-deep',
+  new:        'bg-sorobanlard-lilac text-sorobanlard-deep',
   hot:        'bg-orange-100 text-orange-700',
 };
 
@@ -156,7 +156,7 @@ export function CourseCard({
             onClick={toggleWishlist}
             aria-pressed={isWishlisted}
             aria-label={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
-            className="absolute top-2.5 right-2.5 p-1.5 rounded-full bg-white/90 hover:bg-white shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-hamplard-primary"
+            className="absolute top-2.5 right-2.5 p-1.5 rounded-full bg-white/90 hover:bg-white shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-sorobanlard-primary"
           >
             <Heart
               className={cn(
@@ -183,7 +183,7 @@ export function CourseCard({
             {course.title}
           </h3>
           <p className="text-xs text-ink-500 mb-3 truncate">
-            {course.instructor?.name ?? 'Hamplard Instructor'}
+            {course.instructor?.name ?? 'SorobanLard Instructor'}
           </p>
 
           {/* Star rating + review count */}
@@ -241,7 +241,7 @@ export function CourseCard({
           {/* Price / free enrollment CTA */}
           <div className="pt-3 border-t border-ink-100">
             {freeCta ? (
-              <span className="block w-full rounded-lg bg-hamplard-primary px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors group-hover:bg-hamplard-primary/90">
+              <span className="block w-full rounded-lg bg-sorobanlard-primary px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors group-hover:bg-sorobanlard-primary/90">
                 Enroll Free
               </span>
             ) : (

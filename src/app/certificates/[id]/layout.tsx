@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 // carries an individual learner's record, so it is kept out of search results.
 export const metadata: Metadata = buildMetadata({
   title: 'Verify Certificate',
-  description: 'Verify the authenticity of a Hamplard certificate of completion.',
+  description: 'Verify the authenticity of a SorobanLard certificate of completion.',
   path: '/certificates',
   noIndex: true,
 });

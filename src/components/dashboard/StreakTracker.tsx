@@ -9,7 +9,7 @@ interface StreakData {
   activityDays: string[];
 }
 
-const STORAGE_KEY = 'hamplard-streak-data';
+const STORAGE_KEY = 'sorobanlard-streak-data';
 const MIN_SESSION_MINUTES = 5;
 
 function getTodayKey(): string {
@@ -126,7 +126,7 @@ export function StreakTracker() {
       </p>
 
       {isBroken && (
-        <p className="text-xs text-hamplard-primary font-medium mb-3">
+        <p className="text-xs text-sorobanlard-primary font-medium mb-3">
           Start a new streak today
         </p>
       )}
@@ -138,7 +138,7 @@ export function StreakTracker() {
           return (
             <div
               key={day}
-              className={`h-6 w-6 rounded ${isActive ? 'bg-hamplard-primary' : 'bg-ink-100'} ${isToday ? 'ring-2 ring-hamplard-primary/50' : ''}`}
+              className={`h-6 w-6 rounded ${isActive ? 'bg-sorobanlard-primary' : 'bg-ink-100'} ${isToday ? 'ring-2 ring-sorobanlard-primary/50' : ''}`}
               title={day}
             />
           );

@@ -29,7 +29,7 @@ interface NotesPanelProps {
 
 // ── Helpers ────────────────────────────────────────────────────────
 
-const STORAGE_PREFIX = 'hamplard_notes';
+const STORAGE_PREFIX = 'sorobanlard_notes';
 
 const storageKey = (courseId: string, lectureId: string) =>
   `${STORAGE_PREFIX}_${courseId}_${lectureId}`;

@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Help Center',
-  description: 'Find quick answers about learning, billing, and certificates on Hamplard.',
+  description: 'Find quick answers about learning, billing, and certificates on SorobanLard.',
   path: '/help',
 });
 

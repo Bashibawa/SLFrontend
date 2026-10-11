@@ -4,7 +4,7 @@ import { buildMetadata } from '@/lib/seo';
 export const metadata: Metadata = buildMetadata({
   title: 'Create an Account',
   description:
-    'Create a free Hamplard account and start learning practical, job-ready skills from expert instructors.',
+    'Create a free SorobanLard account and start learning practical, job-ready skills from expert instructors.',
   path: '/signup',
 });
 

@@ -202,8 +202,8 @@ export default async function CategoryPage({
                   className={cn(
                     'flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium border transition-colors whitespace-nowrap',
                     !activeSub
-                      ? 'bg-hamplard-primary text-white border-hamplard-primary shadow-sm'
-                      : 'bg-white text-ink-600 border-ink-200 hover:border-hamplard-primary hover:text-hamplard-primary',
+                      ? 'bg-sorobanlard-primary text-white border-sorobanlard-primary shadow-sm'
+                      : 'bg-white text-ink-600 border-ink-200 hover:border-sorobanlard-primary hover:text-sorobanlard-primary',
                   )}
                   aria-pressed={!activeSub}
                 >
@@ -217,8 +217,8 @@ export default async function CategoryPage({
                     className={cn(
                       'flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium border transition-colors whitespace-nowrap',
                       activeSub.toLowerCase() === sub.toLowerCase()
-                        ? 'bg-hamplard-primary text-white border-hamplard-primary shadow-sm'
-                        : 'bg-white text-ink-600 border-ink-200 hover:border-hamplard-primary hover:text-hamplard-primary',
+                        ? 'bg-sorobanlard-primary text-white border-sorobanlard-primary shadow-sm'
+                        : 'bg-white text-ink-600 border-ink-200 hover:border-sorobanlard-primary hover:text-sorobanlard-primary',
                     )}
                     aria-pressed={activeSub.toLowerCase() === sub.toLowerCase()}
                   >
@@ -239,7 +239,7 @@ export default async function CategoryPage({
               {activeSub && (
                 <>
                   {' '}matching{' '}
-                  <span className="font-semibold text-hamplard-primary">{activeSub}</span>
+                  <span className="font-semibold text-sorobanlard-primary">{activeSub}</span>
                 </>
               )}
             </p>
@@ -305,7 +305,7 @@ export default async function CategoryPage({
                     className="card p-5 flex items-start gap-4 hover:shadow-lifted transition-shadow"
                   >
                     {/* Avatar */}
-                    <div className="flex-shrink-0 relative w-12 h-12 rounded-full overflow-hidden bg-hamplard-lilac flex items-center justify-center">
+                    <div className="flex-shrink-0 relative w-12 h-12 rounded-full overflow-hidden bg-sorobanlard-lilac flex items-center justify-center">
                       {inst.avatarUrl ? (
                         <Image
                           src={inst.avatarUrl}
@@ -315,7 +315,7 @@ export default async function CategoryPage({
                           className="object-cover"
                         />
                       ) : (
-                        <span className="text-sm font-bold text-hamplard-deep" aria-hidden="true">
+                        <span className="text-sm font-bold text-sorobanlard-deep" aria-hidden="true">
                           {initials}
                         </span>
                       )}
@@ -324,7 +324,7 @@ export default async function CategoryPage({
                     {/* Info */}
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-semibold text-ink-900 truncate">
-                        {inst.name ?? 'Hamplard Instructor'}
+                        {inst.name ?? 'SorobanLard Instructor'}
                       </p>
                       {inst.bio && (
                         <p className="text-xs text-ink-500 mt-0.5 line-clamp-2">
@@ -374,11 +374,11 @@ export default async function CategoryPage({
                   className="flex-shrink-0 w-36 md:w-auto card p-4 flex flex-col items-center gap-2 text-center hover:shadow-lifted hover:-translate-y-0.5 transition-all group"
                 >
                   <span className="text-3xl" aria-hidden="true">{cat.icon}</span>
-                  <span className="text-xs font-semibold text-ink-700 group-hover:text-hamplard-primary transition-colors leading-snug">
+                  <span className="text-xs font-semibold text-ink-700 group-hover:text-sorobanlard-primary transition-colors leading-snug">
                     {cat.name}
                   </span>
                   <ArrowRight
-                    className="w-3.5 h-3.5 text-ink-300 group-hover:text-hamplard-primary transition-colors"
+                    className="w-3.5 h-3.5 text-ink-300 group-hover:text-sorobanlard-primary transition-colors"
                     aria-hidden="true"
                   />
                 </Link>

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        hamplard: {
+        sorobanlard: {
           deep: '#26215C',
           primary: '#7F77DD',
           lilac: '#EEEDFE',

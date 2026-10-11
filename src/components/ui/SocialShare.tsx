@@ -88,7 +88,7 @@ export function SocialShare({
   const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
   const encodedUrl = encodeURIComponent(shareUrl);
 
-  const achievementText = shareText ?? `I just completed ${courseTitle} on Hamplard! #Hamplard`;
+  const achievementText = shareText ?? `I just completed ${courseTitle} on SorobanLard! #SorobanLard`;
   const encodedAchievementText = encodeURIComponent(achievementText);
 
   const handleCopyLink = async () => {
@@ -143,7 +143,7 @@ export function SocialShare({
 
   const buttonClass = cn(
     'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200',
-    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hamplard-primary',
+    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sorobanlard-primary',
     'hover:scale-105 active:scale-95',
     sizeClasses[size],
   );

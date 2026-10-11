@@ -83,11 +83,11 @@ export default function SignupPage() {
         <section className="order-2 flex items-center justify-center p-6 sm:p-10 lg:order-1">
           <div className="w-full max-w-md">
             <Link href="/" className="mb-8 inline-block font-display text-3xl font-bold text-[#26215C]">
-              Hamplard
+              SorobanLard
             </Link>
             <h1 className="mb-2 text-3xl font-bold text-[#26215C]">Create your account</h1>
             <p className="mb-6 text-sm text-[#554F99]">
-              Join Hamplard and start learning practical, career-ready skills.
+              Join SorobanLard and start learning practical, career-ready skills.
             </p>
 
             <form className="space-y-4" onSubmit={onSubmit} noValidate>

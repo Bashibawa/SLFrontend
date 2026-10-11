@@ -4,8 +4,8 @@ import type { FAQItem } from './FAQAccordion';
 
 const mockFAQs: FAQItem[] = [
   {
-    question: 'What is Hamplard?',
-    answer: 'Hamplard is an Africa-focused platform for practical skills learning. We provide courses in various practical trades and crafts.',
+    question: 'What is SorobanLard?',
+    answer: 'SorobanLard is an Africa-focused platform for practical skills learning. We provide courses in various practical trades and crafts.',
   },
   {
     question: 'How do I enroll in a course?',

@@ -3,7 +3,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Log In',
-  description: 'Log in to Hamplard to continue your courses, track progress and claim certificates.',
+  description: 'Log in to SorobanLard to continue your courses, track progress and claim certificates.',
   path: '/login',
 });
 

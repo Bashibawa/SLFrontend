@@ -6,7 +6,7 @@ export function generateMetadata(): Metadata {
   return buildMetadata({
     title: 'Free Courses',
     description:
-      'Explore free practical courses on Hamplard and start learning without spending.',
+      'Explore free practical courses on SorobanLard and start learning without spending.',
     path: '/courses/free',
   });
 }

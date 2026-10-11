@@ -1,4 +1,4 @@
-export const RECENTLY_VIEWED_KEY = 'hamplard_recently_viewed';
+export const RECENTLY_VIEWED_KEY = 'sorobanlard_recently_viewed';
 export const RECENTLY_VIEWED_LIMIT = 8;
 export const RECENTLY_VIEWED_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
 

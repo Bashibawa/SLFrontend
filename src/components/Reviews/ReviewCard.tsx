@@ -60,7 +60,7 @@ function InitialsAvatar({
     <div
       aria-hidden="true"
       className={cn(
-        'rounded-full bg-hamplard-lilac text-hamplard-deep font-semibold flex items-center justify-center shrink-0',
+        'rounded-full bg-sorobanlard-lilac text-sorobanlard-deep font-semibold flex items-center justify-center shrink-0',
         sizeMap[size],
       )}
     >
@@ -161,7 +161,7 @@ export function ReviewCard({ review, defaultExpanded = false, className }: Revie
 
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-            <span className="text-sm font-semibold text-hamplard-deep truncate">
+            <span className="text-sm font-semibold text-sorobanlard-deep truncate">
               {review.authorName}
             </span>
             <RelativeDate isoDate={review.createdAt} />
@@ -176,7 +176,7 @@ export function ReviewCard({ review, defaultExpanded = false, className }: Revie
       <div className="mt-3">
         <p
           className={cn(
-            'text-sm text-hamplard-deep/80 leading-relaxed',
+            'text-sm text-sorobanlard-deep/80 leading-relaxed',
             !expanded && hasLongText && 'line-clamp-3',
           )}
         >
@@ -188,7 +188,7 @@ export function ReviewCard({ review, defaultExpanded = false, className }: Revie
           <button
             type="button"
             onClick={() => setExpanded((v) => !v)}
-            className="mt-1.5 inline-flex items-center gap-1 text-xs font-medium text-hamplard-primary hover:text-hamplard-mid transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary rounded"
+            className="mt-1.5 inline-flex items-center gap-1 text-xs font-medium text-sorobanlard-primary hover:text-sorobanlard-mid transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary rounded"
             aria-expanded={expanded}
           >
             {expanded ? (
@@ -206,7 +206,7 @@ export function ReviewCard({ review, defaultExpanded = false, className }: Revie
 
       {/* ── Instructor Reply (visible when expanded or review is short) ── */}
       {hasInstructorReply && (expanded || !hasLongText) && (
-        <div className="mt-4 ml-4 pl-4 border-l-2 border-hamplard-primary/30">
+        <div className="mt-4 ml-4 pl-4 border-l-2 border-sorobanlard-primary/30">
           {/* Reply header */}
           <div className="flex items-start gap-2.5">
             {review.instructorReply!.avatarUrl ? (
@@ -221,17 +221,17 @@ export function ReviewCard({ review, defaultExpanded = false, className }: Revie
 
             <div className="flex-1 min-w-0">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                <span className="text-xs font-semibold text-hamplard-deep">
+                <span className="text-xs font-semibold text-sorobanlard-deep">
                   {review.instructorReply!.name}
                 </span>
-                <span className="inline-flex items-center gap-1 px-1.5 py-0 rounded-full bg-hamplard-lilac text-hamplard-mid text-[10px] font-semibold tracking-wide uppercase">
+                <span className="inline-flex items-center gap-1 px-1.5 py-0 rounded-full bg-sorobanlard-lilac text-sorobanlard-mid text-[10px] font-semibold tracking-wide uppercase">
                   <MessageSquare className="w-2.5 h-2.5" aria-hidden="true" />
                   Instructor
                 </span>
                 <RelativeDate isoDate={review.instructorReply!.repliedAt} />
               </div>
 
-              <p className="mt-1.5 text-sm text-hamplard-deep/80 leading-relaxed">
+              <p className="mt-1.5 text-sm text-sorobanlard-deep/80 leading-relaxed">
                 {review.instructorReply!.text}
               </p>
             </div>
@@ -250,10 +250,10 @@ export function ReviewCard({ review, defaultExpanded = false, className }: Revie
             aria-pressed={vote === 'up'}
             aria-label={vote === 'up' ? 'Remove helpful vote' : 'Mark review as helpful'}
             className={cn(
-              'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary focus-visible:ring-offset-1',
+              'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-offset-1',
               vote === 'up'
-                ? 'bg-hamplard-primary text-white border-hamplard-primary'
-                : 'bg-white text-semantic-text-muted border-semantic-border hover:border-hamplard-primary hover:text-hamplard-primary',
+                ? 'bg-sorobanlard-primary text-white border-sorobanlard-primary'
+                : 'bg-white text-semantic-text-muted border-semantic-border hover:border-sorobanlard-primary hover:text-sorobanlard-primary',
             )}
           >
             <ThumbsUp
@@ -269,10 +269,10 @@ export function ReviewCard({ review, defaultExpanded = false, className }: Revie
             aria-pressed={vote === 'down'}
             aria-label={vote === 'down' ? 'Remove not helpful vote' : 'Mark review as not helpful'}
             className={cn(
-              'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary focus-visible:ring-offset-1',
+              'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-offset-1',
               vote === 'down'
-                ? 'bg-hamplard-deep text-white border-hamplard-deep'
-                : 'bg-white text-semantic-text-muted border-semantic-border hover:border-hamplard-deep hover:text-hamplard-deep',
+                ? 'bg-sorobanlard-deep text-white border-sorobanlard-deep'
+                : 'bg-white text-semantic-text-muted border-semantic-border hover:border-sorobanlard-deep hover:text-sorobanlard-deep',
             )}
           >
             <ThumbsDown

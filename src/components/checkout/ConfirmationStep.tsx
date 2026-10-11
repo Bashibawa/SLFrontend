@@ -69,7 +69,7 @@ export function ConfirmationStep({ receipt }: ConfirmationStepProps) {
             showAnimation ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0',
           )}
         >
-          We&apos;ve charged <strong className="text-hamplard-primary">{formatUsdc(receipt.total)}</strong>.
+          We&apos;ve charged <strong className="text-sorobanlard-primary">{formatUsdc(receipt.total)}</strong>.
           You now have access to {receipt.items.length} course{receipt.items.length === 1 ? '' : 's'}.
         </p>
 
@@ -91,7 +91,7 @@ export function ConfirmationStep({ receipt }: ConfirmationStepProps) {
           )}
         >
           <h2 className="flex items-center gap-2 text-sm font-semibold text-ink-900">
-            <GraduationCap className="h-4 w-4 text-hamplard-primary" />
+            <GraduationCap className="h-4 w-4 text-sorobanlard-primary" />
             Enrolled courses
           </h2>
 
@@ -101,19 +101,19 @@ export function ConfirmationStep({ receipt }: ConfirmationStepProps) {
               className="flex items-center justify-between rounded-xl border border-ink-100 bg-ink-50/50 px-4 py-3 transition-colors hover:bg-ink-50"
             >
               <div className="flex items-center gap-3 min-w-0">
-                <BookOpen className="h-5 w-5 shrink-0 text-hamplard-primary" />
+                <BookOpen className="h-5 w-5 shrink-0 text-sorobanlard-primary" />
                 <div className="min-w-0">
                   <p className="text-sm font-medium text-ink-900 truncate">
                     {item.course.title}
                   </p>
                   <p className="text-xs text-ink-500">
-                    {item.course.instructor?.name || 'Hamplard Instructor'}
+                    {item.course.instructor?.name || 'SorobanLard Instructor'}
                   </p>
                 </div>
               </div>
               <Link
                 href={`/dashboard/courses/${item.courseId}`}
-                className="shrink-0 text-xs font-medium text-hamplard-primary hover:text-hamplard-primary/80 transition-colors"
+                className="shrink-0 text-xs font-medium text-sorobanlard-primary hover:text-sorobanlard-primary/80 transition-colors"
               >
                 Start learning →
               </Link>

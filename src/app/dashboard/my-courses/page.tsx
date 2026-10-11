@@ -148,7 +148,7 @@ function EnrolledCourseCard({ enrollment }: EnrolledCourseCardProps) {
           {course.title}
         </h3>
         <p className="text-xs text-ink-400 mb-3 truncate">
-          {course.instructor?.name ?? 'Hamplard Instructor'}
+          {course.instructor?.name ?? 'SorobanLard Instructor'}
         </p>
 
         {/* Progress bar */}

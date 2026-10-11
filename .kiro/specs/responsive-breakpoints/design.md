@@ -2,7 +2,7 @@
 
 ## Overview
 
-A comprehensive responsive grid system and breakpoint strategy for Hamplard across all device sizes. This document establishes the single source of truth for layout, spacing, and component behavior across mobile, tablet, and desktop devices. All page designs must adapt gracefully using these specifications.
+A comprehensive responsive grid system and breakpoint strategy for SorobanLard across all device sizes. This document establishes the single source of truth for layout, spacing, and component behavior across mobile, tablet, and desktop devices. All page designs must adapt gracefully using these specifications.
 
 ---
 
@@ -50,7 +50,7 @@ module.exports = {
 
 ### Column Layout
 
-Hamplard uses a flexible column grid:
+SorobanLard uses a flexible column grid:
 
 | Breakpoint | Columns | Use |
 |---|---|---|
@@ -292,7 +292,7 @@ The following behaviors occur at specified breakpoints:
 ┌────────────────────────────────────┐
 │ ☰  [Logo]  [Account]               │  ← 56px top nav
 ├────────────────────────────────────┤
-│ Welcome to Hamplard                │
+│ Welcome to SorobanLard                │
 │ [Search Input - full width]        │ ← 44px min height
 │                                    │
 │ [Show Filters ▼]                   │ ← Expandable filter drawer

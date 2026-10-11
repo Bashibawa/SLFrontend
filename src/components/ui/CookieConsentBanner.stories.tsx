@@ -35,7 +35,7 @@ export const Default: Story = {
     () => {
       // Clear localStorage to ensure banner shows
       if (typeof window !== 'undefined') {
-        localStorage.removeItem('hamplard-cookie-consent');
+        localStorage.removeItem('sorobanlard-cookie-consent');
       }
       return <CookieConsentBanner />;
     },

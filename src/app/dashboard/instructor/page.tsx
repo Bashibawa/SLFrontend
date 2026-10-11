@@ -121,7 +121,7 @@ export default function InstructorDashboardPage() {
       <div className="mb-8">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <h2 className="font-display text-lg font-semibold text-ink-900 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-hamplard-primary" />
+            <TrendingUp className="w-5 h-5 text-sorobanlard-primary" />
             Revenue Analytics
           </h2>
           <RevenueDateRangePicker value={dateRange} onChange={setDateRange} />

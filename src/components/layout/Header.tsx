@@ -75,7 +75,7 @@ function deriveSubcategories(courses: Course[], categoryName: string) {
 
 const NAV_LINKS = [
   { label: 'Courses', href: '/dashboard/courses' },
-  { label: 'Teach on Hamplard', href: '/teach' },
+  { label: 'Teach on SorobanLard', href: '/teach' },
   { label: 'Team Plans', href: '/teams' },
 ] as const;
 
@@ -300,7 +300,7 @@ export function Header() {
           href="/"
           className="flex-shrink-0 font-display text-xl font-semibold tracking-tight text-white"
         >
-          Hamplard
+          SorobanLard
         </Link>
 
         {/* ── Desktop center: categories mega-menu + search ── */}
@@ -370,7 +370,7 @@ export function Header() {
                                   selected
                                     ? 'bg-saffron-50 text-saffron-800'
                                     : 'text-ink-800 hover:bg-ink-50',
-                                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary focus-visible:ring-inset',
+                                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-inset',
                                 )}
                               >
                                 <span aria-hidden="true" className="text-lg">{category.icon}</span>
@@ -382,7 +382,7 @@ export function Header() {
                                     key={subcategory}
                                     href={`/categories/${category.slug}?sub=${encodeURIComponent(subcategory)}`}
                                     onClick={() => setMegaOpen(false)}
-                                    className="block truncate rounded px-1 py-0.5 text-xs text-ink-500 hover:text-hamplard-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+                                    className="block truncate rounded px-1 py-0.5 text-xs text-ink-500 hover:text-sorobanlard-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
                                   >
                                     {subcategory}
                                   </Link>
@@ -390,7 +390,7 @@ export function Header() {
                                 <Link
                                   href={`/categories/${category.slug}`}
                                   onClick={() => setMegaOpen(false)}
-                                  className="block rounded px-1 py-0.5 text-xs font-medium text-hamplard-primary hover:text-hamplard-mid focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+                                  className="block rounded px-1 py-0.5 text-xs font-medium text-sorobanlard-primary hover:text-sorobanlard-mid focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
                                 >
                                   All {category.name} courses
                                 </Link>
@@ -402,7 +402,7 @@ export function Header() {
                       <Link
                         href="/courses"
                         onClick={() => setMegaOpen(false)}
-                        className="mt-5 inline-flex items-center border-t border-ink-100 pt-4 text-sm font-semibold text-hamplard-primary hover:text-hamplard-mid"
+                        className="mt-5 inline-flex items-center border-t border-ink-100 pt-4 text-sm font-semibold text-sorobanlard-primary hover:text-sorobanlard-mid"
                       >
                         Browse all courses <span aria-hidden="true" className="ml-1">→</span>
                       </Link>
@@ -416,7 +416,7 @@ export function Header() {
                         <Link
                           href={`/courses/${activeFeaturedCourse.id}`}
                           onClick={() => setMegaOpen(false)}
-                          className="group block overflow-hidden rounded-md bg-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+                          className="group block overflow-hidden rounded-md bg-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
                         >
                           {activeFeaturedCourse.thumbnailUrl ? (
                             <img
@@ -430,11 +430,11 @@ export function Header() {
                             </div>
                           )}
                           <div className="p-3">
-                            <p className="line-clamp-2 text-sm font-semibold text-ink-900 group-hover:text-hamplard-primary">
+                            <p className="line-clamp-2 text-sm font-semibold text-ink-900 group-hover:text-sorobanlard-primary">
                               {activeFeaturedCourse.title}
                             </p>
                             <p className="mt-1 truncate text-xs text-ink-500">
-                              {activeFeaturedCourse.instructor.name ?? 'Hamplard instructor'}
+                              {activeFeaturedCourse.instructor.name ?? 'SorobanLard instructor'}
                             </p>
                             {activeFeaturedCourse.rating != null && (
                               <p className="mt-2 text-xs font-semibold text-saffron-700">
@@ -492,7 +492,7 @@ export function Header() {
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search courses..."
               aria-label="Search courses"
-              className="w-full rounded-lg border border-white/15 bg-white/10 py-2 pl-9 pr-3 text-sm text-white placeholder:text-slate-400 transition-colors focus:border-hamplard-primary focus:outline-none focus:ring-1 focus:ring-hamplard-primary"
+              className="w-full rounded-lg border border-white/15 bg-white/10 py-2 pl-9 pr-3 text-sm text-white placeholder:text-slate-400 transition-colors focus:border-sorobanlard-primary focus:outline-none focus:ring-1 focus:ring-sorobanlard-primary"
             />
           </form>
         </div>
@@ -556,7 +556,7 @@ export function Header() {
                       className="h-8 w-8 rounded-full object-cover ring-2 ring-white/20"
                     />
                   ) : (
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-hamplard-primary text-sm font-semibold text-white">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sorobanlard-primary text-sm font-semibold text-white">
                       {user?.name?.charAt(0)?.toUpperCase() ?? 'U'}
                     </span>
                   )}
@@ -624,7 +624,7 @@ export function Header() {
               </Link>
               <Link
                 href="/signup"
-                className="rounded-lg bg-hamplard-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-hamplard-mid"
+                className="rounded-lg bg-sorobanlard-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-sorobanlard-mid"
               >
                 Sign up
               </Link>
@@ -668,7 +668,7 @@ export function Header() {
         )}
       >
         <div className="flex items-center justify-between border-b border-white/10 px-4 py-4">
-          <span className="font-display text-lg font-semibold text-white">Hamplard</span>
+          <span className="font-display text-lg font-semibold text-white">SorobanLard</span>
           <button
             type="button"
             onClick={() => setMobileOpen(false)}
@@ -696,7 +696,7 @@ export function Header() {
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search courses..."
               aria-label="Search courses"
-              className="w-full rounded-lg border border-white/15 bg-white/10 py-2.5 pl-9 pr-3 text-sm text-white placeholder:text-slate-400 focus:border-hamplard-primary focus:outline-none focus:ring-1 focus:ring-hamplard-primary"
+              className="w-full rounded-lg border border-white/15 bg-white/10 py-2.5 pl-9 pr-3 text-sm text-white placeholder:text-slate-400 focus:border-sorobanlard-primary focus:outline-none focus:ring-1 focus:ring-sorobanlard-primary"
             />
           </form>
 
@@ -767,7 +767,7 @@ export function Header() {
                 <Link
                   href={activeFeaturedCourse ? `/courses/${activeFeaturedCourse.id}` : `/categories/${activeCategory.slug}`}
                   onClick={() => setMobileOpen(false)}
-                  className="mt-2 flex items-center gap-3 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+                  className="mt-2 flex items-center gap-3 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
                 >
                   {activeFeaturedCourse?.thumbnailUrl ? (
                     <img
@@ -876,7 +876,7 @@ export function Header() {
               <Link
                 href="/signup"
                 onClick={() => setMobileOpen(false)}
-                className="flex-1 rounded-lg bg-hamplard-primary py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-hamplard-mid"
+                className="flex-1 rounded-lg bg-sorobanlard-primary py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-sorobanlard-mid"
               >
                 Sign up
               </Link>

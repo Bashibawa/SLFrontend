@@ -133,7 +133,7 @@ export default function PaymentMethodsPage() {
           <div>
             <h1 className="section-heading">Payment methods</h1>
             <p className="text-sm text-ink-500 mt-1">
-              Saved cards for faster checkout. Card numbers are stored securely by Stripe, never by Hamplard.
+              Saved cards for faster checkout. Card numbers are stored securely by Stripe, never by SorobanLard.
             </p>
           </div>
           <Button
@@ -192,7 +192,7 @@ export default function PaymentMethodsPage() {
                 key={method.id}
                 className={cn(
                   'card p-4 flex flex-wrap items-center gap-4',
-                  method.isDefault && 'border-hamplard-primary/40 ring-1 ring-hamplard-primary/20',
+                  method.isDefault && 'border-sorobanlard-primary/40 ring-1 ring-sorobanlard-primary/20',
                 )}
               >
                 <CardBrandIcon brand={method.brand} />
@@ -208,7 +208,7 @@ export default function PaymentMethodsPage() {
                       </span>
                     </span>
                     {method.isDefault && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-hamplard-lilac px-2 py-0.5 text-xs font-semibold text-hamplard-deep">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-sorobanlard-lilac px-2 py-0.5 text-xs font-semibold text-sorobanlard-deep">
                         <Star className="h-3 w-3" aria-hidden="true" />
                         Default
                       </span>

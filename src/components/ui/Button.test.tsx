@@ -9,14 +9,14 @@ describe('Button', () => {
       render(<Button variant="primary">Primary Button</Button>);
       const button = screen.getByRole('button', { name: /primary button/i });
       expect(button).toBeInTheDocument();
-      expect(button).toHaveClass('bg-hamplard-primary');
+      expect(button).toHaveClass('bg-sorobanlard-primary');
     });
 
     it('renders secondary variant correctly', () => {
       render(<Button variant="secondary">Secondary Button</Button>);
       const button = screen.getByRole('button', { name: /secondary button/i });
       expect(button).toBeInTheDocument();
-      expect(button).toHaveClass('bg-hamplard-lilac');
+      expect(button).toHaveClass('bg-sorobanlard-lilac');
     });
 
     it('renders tertiary variant correctly', () => {
@@ -37,7 +37,7 @@ describe('Button', () => {
       render(<Button variant="ghost">Ghost Button</Button>);
       const button = screen.getByRole('button', { name: /ghost button/i });
       expect(button).toBeInTheDocument();
-      expect(button).toHaveClass('text-hamplard-primary');
+      expect(button).toHaveClass('text-sorobanlard-primary');
     });
   });
 

@@ -97,10 +97,10 @@ function NewsletterForm() {
 
 const FOOTER_COLUMNS = [
   {
-    title: 'About Hamplard',
+    title: 'About SorobanLard',
     links: [
       { label: 'Our story', href: '/about' },
-      { label: 'Teach on Hamplard', href: '/teach' },
+      { label: 'Teach on SorobanLard', href: '/teach' },
       { label: 'Team plans', href: '/teams' },
       { label: 'Careers', href: '/#careers' },
       { label: 'Partner with us', href: '/#partners' },
@@ -140,25 +140,25 @@ const FOOTER_COLUMNS = [
 const SOCIAL_LINKS = [
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/company/hamplard',
+    href: 'https://linkedin.com/company/sorobanlard',
     // LinkedIn logo path
     icon: 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z',
   },
   {
     label: 'X (Twitter)',
-    href: 'https://x.com/hamplard',
+    href: 'https://x.com/sorobanlard',
     // X / Twitter logo
     icon: 'M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z',
   },
   {
     label: 'YouTube',
-    href: 'https://youtube.com/@hamplard',
+    href: 'https://youtube.com/@sorobanlard',
     // YouTube logo path
     icon: 'M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29.94 29.94 0 0 0 1 12a29.94 29.94 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29.94 29.94 0 0 0 23 12a29.94 29.94 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z',
   },
   {
     label: 'Instagram',
-    href: 'https://instagram.com/hamplard',
+    href: 'https://instagram.com/sorobanlard',
     // Instagram logo path
     icon: 'M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5Zm-5 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm5.5-9.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z',
   },
@@ -179,7 +179,7 @@ export function Footer() {
         <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between lg:hidden">
           <div className="space-y-1">
             <p className="font-display text-xl font-semibold tracking-tight text-white">
-              Hamplard
+              SorobanLard
             </p>
             <p className="max-w-xs text-sm leading-relaxed text-slate-300">
               Empowering ambitious learners across Africa with practical online courses.
@@ -194,10 +194,10 @@ export function Footer() {
           <div className="space-y-6">
             <div className="space-y-3">
               <p className="font-display text-xl font-semibold tracking-tight text-white">
-                Hamplard
+                SorobanLard
               </p>
               <p className="text-sm leading-7 text-slate-300">
-                Hamplard empowers ambitious learners across Africa with practical online courses
+                SorobanLard empowers ambitious learners across Africa with practical online courses
                 in tailoring, makeup, baking, and photography.
               </p>
             </div>
@@ -296,7 +296,7 @@ export function Footer() {
         {/* ── Bottom bar ── */}
         <div className="mt-8 border-t border-white/10 pt-8 sm:flex sm:items-center sm:justify-between">
           <p className="text-sm text-slate-400">
-            © {currentYear} Hamplard. All rights reserved.
+            © {currentYear} SorobanLard. All rights reserved.
           </p>
           {/* Social row visible on mobile bottom bar */}
           <div className="mt-6 sm:mt-0 lg:hidden">
@@ -319,7 +319,7 @@ function SocialRow() {
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Follow Hamplard on ${social.label}`}
+          aria-label={`Follow SorobanLard on ${social.label}`}
           role="listitem"
           className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-slate-300 transition hover:border-[#7F77DD] hover:bg-[#7F77DD]/20 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7F77DD]"
         >

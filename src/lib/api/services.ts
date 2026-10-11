@@ -12,8 +12,8 @@ import type {
 } from "@/types";
 
 const isBrowser = typeof window !== "undefined";
-const ANNOUNCEMENTS_STORAGE_KEY = "hamplard_announcements";
-const NOTIFICATIONS_STORAGE_KEY = "hamplard_notifications";
+const ANNOUNCEMENTS_STORAGE_KEY = "sorobanlard_announcements";
+const NOTIFICATIONS_STORAGE_KEY = "sorobanlard_notifications";
 
 const readStorage = <T>(key: string, fallback: T): T => {
   if (!isBrowser) return fallback;
@@ -33,12 +33,12 @@ const writeStorage = (key: string, value: unknown) => {
 
 const currentUserKey = () => {
   if (!isBrowser) return "anonymous";
-  return localStorage.getItem("hamplard_address") ?? "anonymous";
+  return localStorage.getItem("sorobanlard_address") ?? "anonymous";
 };
 
 const emitNotificationsUpdated = () => {
   if (isBrowser) {
-    window.dispatchEvent(new Event("hamplard:notifications-updated"));
+    window.dispatchEvent(new Event("sorobanlard:notifications-updated"));
   }
 };
 
@@ -571,7 +571,7 @@ export const uploadsApi = {
 
     const token =
       typeof window !== "undefined"
-        ? localStorage.getItem("hamplard_token")
+        ? localStorage.getItem("sorobanlard_token")
         : null;
 
     return new Promise((resolve, reject) => {

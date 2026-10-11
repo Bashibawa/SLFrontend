@@ -4,7 +4,7 @@ import { CheckoutContent } from '@/components/checkout/CheckoutContent';
 
 export const metadata: Metadata = {
   title: 'Checkout',
-  description: 'Complete your Hamplard course purchase securely with card or PayPal.',
+  description: 'Complete your SorobanLard course purchase securely with card or PayPal.',
 };
 
 export default function CheckoutPage() {

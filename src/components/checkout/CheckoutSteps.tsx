@@ -28,7 +28,7 @@ export function CheckoutSteps({ steps, currentStep }: CheckoutStepsProps) {
                   className={cn(
                     'flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold transition-colors',
                     isComplete && 'bg-leaf-600 text-white',
-                    isCurrent && 'border-2 border-hamplard-primary text-hamplard-primary',
+                    isCurrent && 'border-2 border-sorobanlard-primary text-sorobanlard-primary',
                     !isComplete && !isCurrent && 'border-2 border-ink-200 text-ink-400',
                   )}
                   aria-current={isCurrent ? 'step' : undefined}

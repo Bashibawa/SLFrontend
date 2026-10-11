@@ -53,7 +53,7 @@ const SORT_OPTIONS: {
  *   inside a pill-shaped container. Screen-reader friendly by default.
  *
  * - Desktop (≥ sm): Horizontal pill-button group. Each option is a toggle button.
- *   The active option uses hamplard-primary fill; inactive options use ghost style.
+ *   The active option uses sorobanlard-primary fill; inactive options use ghost style.
  *
  * A `totalReviews` count label is rendered to the left of the controls.
  *
@@ -91,7 +91,7 @@ export function ReviewFilter({
     >
       {/* ── Review count ── */}
       {totalReviews !== undefined && (
-        <p className="text-sm font-medium text-hamplard-deep">
+        <p className="text-sm font-medium text-sorobanlard-deep">
           <span className="font-semibold">{totalReviews.toLocaleString()}</span>{' '}
           {totalReviews === 1 ? 'review' : 'reviews'}
         </p>
@@ -103,7 +103,7 @@ export function ReviewFilter({
           type="button"
           onClick={() => onStarFilterChange(null)}
           aria-label={`Clear ${starFilter}-star filter`}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill text-xs font-medium bg-hamplard-lilac text-hamplard-primary border border-hamplard-primary transition-colors hover:bg-hamplard-primary hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill text-xs font-medium bg-sorobanlard-lilac text-sorobanlard-primary border border-sorobanlard-primary transition-colors hover:bg-sorobanlard-primary hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
         >
           <Star className="w-3.5 h-3.5 fill-current" aria-hidden="true" />
           {starFilter} {starFilter === 1 ? 'star' : 'stars'}
@@ -120,11 +120,11 @@ export function ReviewFilter({
           aria-expanded={mobileOpen}
           aria-label={`Sort reviews by: ${activeLabel}`}
           className={cn(
-            'inline-flex items-center gap-2 px-3.5 py-2 rounded-pill border text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary',
-            'bg-white border-semantic-border text-hamplard-deep hover:bg-hamplard-lilac hover:border-hamplard-primary',
+            'inline-flex items-center gap-2 px-3.5 py-2 rounded-pill border text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary',
+            'bg-white border-semantic-border text-sorobanlard-deep hover:bg-sorobanlard-lilac hover:border-sorobanlard-primary',
           )}
         >
-          <ArrowUpDown className="w-4 h-4 text-hamplard-primary shrink-0" aria-hidden="true" />
+          <ArrowUpDown className="w-4 h-4 text-sorobanlard-primary shrink-0" aria-hidden="true" />
           <span>{activeLabel}</span>
           <ChevronDown
             className={cn(
@@ -153,20 +153,20 @@ export function ReviewFilter({
                   className={cn(
                     'w-full flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors',
                     sortBy === opt.value
-                      ? 'bg-hamplard-lilac text-hamplard-primary font-semibold'
-                      : 'text-hamplard-deep hover:bg-hamplard-lilac/50',
+                      ? 'bg-sorobanlard-lilac text-sorobanlard-primary font-semibold'
+                      : 'text-sorobanlard-deep hover:bg-sorobanlard-lilac/50',
                   )}
                 >
                   <span
                     className={cn(
-                      sortBy === opt.value ? 'text-hamplard-primary' : 'text-semantic-text-muted',
+                      sortBy === opt.value ? 'text-sorobanlard-primary' : 'text-semantic-text-muted',
                     )}
                   >
                     {opt.icon}
                   </span>
                   {opt.label}
                   {sortBy === opt.value && (
-                    <span className="ml-auto w-1.5 h-1.5 rounded-full bg-hamplard-primary" />
+                    <span className="ml-auto w-1.5 h-1.5 rounded-full bg-sorobanlard-primary" />
                   )}
                 </button>
               </li>
@@ -190,10 +190,10 @@ export function ReviewFilter({
               onClick={() => onSortChange(opt.value)}
               aria-pressed={isActive}
               className={cn(
-                'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill text-xs font-medium transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary focus-visible:ring-offset-1',
+                'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill text-xs font-medium transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-offset-1',
                 isActive
-                  ? 'bg-hamplard-primary text-white shadow-sm'
-                  : 'text-hamplard-deep/70 hover:text-hamplard-deep hover:bg-white',
+                  ? 'bg-sorobanlard-primary text-white shadow-sm'
+                  : 'text-sorobanlard-deep/70 hover:text-sorobanlard-deep hover:bg-white',
               )}
             >
               <span

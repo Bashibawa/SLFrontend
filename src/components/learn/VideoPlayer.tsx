@@ -37,7 +37,7 @@ interface VideoPlayerProps {
 // ── Constants ─────────────────────────────────────────────────────
 const AUTOSAVE_INTERVAL_MS  = 30_000; // save every 30 s
 const COMPLETION_THRESHOLD  = 0.95;   // 95 %
-const CAPTIONS_STORAGE_KEY = 'hamplard-captions-enabled';
+const CAPTIONS_STORAGE_KEY = 'sorobanlard-captions-enabled';
 
 // ── Component ─────────────────────────────────────────────────────
 export const VideoPlayer = forwardRef<

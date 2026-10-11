@@ -103,7 +103,7 @@ export function CheckoutContent() {
 
               <div className="mt-4 flex items-center justify-between">
                 <span className="text-sm font-semibold text-ink-900">Total</span>
-                <span className="text-xl font-bold text-hamplard-primary">{formatUsdc(total)}</span>
+                <span className="text-xl font-bold text-sorobanlard-primary">{formatUsdc(total)}</span>
               </div>
             </div>
           </aside>

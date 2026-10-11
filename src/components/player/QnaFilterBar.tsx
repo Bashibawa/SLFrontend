@@ -47,7 +47,7 @@ export function QnaFilterBar({
           onChange={(e) => onSearchChange(e.target.value)}
           placeholder="Search questions…"
           aria-label="Search Q&A"
-          className="w-full rounded-xl border border-semantic-border pl-9 pr-9 py-2.5 text-sm text-hamplard-deep bg-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-hamplard-primary focus:border-hamplard-primary transition-colors"
+          className="w-full rounded-xl border border-semantic-border pl-9 pr-9 py-2.5 text-sm text-sorobanlard-deep bg-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary focus:border-sorobanlard-primary transition-colors"
         />
         {search && (
           <button
@@ -77,10 +77,10 @@ export function QnaFilterBar({
                 onClick={() => onFilterChange(opt.value)}
                 aria-pressed={isActive}
                 className={cn(
-                  'px-3 py-1.5 rounded-pill text-xs font-medium transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary focus-visible:ring-offset-1',
+                  'px-3 py-1.5 rounded-pill text-xs font-medium transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-offset-1',
                   isActive
-                    ? 'bg-hamplard-primary text-white shadow-sm'
-                    : 'text-hamplard-deep/70 hover:text-hamplard-deep hover:bg-white',
+                    ? 'bg-sorobanlard-primary text-white shadow-sm'
+                    : 'text-sorobanlard-deep/70 hover:text-sorobanlard-deep hover:bg-white',
                 )}
               >
                 {opt.label}
@@ -104,10 +104,10 @@ export function QnaFilterBar({
                 onClick={() => onSortChange(opt.value)}
                 aria-pressed={isActive}
                 className={cn(
-                  'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill text-xs font-medium transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary focus-visible:ring-offset-1',
+                  'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill text-xs font-medium transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-offset-1',
                   isActive
-                    ? 'bg-hamplard-primary text-white shadow-sm'
-                    : 'text-hamplard-deep/70 hover:text-hamplard-deep hover:bg-white',
+                    ? 'bg-sorobanlard-primary text-white shadow-sm'
+                    : 'text-sorobanlard-deep/70 hover:text-sorobanlard-deep hover:bg-white',
                 )}
               >
                 {opt.icon}
@@ -119,7 +119,7 @@ export function QnaFilterBar({
       </div>
 
       <p className="text-xs text-semantic-text-muted">
-        <span className="font-semibold text-hamplard-deep">{resultCount.toLocaleString()}</span>{' '}
+        <span className="font-semibold text-sorobanlard-deep">{resultCount.toLocaleString()}</span>{' '}
         {resultCount === 1 ? 'question' : 'questions'}
       </p>
     </div>

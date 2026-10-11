@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { useReducedMotion } from './use-reduced-motion';
 
 describe('useReducedMotion', () => {
-  const STORAGE_KEY = 'hamplard_reduced_motion';
+  const STORAGE_KEY = 'sorobanlard_reduced_motion';
 
   beforeEach(() => {
     localStorage.clear();
@@ -235,7 +235,7 @@ describe('useReducedMotion', () => {
   });
 
   describe('Custom events', () => {
-    it('dispatches hamplard:reduced-motion-changed on manual override', async () => {
+    it('dispatches sorobanlard:reduced-motion-changed on manual override', async () => {
       const dispatchEventSpy = vi.spyOn(window, 'dispatchEvent');
       const { result } = renderHook(() => useReducedMotion());
 
@@ -245,12 +245,12 @@ describe('useReducedMotion', () => {
 
       expect(dispatchEventSpy).toHaveBeenCalledWith(
         expect.objectContaining({
-          type: 'hamplard:reduced-motion-changed',
+          type: 'sorobanlard:reduced-motion-changed',
         }),
       );
     });
 
-    it('dispatches hamplard:reduced-motion-changed on clear override', async () => {
+    it('dispatches sorobanlard:reduced-motion-changed on clear override', async () => {
       localStorage.setItem(STORAGE_KEY, 'true');
       const dispatchEventSpy = vi.spyOn(window, 'dispatchEvent');
 
@@ -266,7 +266,7 @@ describe('useReducedMotion', () => {
 
       expect(dispatchEventSpy).toHaveBeenCalledWith(
         expect.objectContaining({
-          type: 'hamplard:reduced-motion-changed',
+          type: 'sorobanlard:reduced-motion-changed',
         }),
       );
     });

@@ -115,7 +115,7 @@ export default function TeachPage() {
         <section className="relative overflow-hidden bg-gradient-to-b from-[#F4F2FF] to-[#FAF9FF] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#EEEDFE] px-4 py-1.5 text-xs font-semibold text-[#7F77DD]">
-              <Sparkles className="h-4 w-4" /> Teach on Hamplard
+              <Sparkles className="h-4 w-4" /> Teach on SorobanLard
             </span>
 
             <h1 className="mx-auto mt-6 max-w-4xl font-display text-4xl font-extrabold tracking-tight text-[#26215C] sm:text-5xl lg:text-6xl">
@@ -150,7 +150,7 @@ export default function TeachPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center">
               <h2 className="font-display text-3xl font-extrabold text-[#26215C] sm:text-4xl">
-                Why Become an Instructor on Hamplard?
+                Why Become an Instructor on SorobanLard?
               </h2>
               <p className="mt-4 text-base text-[#5A5578]">
                 We provide the platform, audience, and support so you can focus on teaching.
@@ -230,7 +230,7 @@ export default function TeachPage() {
                 Loved by Top Instructors
               </h2>
               <p className="mt-4 text-base text-[#5A5578]">
-                Hear from skilled creators who build their online teaching business on Hamplard.
+                Hear from skilled creators who build their online teaching business on SorobanLard.
               </p>
             </div>
 
@@ -256,7 +256,7 @@ export default function TeachPage() {
                   <CheckCircle2 className="mx-auto h-12 w-12 text-emerald-600" />
                   <h3 className="mt-4 text-lg font-bold">Application Submitted!</h3>
                   <p className="mt-2 text-sm">
-                    Thank you for applying to teach on Hamplard. We will review your application and send instructions to your email within 48 hours.
+                    Thank you for applying to teach on SorobanLard. We will review your application and send instructions to your email within 48 hours.
                   </p>
                 </div>
               ) : (
@@ -351,7 +351,7 @@ export default function TeachPage() {
                       htmlFor="motivation"
                       className="block text-sm font-semibold text-[#26215C]"
                     >
-                      Why do you want to teach on Hamplard? *
+                      Why do you want to teach on SorobanLard? *
                     </label>
                     <textarea
                       id="motivation"

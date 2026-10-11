@@ -129,7 +129,7 @@ export default function TeamsPage() {
         <section className="relative overflow-hidden bg-gradient-to-b from-[#F4F2FF] to-[#FAF9FF] py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#EEEDFE] px-4 py-1.5 text-xs font-semibold text-[#7F77DD]">
-              <Building2 className="h-4 w-4" /> Hamplard for Business & Teams
+              <Building2 className="h-4 w-4" /> SorobanLard for Business & Teams
             </span>
 
             <h1 className="mx-auto mt-6 max-w-4xl font-display text-4xl font-extrabold tracking-tight text-[#26215C] sm:text-5xl lg:text-6xl">
@@ -184,7 +184,7 @@ export default function TeamsPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center">
               <h2 className="font-display text-3xl font-extrabold text-[#26215C] sm:text-4xl">
-                Why Companies Choose Hamplard
+                Why Companies Choose SorobanLard
               </h2>
               <p className="mt-4 text-base text-[#5A5578]">
                 Everything you need to deploy, manage, and evaluate team skill growth.

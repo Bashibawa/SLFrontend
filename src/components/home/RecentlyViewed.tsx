@@ -67,7 +67,7 @@ export function RecentlyViewed() {
             <button
               type="button"
               onClick={handleClear}
-              className="font-semibold text-hamplard-primary transition-colors hover:underline"
+              className="font-semibold text-sorobanlard-primary transition-colors hover:underline"
             >
               Yes
             </button>
@@ -83,7 +83,7 @@ export function RecentlyViewed() {
           <button
             type="button"
             onClick={() => setConfirmingClear(true)}
-            className="shrink-0 text-sm font-semibold text-ink-400 transition-colors hover:text-hamplard-primary"
+            className="shrink-0 text-sm font-semibold text-ink-400 transition-colors hover:text-sorobanlard-primary"
           >
             Clear
           </button>
@@ -97,7 +97,7 @@ export function RecentlyViewed() {
         ))}
         <Link
           href="/courses"
-          className="flex min-h-48 w-44 shrink-0 snap-start flex-col items-center justify-center gap-2 rounded-xl border border-ink-100 bg-white text-sm font-semibold text-hamplard-primary transition-colors hover:bg-hamplard-lilac"
+          className="flex min-h-48 w-44 shrink-0 snap-start flex-col items-center justify-center gap-2 rounded-xl border border-ink-100 bg-white text-sm font-semibold text-sorobanlard-primary transition-colors hover:bg-sorobanlard-lilac"
         >
           See all courses
           <ArrowRight className="h-5 w-5" aria-hidden="true" />

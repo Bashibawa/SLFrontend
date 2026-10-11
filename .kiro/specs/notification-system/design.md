@@ -2,7 +2,7 @@
 
 ## Overview
 
-A comprehensive notification system for Hamplard featuring a bell icon with badge in the navbar, a dropdown notification panel, and a dedicated full-page notifications view. Supports multiple notification types with read/unread states, grouping by date, and mobile-responsive UI.
+A comprehensive notification system for SorobanLard featuring a bell icon with badge in the navbar, a dropdown notification panel, and a dedicated full-page notifications view. Supports multiple notification types with read/unread states, grouping by date, and mobile-responsive UI.
 
 ---
 

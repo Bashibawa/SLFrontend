@@ -1,8 +1,8 @@
 {
-  "name": "hamplard-frontend",
+  "name": "sorobanlard-frontend",
   "version": "0.1.0",
   "private": true,
-  "description": "Hamplard — Next.js frontend for Africa's practical skills learning platform",
+  "description": "SorobanLard — Next.js frontend for Africa's practical skills learning platform",
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",

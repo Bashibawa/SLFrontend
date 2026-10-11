@@ -89,7 +89,7 @@ function SidebarVariant({
           </div>
           <div className="h-2 w-full rounded-full bg-ink-100 overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-saffron-500 to-hamplard-primary rounded-full transition-all duration-500"
+              className="h-full bg-gradient-to-r from-saffron-500 to-sorobanlard-primary rounded-full transition-all duration-500"
               style={{ width: `${percentage}%` }}
               aria-valuenow={percentage}
               aria-valuemin={0}
@@ -99,7 +99,7 @@ function SidebarVariant({
           </div>
           <Link
             href="/dashboard/profile"
-            className="text-[10px] font-medium text-hamplard-primary hover:underline mt-2 inline-block"
+            className="text-[10px] font-medium text-sorobanlard-primary hover:underline mt-2 inline-block"
           >
             Complete profile →
           </Link>
@@ -137,13 +137,13 @@ function CardVariant({
       <div className="mb-5">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-sm font-semibold text-ink-900">Profile Completion</h3>
-          <span className="text-sm font-bold text-hamplard-primary">{percentage}%</span>
+          <span className="text-sm font-bold text-sorobanlard-primary">{percentage}%</span>
         </div>
 
         {/* Progress bar */}
         <div className="h-2.5 w-full rounded-full bg-ink-100 overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-saffron-500 to-hamplard-primary rounded-full transition-all duration-500"
+            className="h-full bg-gradient-to-r from-saffron-500 to-sorobanlard-primary rounded-full transition-all duration-500"
             style={{ width: `${percentage}%` }}
             aria-valuenow={percentage}
             aria-valuemin={0}

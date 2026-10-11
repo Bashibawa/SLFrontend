@@ -35,7 +35,7 @@ export default function ReferralDashboard({
 }: Props) {
   const [copied, setCopied] = useState(false);
 
-  const referralLink = `https://hamplard.com/ref/${referralCode}`;
+  const referralLink = `https://sorobanlard.com/ref/${referralCode}`;
 
   const copyLink = async () => {
     try {
@@ -48,9 +48,9 @@ export default function ReferralDashboard({
   };
 
   const shareEmail = () => {
-    const subject = encodeURIComponent("Join me on Hamplard");
+    const subject = encodeURIComponent("Join me on SorobanLard");
     const body = encodeURIComponent(
-      `Hey! Join me on Hamplard and start learning today: ${referralLink}`,
+      `Hey! Join me on SorobanLard and start learning today: ${referralLink}`,
     );
 
     window.open(`mailto:?subject=${subject}&body=${body}`, "_self");
@@ -58,7 +58,7 @@ export default function ReferralDashboard({
 
   const shareWhatsApp = () => {
     const message = encodeURIComponent(
-      `Hey! Join me on Hamplard and start learning today: ${referralLink}`,
+      `Hey! Join me on SorobanLard and start learning today: ${referralLink}`,
     );
 
     window.open(`https://wa.me/?text=${message}`, "_blank");
@@ -80,7 +80,7 @@ export default function ReferralDashboard({
       <div>
         <h1 className="text-2xl font-semibold">Refer & Earn</h1>
         <p className="text-sm text-ink-500 mt-1">
-          Invite your friends to Hamplard and earn rewards when they enroll.
+          Invite your friends to SorobanLard and earn rewards when they enroll.
         </p>
       </div>
 
@@ -88,7 +88,7 @@ export default function ReferralDashboard({
       <section className="card p-6">
         <h2 className="text-lg font-semibold">Your referral link</h2>
         <p className="text-sm text-ink-500 mt-1">
-          Share this link with your friends to invite them to Hamplard.
+          Share this link with your friends to invite them to SorobanLard.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-2 mt-4">

@@ -67,7 +67,7 @@ describe('FileUpload', () => {
   beforeEach(() => {
     MockXHR.instances = [];
     vi.stubGlobal('XMLHttpRequest', MockXHR);
-    localStorage.setItem('hamplard_token', 'mock-token');
+    localStorage.setItem('sorobanlard_token', 'mock-token');
   });
 
   afterEach(() => {
@@ -82,7 +82,7 @@ describe('FileUpload', () => {
       const dropZone = screen.getByRole('button', { name: /upload files/i });
 
       fireEvent.dragOver(dropZone);
-      expect(dropZone).toHaveClass('border-hamplard-primary', 'bg-hamplard-lilac');
+      expect(dropZone).toHaveClass('border-sorobanlard-primary', 'bg-sorobanlard-lilac');
 
       fireEvent.dragLeave(dropZone);
       expect(dropZone).toHaveClass('border-ink-200', 'bg-ink-50');
@@ -99,7 +99,7 @@ describe('FileUpload', () => {
       Object.defineProperty(leave, 'relatedTarget', { value: child });
       fireEvent(dropZone, leave);
 
-      expect(dropZone).toHaveClass('border-hamplard-primary');
+      expect(dropZone).toHaveClass('border-sorobanlard-primary');
     });
 
     it('queues every dropped file with its own upload request', async () => {

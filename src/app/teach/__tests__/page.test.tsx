@@ -51,7 +51,7 @@ describe('Teach Landing Page (Issue #191)', () => {
 
     const nameInput = screen.getByLabelText(/Full Name \*/i);
     const emailInput = screen.getByLabelText(/Email Address \*/i);
-    const motivationInput = screen.getByLabelText(/Why do you want to teach on Hamplard\? \*/i);
+    const motivationInput = screen.getByLabelText(/Why do you want to teach on SorobanLard\? \*/i);
 
     fireEvent.change(nameInput, { target: { value: 'Amina Bello' } });
     fireEvent.change(emailInput, { target: { value: 'amina@example.com' } });

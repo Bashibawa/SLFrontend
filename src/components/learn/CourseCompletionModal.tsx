@@ -66,8 +66,8 @@ export default function CourseCompletionModal({
 
   const shareUrl = typeof window !== 'undefined'
     ? `${window.location.origin}/courses/${courseId}`
-    : `https://hamplard.app/courses/${courseId}`;
-  const shareText = `I just completed ${courseTitle} on Hamplard! #Hamplard`;
+    : `https://sorobanlard.app/courses/${courseId}`;
+  const shareText = `I just completed ${courseTitle} on SorobanLard! #SorobanLard`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink-950/70 px-4">

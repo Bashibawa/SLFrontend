@@ -93,7 +93,7 @@ export function ReviewSection({
       aria-label="Course reviews"
     >
       {/* ── Section heading ── */}
-      <h2 className="font-display text-h4 text-hamplard-deep">Reviews</h2>
+      <h2 className="font-display text-h4 text-sorobanlard-deep">Reviews</h2>
 
       {/* ── Rating summary ── */}
       {totalReviews > 0 && (
@@ -109,7 +109,7 @@ export function ReviewSection({
       {/* ── Review submission form (enrolled students only) ── */}
       {canReview && (
         <div className="space-y-3">
-          <h3 className="text-base font-semibold text-hamplard-deep">
+          <h3 className="text-base font-semibold text-sorobanlard-deep">
             {existingReview ? 'Your Review' : 'Leave a Review'}
           </h3>
           <ReviewForm
@@ -138,7 +138,7 @@ export function ReviewSection({
                 <button
                   type="button"
                   onClick={() => setStarFilter(null)}
-                  className="text-hamplard-primary hover:underline underline-offset-2 font-medium"
+                  className="text-sorobanlard-primary hover:underline underline-offset-2 font-medium"
                 >
                   Clear filter
                 </button>
@@ -158,7 +158,7 @@ export function ReviewSection({
         /* Zero reviews state */
         <div className="rounded-2xl border border-semantic-border bg-semantic-bg-surface p-10 text-center">
           <p className="text-2xl mb-3" aria-hidden="true">⭐</p>
-          <p className="text-sm font-medium text-hamplard-deep mb-1">No reviews yet</p>
+          <p className="text-sm font-medium text-sorobanlard-deep mb-1">No reviews yet</p>
           <p className="text-xs text-semantic-text-muted">
             {canReview
               ? 'Be the first to share your experience with this course.'

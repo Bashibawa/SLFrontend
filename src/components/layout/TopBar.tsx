@@ -39,11 +39,11 @@ export function TopBar() {
     };
 
     refreshCount();
-    window.addEventListener('hamplard:notifications-updated', refreshCount);
+    window.addEventListener('sorobanlard:notifications-updated', refreshCount);
 
     return () => {
       window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('hamplard:notifications-updated', refreshCount as EventListener);
+      window.removeEventListener('sorobanlard:notifications-updated', refreshCount as EventListener);
     };
   }, []);
 
@@ -73,7 +73,7 @@ export function TopBar() {
         </button>
 
         <Link href="/" className="shrink-0 font-display text-xl font-semibold tracking-tight text-white">
-          Hamplard
+          SorobanLard
         </Link>
 
         <div className="relative hidden lg:block">

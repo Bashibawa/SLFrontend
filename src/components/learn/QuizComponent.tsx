@@ -224,7 +224,7 @@ export function QuizComponent({
           <button
             type="button"
             onClick={handleRetake}
-            className="inline-flex items-center gap-2 rounded-lg bg-hamplard-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-hamplard-mid"
+            className="inline-flex items-center gap-2 rounded-lg bg-sorobanlard-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-sorobanlard-mid"
           >
             <RotateCcw className="h-4 w-4" />
             Retake
@@ -269,7 +269,7 @@ export function QuizComponent({
           className="mt-2 h-2 w-full overflow-hidden rounded-full bg-ink-100"
         >
           <div
-            className="h-full rounded-full bg-hamplard-primary transition-all duration-300"
+            className="h-full rounded-full bg-sorobanlard-primary transition-all duration-300"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
@@ -301,7 +301,7 @@ export function QuizComponent({
                   "flex cursor-pointer items-start gap-3 rounded-lg border px-4 py-3 text-sm transition-all",
                   !isSubmitted &&
                     isSelected &&
-                    "border-hamplard-primary bg-hamplard-lilac/50",
+                    "border-sorobanlard-primary bg-sorobanlard-lilac/50",
                   !isSubmitted &&
                     !isSelected &&
                     "border-ink-200 hover:bg-ink-50",
@@ -324,8 +324,8 @@ export function QuizComponent({
                   className={cn(
                     "mt-0.5 h-4 w-4 flex-shrink-0",
                     question.type === "multi_select"
-                      ? "rounded accent-hamplard-primary"
-                      : "accent-hamplard-primary",
+                      ? "rounded accent-sorobanlard-primary"
+                      : "accent-sorobanlard-primary",
                   )}
                 />
                 <span className="flex-1 leading-snug text-ink-700">
@@ -384,7 +384,7 @@ export function QuizComponent({
             className={cn(
               "inline-flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-medium transition-colors",
               answered
-                ? "bg-hamplard-primary text-white hover:bg-hamplard-mid"
+                ? "bg-sorobanlard-primary text-white hover:bg-sorobanlard-mid"
                 : "cursor-not-allowed bg-ink-100 text-ink-400",
             )}
           >
@@ -394,7 +394,7 @@ export function QuizComponent({
           <button
             type="button"
             onClick={handleNext}
-            className="inline-flex items-center gap-1 rounded-lg bg-hamplard-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-hamplard-mid"
+            className="inline-flex items-center gap-1 rounded-lg bg-sorobanlard-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-sorobanlard-mid"
           >
             {isLastQuestion ? "See Results" : "Next"}
             <ChevronRight className="h-4 w-4" />

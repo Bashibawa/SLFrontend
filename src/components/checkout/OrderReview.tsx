@@ -114,7 +114,7 @@ export function OrderReview({ onNext }: OrderReviewProps) {
                   {item.course.title}
                 </h3>
                 <p className="mt-0.5 text-xs text-ink-500">
-                  {item.course.instructor?.name || 'Hamplard Instructor'}
+                  {item.course.instructor?.name || 'SorobanLard Instructor'}
                 </p>
                 <div className="mt-1 flex items-center gap-2">
                   <span className="text-xs text-leaf-600 font-medium">
@@ -129,7 +129,7 @@ export function OrderReview({ onNext }: OrderReviewProps) {
 
               {/* Price & remove */}
               <div className="flex flex-col items-end gap-2 shrink-0">
-                <span className="text-base font-bold text-hamplard-primary">
+                <span className="text-base font-bold text-sorobanlard-primary">
                   {formatUsdc(item.course.price)}
                 </span>
                 <button
@@ -177,7 +177,7 @@ export function OrderReview({ onNext }: OrderReviewProps) {
                   setPromoError(null);
                 }}
                 placeholder="Enter promo code"
-                className="flex-1 rounded-lg border border-ink-200 bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-500 focus:border-hamplard-primary focus:outline-none focus:ring-2 focus:ring-hamplard-primary/30"
+                className="flex-1 rounded-lg border border-ink-200 bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-500 focus:border-sorobanlard-primary focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary/30"
                 onKeyDown={(e) => e.key === 'Enter' && handleApplyPromo()}
               />
               <Button
@@ -241,7 +241,7 @@ export function OrderReview({ onNext }: OrderReviewProps) {
           <div className="mt-4 border-t border-ink-200 pt-4">
             <div className="flex items-center justify-between">
               <span className="text-base font-semibold text-ink-900">Total</span>
-              <span className="text-xl font-bold text-hamplard-primary">{formatUsdc(total)}</span>
+              <span className="text-xl font-bold text-sorobanlard-primary">{formatUsdc(total)}</span>
             </div>
             <p className="mt-1 text-[11px] text-ink-400">
               All prices in USDC

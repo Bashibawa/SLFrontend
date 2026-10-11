@@ -262,10 +262,10 @@ export default function ContactPage() {
                 Send us an email directly or use the form above.
               </p>
               <Link
-                href="mailto:support@hamplard.app"
+                href="mailto:support@sorobanlard.app"
                 className="mt-4 inline-block text-sm font-semibold text-[#7F77DD] hover:underline"
               >
-                support@hamplard.app
+                support@sorobanlard.app
               </Link>
             </div>
 

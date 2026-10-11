@@ -88,10 +88,10 @@ export default function TermsPage() {
             <section id="overview" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Overview</h2>
               <p className="text-[#5A5578]">
-                Welcome to Hamplard. These Terms of Service ("Terms") govern your access to and use of the Hamplard platform, website, and services (collectively, the "Service"). By accessing or using Hamplard, you agree to be bound by these Terms. If you do not agree to any part of these Terms, you may not use the Service.
+                Welcome to SorobanLard. These Terms of Service ("Terms") govern your access to and use of the SorobanLard platform, website, and services (collectively, the "Service"). By accessing or using SorobanLard, you agree to be bound by these Terms. If you do not agree to any part of these Terms, you may not use the Service.
               </p>
               <p className="text-[#5A5578]">
-                Hamplard is an online learning platform that provides vocational courses in tailoring, makeup artistry, baking, photography, and other practical skills to learners across Africa.
+                SorobanLard is an online learning platform that provides vocational courses in tailoring, makeup artistry, baking, photography, and other practical skills to learners across Africa.
               </p>
             </section>
 
@@ -99,10 +99,10 @@ export default function TermsPage() {
             <section id="user-accounts" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">User Accounts</h2>
               <p className="text-[#5A5578]">
-                To access certain features of Hamplard, you may be required to create an account. You agree to provide accurate, current, and complete information during the registration process and to maintain the confidentiality of your password and account information.
+                To access certain features of SorobanLard, you may be required to create an account. You agree to provide accurate, current, and complete information during the registration process and to maintain the confidentiality of your password and account information.
               </p>
               <p className="text-[#5A5578]">
-                You are responsible for all activities that occur under your account. You agree to notify Hamplard immediately of any unauthorized use of your account or any other breach of security.
+                You are responsible for all activities that occur under your account. You agree to notify SorobanLard immediately of any unauthorized use of your account or any other breach of security.
               </p>
               <p className="text-[#5A5578]">
                 You must be at least 18 years old to create an account and use the Service. If you are under 18, you may only use the Service under the supervision of a parent or guardian who agrees to be bound by these Terms.
@@ -113,13 +113,13 @@ export default function TermsPage() {
             <section id="intellectual-property" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Intellectual Property Rights</h2>
               <p className="text-[#5A5578]">
-                All course content, materials, designs, and intellectual property on Hamplard (including but not limited to videos, text, images, and code) are owned by Hamplard or its content providers and are protected by copyright and other intellectual property laws.
+                All course content, materials, designs, and intellectual property on SorobanLard (including but not limited to videos, text, images, and code) are owned by SorobanLard or its content providers and are protected by copyright and other intellectual property laws.
               </p>
               <p className="text-[#5A5578]">
-                You are granted a limited, non-exclusive, non-transferable license to access and view the course materials for your personal learning purposes only. You may not reproduce, distribute, modify, or create derivative works of any course materials without prior written consent from Hamplard.
+                You are granted a limited, non-exclusive, non-transferable license to access and view the course materials for your personal learning purposes only. You may not reproduce, distribute, modify, or create derivative works of any course materials without prior written consent from SorobanLard.
               </p>
               <p className="text-[#5A5578]">
-                Any user-generated content you submit to Hamplard (including comments, reviews, and projects) may be used by Hamplard to improve the Service and may be shared with other users.
+                Any user-generated content you submit to SorobanLard (including comments, reviews, and projects) may be used by SorobanLard to improve the Service and may be shared with other users.
               </p>
             </section>
 
@@ -127,13 +127,13 @@ export default function TermsPage() {
             <section id="user-conduct" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">User Conduct</h2>
               <p className="text-[#5A5578]">
-                You agree to use Hamplard only for lawful purposes and in a way that does not infringe upon the rights of others or restrict their use and enjoyment of the Service. Prohibited behavior includes:
+                You agree to use SorobanLard only for lawful purposes and in a way that does not infringe upon the rights of others or restrict their use and enjoyment of the Service. Prohibited behavior includes:
               </p>
               <ul className="list-disc space-y-2 pl-6 text-[#5A5578]">
                 <li>Harassing or causing distress or inconvenience to any person</li>
                 <li>Transmitting illegal or unauthorized content</li>
                 <li>Attempting to gain unauthorized access to systems or networks</li>
-                <li>Disrupting the normal flow of dialogue within Hamplard</li>
+                <li>Disrupting the normal flow of dialogue within SorobanLard</li>
                 <li>Reverse engineering or attempting to discover source code or algorithms</li>
                 <li>Circumventing access controls or geographic restrictions</li>
               </ul>
@@ -143,10 +143,10 @@ export default function TermsPage() {
             <section id="limitations" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Limitations of Liability</h2>
               <p className="text-[#5A5578]">
-                To the fullest extent permitted by law, Hamplard shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or use, even if advised of the possibility of such damages.
+                To the fullest extent permitted by law, SorobanLard shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or use, even if advised of the possibility of such damages.
               </p>
               <p className="text-[#5A5578]">
-                Hamplard does not warrant that the Service will be uninterrupted, error-free, or free of viruses or malicious code. Your use of the Service is at your own risk.
+                SorobanLard does not warrant that the Service will be uninterrupted, error-free, or free of viruses or malicious code. Your use of the Service is at your own risk.
               </p>
             </section>
 
@@ -154,7 +154,7 @@ export default function TermsPage() {
             <section id="indemnification" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Indemnification</h2>
               <p className="text-[#5A5578]">
-                You agree to indemnify and hold harmless Hamplard, its operators, instructors, and other users from any claims, damages, or costs (including legal fees) arising from your use of the Service or violation of these Terms.
+                You agree to indemnify and hold harmless SorobanLard, its operators, instructors, and other users from any claims, damages, or costs (including legal fees) arising from your use of the Service or violation of these Terms.
               </p>
             </section>
 
@@ -162,7 +162,7 @@ export default function TermsPage() {
             <section id="modifications" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Modifications to Service</h2>
               <p className="text-[#5A5578]">
-                Hamplard reserves the right to modify, suspend, or discontinue the Service or any features thereof at any time. We may also update these Terms from time to time. Continued use of the Service following any modifications constitutes your acceptance of the updated Terms.
+                SorobanLard reserves the right to modify, suspend, or discontinue the Service or any features thereof at any time. We may also update these Terms from time to time. Continued use of the Service following any modifications constitutes your acceptance of the updated Terms.
               </p>
             </section>
 
@@ -170,10 +170,10 @@ export default function TermsPage() {
             <section id="termination" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Termination</h2>
               <p className="text-[#5A5578]">
-                Hamplard may terminate or suspend your account and access to the Service immediately, without prior notice or liability, for any reason whatsoever, including if you breach these Terms or engage in conduct that violates applicable laws.
+                SorobanLard may terminate or suspend your account and access to the Service immediately, without prior notice or liability, for any reason whatsoever, including if you breach these Terms or engage in conduct that violates applicable laws.
               </p>
               <p className="text-[#5A5578]">
-                You may terminate your account at any time by contacting Hamplard support. Upon termination, your right to use the Service will cease immediately.
+                You may terminate your account at any time by contacting SorobanLard support. Upon termination, your right to use the Service will cease immediately.
               </p>
             </section>
 
@@ -181,7 +181,7 @@ export default function TermsPage() {
             <section id="governing-law" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Governing Law</h2>
               <p className="text-[#5A5578]">
-                These Terms and your use of Hamplard are governed by and construed in accordance with the laws of the jurisdiction in which Hamplard operates, without regard to its conflict of law provisions.
+                These Terms and your use of SorobanLard are governed by and construed in accordance with the laws of the jurisdiction in which SorobanLard operates, without regard to its conflict of law provisions.
               </p>
               <p className="text-[#5A5578]">
                 You agree to submit to the exclusive jurisdiction of the courts in that jurisdiction for the resolution of any disputes.
@@ -197,14 +197,14 @@ export default function TermsPage() {
               <div className="mt-4 space-y-2 text-[#5A5578]">
                 <p>
                   <span className="font-semibold">Email:</span>{' '}
-                  <Link href="mailto:support@hamplard.app" className="text-[#7F77DD] hover:underline">
-                    support@hamplard.app
+                  <Link href="mailto:support@sorobanlard.app" className="text-[#7F77DD] hover:underline">
+                    support@sorobanlard.app
                   </Link>
                 </p>
                 <p>
                   <span className="font-semibold">Website:</span>{' '}
-                  <Link href="https://hamplard.app" className="text-[#7F77DD] hover:underline">
-                    hamplard.app
+                  <Link href="https://sorobanlard.app" className="text-[#7F77DD] hover:underline">
+                    sorobanlard.app
                   </Link>
                 </p>
               </div>

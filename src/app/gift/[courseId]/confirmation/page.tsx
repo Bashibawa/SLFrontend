@@ -33,7 +33,7 @@ function ConfirmationContent() {
       try {
         await navigator.share({
           title: 'You have a course gift!',
-          text: `I'm gifting you a course on Hamplard. Click the link to claim it.`,
+          text: `I'm gifting you a course on SorobanLard. Click the link to claim it.`,
           url: claimUrl,
         });
       } catch {
@@ -48,7 +48,7 @@ function ConfirmationContent() {
     // Build a simple text-based gift card and trigger download
     const content = [
       '╔══════════════════════════════════════╗',
-      '║           🎁  HAMPLARD GIFT           ║',
+      '║           🎁  SOROBANLARD GIFT           ║',
       '╠══════════════════════════════════════╣',
       `║  To: ${recipient.padEnd(34)}║`,
       '║                                      ║',
@@ -58,7 +58,7 @@ function ConfirmationContent() {
       `║  ${claimUrl.slice(0, 38).padEnd(38)}║`,
       claimUrl.length > 38 ? `║  ${claimUrl.slice(38, 76).padEnd(38)}║` : null,
       '║                                      ║',
-      '║         hamplard.com                 ║',
+      '║         sorobanlard.com                 ║',
       '╚══════════════════════════════════════╝',
     ]
       .filter(Boolean)
@@ -68,7 +68,7 @@ function ConfirmationContent() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'hamplard-gift-card.txt';
+    a.download = 'sorobanlard-gift-card.txt';
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -149,7 +149,7 @@ function ConfirmationContent() {
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-0.5 text-saffron-500">2.</span>
-              They sign in or create a free Hamplard account.
+              They sign in or create a free SorobanLard account.
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-0.5 text-saffron-500">3.</span>

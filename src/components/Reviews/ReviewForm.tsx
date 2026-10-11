@@ -64,7 +64,7 @@ function StarSelector({ value, onChange, hasError }: StarSelectorProps) {
             onMouseLeave={() => setHovered(0)}
             onClick={() => onChange(value === s ? 0 : s)}
             className={cn(
-              'p-1 rounded-md transition-transform duration-100 active:scale-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary',
+              'p-1 rounded-md transition-transform duration-100 active:scale-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary',
               hasError && value === 0 && 'ring-1 ring-rose-400 rounded-md',
             )}
           >
@@ -86,14 +86,14 @@ function StarSelector({ value, onChange, hasError }: StarSelectorProps) {
         className={cn(
           'inline-flex items-center gap-1.5 px-3 py-0.5 rounded-pill text-xs font-semibold transition-all duration-150',
           active > 0
-            ? 'bg-hamplard-lilac text-hamplard-mid border border-hamplard-primary/30'
+            ? 'bg-sorobanlard-lilac text-sorobanlard-mid border border-sorobanlard-primary/30'
             : 'bg-gray-50 text-gray-400 border border-gray-200',
         )}
       >
         <span
           className={cn(
             'w-1.5 h-1.5 rounded-full transition-colors',
-            active > 0 ? 'bg-hamplard-primary' : 'bg-gray-300',
+            active > 0 ? 'bg-sorobanlard-primary' : 'bg-gray-300',
           )}
         />
         {active > 0 ? `${active} — ${STAR_LABELS[active]}` : 'No rating yet'}
@@ -150,7 +150,7 @@ function AttachmentPreviews({ attachments, onRemove }: AttachmentPreviewsProps) 
           {att.progress < 100 && (
             <div className="absolute inset-x-0 bottom-0 h-1 bg-black/20">
               <div
-                className="h-full bg-hamplard-primary transition-all duration-150"
+                className="h-full bg-sorobanlard-primary transition-all duration-150"
                 style={{ width: `${att.progress}%` }}
                 role="progressbar"
                 aria-valuenow={att.progress}
@@ -358,36 +358,36 @@ export function ReviewForm({
     return (
       <div
         className={cn(
-          'rounded-2xl border border-hamplard-primary/30 bg-white overflow-hidden',
+          'rounded-2xl border border-sorobanlard-primary/30 bg-white overflow-hidden',
           className,
         )}
       >
         {/* Accent bar */}
-        <div className="h-1 bg-gradient-to-r from-hamplard-primary via-hamplard-primary/70 to-hamplard-lilac" />
+        <div className="h-1 bg-gradient-to-r from-sorobanlard-primary via-sorobanlard-primary/70 to-sorobanlard-lilac" />
 
         <div className="p-6">
           {/* Success icon + message */}
           <div className="flex flex-col items-center text-center mb-6">
-            <div className="w-14 h-14 rounded-full bg-hamplard-primary flex items-center justify-center shadow-md mb-4">
+            <div className="w-14 h-14 rounded-full bg-sorobanlard-primary flex items-center justify-center shadow-md mb-4">
               <CheckCircle className="w-7 h-7 text-white" aria-hidden="true" />
             </div>
-            <h2 className="text-lg font-semibold text-hamplard-deep">
+            <h2 className="text-lg font-semibold text-sorobanlard-deep">
               {isEditMode ? 'Review updated!' : 'Thank you for your review!'}
             </h2>
             <p className="mt-1 text-sm text-semantic-text-muted">
               Your feedback helps others decide if{' '}
-              <strong className="text-hamplard-deep">{courseName}</strong> is right for them.
+              <strong className="text-sorobanlard-deep">{courseName}</strong> is right for them.
             </p>
           </div>
 
           {/* Review preview card */}
-          <div className="rounded-xl bg-hamplard-lilac/40 border border-hamplard-primary/20 p-4 mb-4">
+          <div className="rounded-xl bg-sorobanlard-lilac/40 border border-sorobanlard-primary/20 p-4 mb-4">
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-8 h-8 rounded-full bg-hamplard-primary flex items-center justify-center text-white text-xs font-bold shrink-0">
+              <div className="w-8 h-8 rounded-full bg-sorobanlard-primary flex items-center justify-center text-white text-xs font-bold shrink-0">
                 {(existingReview?.authorName ?? 'Y')[0].toUpperCase()}
               </div>
               <div>
-                <p className="text-xs font-semibold text-hamplard-deep">
+                <p className="text-xs font-semibold text-sorobanlard-deep">
                   {existingReview?.authorName ?? 'You'}
                 </p>
                 <p className="text-[10px] text-semantic-text-muted">Just now</p>
@@ -405,7 +405,7 @@ export function ReviewForm({
                 ))}
               </div>
             </div>
-            <p className="text-sm text-hamplard-deep whitespace-pre-wrap">{text}</p>
+            <p className="text-sm text-sorobanlard-deep whitespace-pre-wrap">{text}</p>
             {attachments.length > 0 && (
               <div className="mt-3">
                 <AttachmentPreviews attachments={attachments} onRemove={() => {}} />
@@ -416,7 +416,7 @@ export function ReviewForm({
           <button
             type="button"
             onClick={handleEdit}
-            className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-hamplard-primary/40 px-4 py-2.5 text-sm font-semibold text-hamplard-mid hover:bg-hamplard-lilac/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-sorobanlard-primary/40 px-4 py-2.5 text-sm font-semibold text-sorobanlard-mid hover:bg-sorobanlard-lilac/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
           >
             <Pencil className="w-4 h-4" aria-hidden="true" />
             Edit review
@@ -434,11 +434,11 @@ export function ReviewForm({
         className,
       )}
     >
-      <div className="h-1 bg-gradient-to-r from-hamplard-primary via-hamplard-primary/70 to-hamplard-lilac" />
+      <div className="h-1 bg-gradient-to-r from-sorobanlard-primary via-sorobanlard-primary/70 to-sorobanlard-lilac" />
 
       <div className="p-6 space-y-6">
         <div>
-          <h2 className="text-lg font-semibold text-hamplard-deep">
+          <h2 className="text-lg font-semibold text-sorobanlard-deep">
             {isEditMode ? 'Edit your review' : `Review ${courseName}`}
           </h2>
           <p className="mt-1 text-sm text-semantic-text-muted">
@@ -464,7 +464,7 @@ export function ReviewForm({
         <div>
           <label
             htmlFor="review-text"
-            className="block text-sm font-medium text-hamplard-deep mb-1.5"
+            className="block text-sm font-medium text-sorobanlard-deep mb-1.5"
           >
             Your review
           </label>
@@ -475,7 +475,7 @@ export function ReviewForm({
             rows={5}
             placeholder={`What stood out? What could be better? (min ${MIN_CHARS} characters)`}
             className={cn(
-              'w-full rounded-xl border px-3.5 py-2.5 text-sm text-hamplard-deep placeholder:text-gray-400 resize-y focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary',
+              'w-full rounded-xl border px-3.5 py-2.5 text-sm text-sorobanlard-deep placeholder:text-gray-400 resize-y focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary',
               errors.text ? 'border-rose-400' : 'border-gray-200',
             )}
           />
@@ -504,7 +504,7 @@ export function ReviewForm({
 
         {/* Attachments */}
         <div>
-          <p className="block text-sm font-medium text-hamplard-deep mb-1.5">
+          <p className="block text-sm font-medium text-sorobanlard-deep mb-1.5">
             Add photos or a video{' '}
             <span className="font-normal text-semantic-text-muted">(optional)</span>
           </p>
@@ -513,7 +513,7 @@ export function ReviewForm({
             <button
               type="button"
               onClick={() => imageInputRef.current?.click()}
-              className="inline-flex items-center gap-2 rounded-xl border border-gray-200 px-3 py-2 text-xs font-semibold text-hamplard-mid hover:bg-hamplard-lilac/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+              className="inline-flex items-center gap-2 rounded-xl border border-gray-200 px-3 py-2 text-xs font-semibold text-sorobanlard-mid hover:bg-sorobanlard-lilac/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
             >
               <ImagePlus className="w-4 h-4" aria-hidden="true" />
               Add images
@@ -521,7 +521,7 @@ export function ReviewForm({
             <button
               type="button"
               onClick={() => videoInputRef.current?.click()}
-              className="inline-flex items-center gap-2 rounded-xl border border-gray-200 px-3 py-2 text-xs font-semibold text-hamplard-mid hover:bg-hamplard-lilac/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+              className="inline-flex items-center gap-2 rounded-xl border border-gray-200 px-3 py-2 text-xs font-semibold text-sorobanlard-mid hover:bg-sorobanlard-lilac/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
             >
               <Video className="w-4 h-4" aria-hidden="true" />
               Add video
@@ -574,10 +574,10 @@ export function ReviewForm({
           onClick={handleSubmit}
           disabled={loading}
           className={cn(
-            'w-full inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary',
+            'w-full inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary',
             isFilled
-              ? 'bg-hamplard-primary hover:bg-hamplard-mid'
-              : 'bg-hamplard-primary/50 cursor-not-allowed',
+              ? 'bg-sorobanlard-primary hover:bg-sorobanlard-mid'
+              : 'bg-sorobanlard-primary/50 cursor-not-allowed',
           )}
         >
           {loading && <Loader2 className="w-4 h-4 animate-spin" aria-hidden="true" />}

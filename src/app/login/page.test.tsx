@@ -95,7 +95,7 @@ describe('LoginPage integration', () => {
     await waitFor(() => {
       expect(mockPush).toHaveBeenCalledWith('/dashboard');
     });
-    expect(localStorage.getItem('hamplard_token')).toBe('token-123');
+    expect(localStorage.getItem('sorobanlard_token')).toBe('token-123');
   });
 
   it('shows an inline error message when the API rejects with invalid credentials', async () => {

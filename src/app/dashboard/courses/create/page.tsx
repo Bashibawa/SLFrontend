@@ -101,7 +101,7 @@ export default function CreateCoursePage() {
 
       <h1 className="section-heading mb-1">Create a new course</h1>
       <p className="text-sm text-ink-500 mb-6">
-        Fill in the details below. After submission, your course will be reviewed by the Hamplard team before going live.
+        Fill in the details below. After submission, your course will be reviewed by the SorobanLard team before going live.
       </p>
 
       {error && (

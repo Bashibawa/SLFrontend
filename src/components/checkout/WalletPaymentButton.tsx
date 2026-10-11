@@ -47,7 +47,7 @@ export function WalletPaymentButton({
   amount,
   currency = 'usd',
   country = 'US',
-  label = 'Hamplard courses',
+  label = 'SorobanLard courses',
   disabled = false,
   confirmPayment,
   onSuccess,

@@ -271,7 +271,7 @@ export function Quiz({
             onClick={handleRetake}
             className={cn(
               'inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium',
-              'bg-hamplard-primary text-white hover:bg-hamplard-mid transition-colors',
+              'bg-sorobanlard-primary text-white hover:bg-sorobanlard-mid transition-colors',
             )}
           >
             <RotateCcw className="h-4 w-4" />
@@ -331,7 +331,7 @@ export function Quiz({
         </div>
         <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-ink-100">
           <div
-            className="h-full rounded-full bg-hamplard-primary transition-all duration-300"
+            className="h-full rounded-full bg-sorobanlard-primary transition-all duration-300"
             style={{
               width: `${((currentIndex + 1) / total) * 100}%`,
             }}
@@ -358,7 +358,7 @@ export function Quiz({
               placeholder="Type your answer..."
               className={cn(
                 'w-full rounded-lg border px-4 py-3 text-sm text-ink-900 placeholder:text-ink-400',
-                'focus:outline-none focus:ring-2 focus:ring-hamplard-primary/40',
+                'focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary/40',
                 isSubmitted && isCorrect && 'border-emerald-500 bg-emerald-50',
                 isSubmitted && !isCorrect && 'border-rose-500 bg-rose-50',
                 !isSubmitted && 'border-ink-200',
@@ -386,7 +386,7 @@ export function Quiz({
                   'flex w-full items-center gap-3 rounded-lg border px-4 py-3 text-left text-sm transition-all',
                   isSelected &&
                     !isSubmitted &&
-                    'border-[#7F77DD] bg-hamplard-lilac/50',
+                    'border-[#7F77DD] bg-sorobanlard-lilac/50',
                   showCorrect && 'border-emerald-500 bg-emerald-50',
                   showIncorrect && 'border-rose-500 bg-rose-50',
                   !isSelected &&
@@ -484,7 +484,7 @@ export function Quiz({
             className={cn(
               'rounded-lg px-4 py-2 text-sm font-medium transition-colors',
               selectedAnswer
-                ? 'bg-hamplard-primary text-white hover:bg-hamplard-mid'
+                ? 'bg-sorobanlard-primary text-white hover:bg-sorobanlard-mid'
                 : 'cursor-not-allowed bg-ink-100 text-ink-400',
             )}
           >
@@ -494,7 +494,7 @@ export function Quiz({
           <button
             type="button"
             onClick={handleNext}
-            className="inline-flex items-center gap-1 rounded-lg bg-hamplard-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-hamplard-mid"
+            className="inline-flex items-center gap-1 rounded-lg bg-sorobanlard-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-sorobanlard-mid"
           >
             {isLastQuestion ? 'See Results' : 'Next'}
             {!isLastQuestion && <ChevronRight className="h-4 w-4" />}

@@ -425,7 +425,7 @@ function SearchPageContent() {
                 {hasActiveFilters && (
                   <button
                     onClick={clearFilters}
-                    className="text-sm font-medium text-hamplard-mid hover:underline"
+                    className="text-sm font-medium text-sorobanlard-mid hover:underline"
                   >
                     Clear all
                   </button>
@@ -454,12 +454,12 @@ function SearchPageContent() {
               <button
                 type="button"
                 onClick={() => setShowFilters(true)}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-hamplard-lilac px-4 py-2 text-sm font-medium text-hamplard-deep transition-colors hover:bg-saffron-100"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-sorobanlard-lilac px-4 py-2 text-sm font-medium text-sorobanlard-deep transition-colors hover:bg-saffron-100"
               >
                 <SlidersHorizontal className="h-4 w-4" />
                 Show Filters
                 {filterCount > 0 && (
-                  <span className="ml-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-hamplard-primary px-1.5 text-xs font-semibold text-white">
+                  <span className="ml-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-sorobanlard-primary px-1.5 text-xs font-semibold text-white">
                     {filterCount}
                   </span>
                 )}

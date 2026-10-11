@@ -134,7 +134,7 @@ function PriceRangeSlider({ value, onChange }: PriceRangeSliderProps) {
             value={localMin}
             onChange={(e) => handleMinChange(Number(e.target.value))}
             aria-label="Minimum price"
-            className="w-full rounded-lg border border-ink-200 bg-white px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-hamplard-primary"
+            className="w-full rounded-lg border border-ink-200 bg-white px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary"
           />
         </label>
         <span className="text-xs text-ink-400">to</span>
@@ -149,7 +149,7 @@ function PriceRangeSlider({ value, onChange }: PriceRangeSliderProps) {
             value={localMax}
             onChange={(e) => handleMaxChange(Number(e.target.value))}
             aria-label="Maximum price"
-            className="w-full rounded-lg border border-ink-200 bg-white px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-hamplard-primary"
+            className="w-full rounded-lg border border-ink-200 bg-white px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary"
           />
         </label>
       </div>
@@ -157,7 +157,7 @@ function PriceRangeSlider({ value, onChange }: PriceRangeSliderProps) {
       <div className="relative h-6">
         <div className="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded-full bg-ink-100" />
         <div
-          className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-hamplard-primary"
+          className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-sorobanlard-primary"
           style={{ left: `${minPercent}%`, right: `${100 - maxPercent}%` }}
         />
         <input
@@ -172,7 +172,7 @@ function PriceRangeSlider({ value, onChange }: PriceRangeSliderProps) {
           aria-valuemin={PRICE_SLIDER_MIN}
           aria-valuemax={localMax}
           aria-valuenow={localMin}
-          className="pointer-events-none absolute inset-0 h-6 w-full cursor-pointer appearance-none bg-transparent [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-hamplard-primary [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-hamplard-primary"
+          className="pointer-events-none absolute inset-0 h-6 w-full cursor-pointer appearance-none bg-transparent [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-sorobanlard-primary [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-sorobanlard-primary"
         />
         <input
           type="range"
@@ -186,7 +186,7 @@ function PriceRangeSlider({ value, onChange }: PriceRangeSliderProps) {
           aria-valuemin={localMin}
           aria-valuemax={PRICE_SLIDER_MAX}
           aria-valuenow={localMax}
-          className="pointer-events-none absolute inset-0 h-6 w-full cursor-pointer appearance-none bg-transparent [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-hamplard-primary [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-hamplard-primary"
+          className="pointer-events-none absolute inset-0 h-6 w-full cursor-pointer appearance-none bg-transparent [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-sorobanlard-primary [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-sorobanlard-primary"
         />
       </div>
     </div>
@@ -234,7 +234,7 @@ export function FilterPanel({ courses, showSort = true, className }: FilterPanel
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
               aria-label="Sort results"
-              className="w-full cursor-pointer appearance-none rounded-lg border border-ink-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-hamplard-primary"
+              className="w-full cursor-pointer appearance-none rounded-lg border border-ink-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary"
             >
               {SORT_OPTIONS.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -252,13 +252,13 @@ export function FilterPanel({ courses, showSort = true, className }: FilterPanel
           {categories.map((category) => (
             <label
               key={category}
-              className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-hamplard-primary"
+              className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-sorobanlard-primary"
             >
               <input
                 type="checkbox"
                 checked={selectedCategories.includes(category)}
                 onChange={() => toggleCategory(category)}
-                className="h-4 w-4 cursor-pointer rounded accent-hamplard-primary"
+                className="h-4 w-4 cursor-pointer rounded accent-sorobanlard-primary"
               />
               <span className="flex-1">{category}</span>
               <span className="text-xs text-ink-400">{countByCategory(category)}</span>
@@ -272,13 +272,13 @@ export function FilterPanel({ courses, showSort = true, className }: FilterPanel
           {levels.map((level) => (
             <label
               key={level}
-              className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-hamplard-primary"
+              className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-sorobanlard-primary"
             >
               <input
                 type="checkbox"
                 checked={selectedLevels.includes(level)}
                 onChange={() => toggleLevel(level)}
-                className="h-4 w-4 cursor-pointer rounded accent-hamplard-primary"
+                className="h-4 w-4 cursor-pointer rounded accent-sorobanlard-primary"
               />
               <span className="flex-1">{level}</span>
               <span className="text-xs text-ink-400">{countByLevel(level)}</span>
@@ -294,14 +294,14 @@ export function FilterPanel({ courses, showSort = true, className }: FilterPanel
             {PRICE_OPTIONS.map((option) => (
               <label
                 key={option.label}
-                className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-hamplard-primary"
+                className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-sorobanlard-primary"
               >
                 <input
                   type="radio"
                   name="price-range"
                   checked={priceRangesEqual(priceRange, option.range)}
                   onChange={() => setPriceRange(option.range)}
-                  className="h-4 w-4 cursor-pointer accent-hamplard-primary"
+                  className="h-4 w-4 cursor-pointer accent-sorobanlard-primary"
                 />
                 <span>{option.label}</span>
               </label>
@@ -315,14 +315,14 @@ export function FilterPanel({ courses, showSort = true, className }: FilterPanel
           {RATING_OPTIONS.map((option) => (
             <label
               key={option.value}
-              className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-hamplard-primary"
+              className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-sorobanlard-primary"
             >
               <input
                 type="radio"
                 name="min-rating"
                 checked={minRating === option.value}
                 onChange={() => setMinRating(option.value)}
-                className="h-4 w-4 cursor-pointer accent-hamplard-primary"
+                className="h-4 w-4 cursor-pointer accent-sorobanlard-primary"
               />
               {option.value > 0 ? (
                 <span className="flex items-center gap-1">
@@ -342,13 +342,13 @@ export function FilterPanel({ courses, showSort = true, className }: FilterPanel
           {DURATION_BUCKETS.map((bucket) => (
             <label
               key={bucket.value}
-              className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-hamplard-primary"
+              className="flex cursor-pointer items-center gap-2 text-sm text-ink-700 transition-colors hover:text-sorobanlard-primary"
             >
               <input
                 type="checkbox"
                 checked={selectedDurations.includes(bucket.value)}
                 onChange={() => toggleDuration(bucket.value)}
-                className="h-4 w-4 cursor-pointer rounded accent-hamplard-primary"
+                className="h-4 w-4 cursor-pointer rounded accent-sorobanlard-primary"
               />
               <span className="flex-1">{bucket.label}</span>
               <span className="text-xs text-ink-400">{countByDuration(bucket.value)}</span>

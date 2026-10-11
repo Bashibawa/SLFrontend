@@ -61,7 +61,7 @@ const serializeJsonLd = (data: unknown) =>
  * Schema.org BreadcrumbList requires absolute URLs for the `item` property
  * (relative paths fail Rich Results validation). We resolve each href via
  * `absoluteUrl` from the seo helper so the origin is taken from
- * NEXT_PUBLIC_SITE_URL and falls back to `https://hamplard.com`. Hrefs that are
+ * NEXT_PUBLIC_SITE_URL and falls back to `https://sorobanlard.com`. Hrefs that are
  * already absolute are passed through unchanged.
  */
 const buildSchemaData = (items: BreadcrumbItem[]) => ({
@@ -91,7 +91,7 @@ function BreadcrumbList({
         return (
           <li key={`${item.label}-${item.originalIndex}-${index}`} className="inline-flex min-w-0 items-center gap-1">
             {shouldRenderLink ? (
-              <Link href={item.href as string} className="truncate transition-colors hover:text-hamplard-primary">
+              <Link href={item.href as string} className="truncate transition-colors hover:text-sorobanlard-primary">
                 {item.label}
               </Link>
             ) : (

@@ -2,7 +2,7 @@
 
 ## Overview
 
-A frictionless shopping cart and multi-step checkout experience for Hamplard course purchases. The implementation spans cart listing, promo code validation, and a three-step checkout flow (Review, Payment, Confirmation) with clear error states and mobile-responsive layouts.
+A frictionless shopping cart and multi-step checkout experience for SorobanLard course purchases. The implementation spans cart listing, promo code validation, and a three-step checkout flow (Review, Payment, Confirmation) with clear error states and mobile-responsive layouts.
 
 ---
 

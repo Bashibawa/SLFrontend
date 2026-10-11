@@ -89,8 +89,8 @@ export function Sidebar() {
         'flex items-center border-b border-ink-100 py-5',
         collapsed ? 'justify-center px-2' : 'justify-between px-5',
       )}>
-        <Link href="/" aria-label="Hamplard" className="font-display text-xl font-semibold text-ink-900">
-          {collapsed ? 'H' : 'Hamplard'}
+        <Link href="/" aria-label="SorobanLard" className="font-display text-xl font-semibold text-ink-900">
+          {collapsed ? 'H' : 'SorobanLard'}
         </Link>
         {!collapsed && isInstructor && (
           <span className="ml-2 text-[10px] font-medium text-saffron-600 bg-saffron-50 px-1.5 py-0.5 rounded-md">

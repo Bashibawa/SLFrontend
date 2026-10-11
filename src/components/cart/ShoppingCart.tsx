@@ -80,10 +80,10 @@ function ShoppingCartContent({ isOpen = true, onClose }: ShoppingCartProps) {
       {/* Header */}
       <div className="flex items-center justify-between border-b border-ink-100 px-4 py-4">
         <div className="flex items-center gap-2">
-          <ShoppingBag className="w-5 h-5 text-hamplard-primary" />
+          <ShoppingBag className="w-5 h-5 text-sorobanlard-primary" />
           <h2 className="text-lg font-semibold text-ink-900">Shopping Cart</h2>
           {itemCount > 0 && (
-            <span className="bg-hamplard-primary text-white text-xs font-semibold px-2 py-0.5 rounded-full">
+            <span className="bg-sorobanlard-primary text-white text-xs font-semibold px-2 py-0.5 rounded-full">
               {itemCount}
             </span>
           )}
@@ -91,7 +91,7 @@ function ShoppingCartContent({ isOpen = true, onClose }: ShoppingCartProps) {
         {onClose && (
           <button
             onClick={onClose}
-            className="p-1 hover:bg-ink-50 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-hamplard-primary"
+            className="p-1 hover:bg-ink-50 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary"
             aria-label="Close cart"
           >
             <X className="w-5 h-5 text-ink-500" />
@@ -143,9 +143,9 @@ function ShoppingCartContent({ isOpen = true, onClose }: ShoppingCartProps) {
                     {item.course.title}
                   </h3>
                   <p className="text-xs text-ink-500 mt-1">
-                    by {item.course.instructor?.name || 'Hamplard Instructor'}
+                    by {item.course.instructor?.name || 'SorobanLard Instructor'}
                   </p>
-                  <p className="text-base font-bold text-hamplard-primary mt-2">
+                  <p className="text-base font-bold text-sorobanlard-primary mt-2">
                     {formatUsdc(item.course.price)}
                   </p>
                 </div>
@@ -183,13 +183,13 @@ function ShoppingCartContent({ isOpen = true, onClose }: ShoppingCartProps) {
                     setPromoCode(e.target.value.toUpperCase());
                     setPromoError(null);
                   }}
-                  className="flex-1 px-3 py-2 text-sm border border-ink-200 rounded-lg focus:ring-2 focus:ring-hamplard-primary focus:border-transparent"
+                  className="flex-1 px-3 py-2 text-sm border border-ink-200 rounded-lg focus:ring-2 focus:ring-sorobanlard-primary focus:border-transparent"
                   disabled={isValidatingPromo}
                 />
                 <button
                   onClick={handleApplyPromo}
                   disabled={isValidatingPromo || !promoCode.trim()}
-                  className="px-3 py-2 text-sm font-medium bg-hamplard-primary text-white rounded-lg hover:bg-hamplard-mid disabled:bg-ink-200 disabled:cursor-not-allowed transition-colors"
+                  className="px-3 py-2 text-sm font-medium bg-sorobanlard-primary text-white rounded-lg hover:bg-sorobanlard-mid disabled:bg-ink-200 disabled:cursor-not-allowed transition-colors"
                 >
                   {isValidatingPromo ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
@@ -247,7 +247,7 @@ function ShoppingCartContent({ isOpen = true, onClose }: ShoppingCartProps) {
           <div className="pt-2 border-t border-ink-200">
             <div className="flex items-center justify-between mb-3">
               <span className="text-base font-semibold text-ink-900">Total</span>
-              <span className="text-xl font-bold text-hamplard-primary">{formatUsdc(finalPrice)}</span>
+              <span className="text-xl font-bold text-sorobanlard-primary">{formatUsdc(finalPrice)}</span>
             </div>
 
             {/* Action Buttons */}

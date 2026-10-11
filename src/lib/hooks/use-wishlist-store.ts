@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
-const STORAGE_KEY = 'hamplard_wishlist';
+const STORAGE_KEY = 'sorobanlard_wishlist';
 
 interface WishlistStore {
   courseIds: string[];

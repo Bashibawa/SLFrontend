@@ -143,7 +143,7 @@ export function NewReleasesClient() {
           </h1>
 
           <p className="mt-3 max-w-2xl text-sm text-ink-500 sm:text-base">
-            Explore the latest courses published on Hamplard within the last 90
+            Explore the latest courses published on SorobanLard within the last 90
             days.
           </p>
         </header>

@@ -46,10 +46,10 @@ export function QnaQuestionForm({ onSubmit, className }: QnaQuestionFormProps) {
 
   return (
     <div className={cn('rounded-2xl border border-semantic-border bg-white p-5', className)}>
-      <h3 className="text-sm font-semibold text-hamplard-deep mb-3">Ask a question</h3>
+      <h3 className="text-sm font-semibold text-sorobanlard-deep mb-3">Ask a question</h3>
 
       <div className="mb-3">
-        <label htmlFor="qna-title" className="block text-xs font-semibold text-hamplard-deep mb-1.5">
+        <label htmlFor="qna-title" className="block text-xs font-semibold text-sorobanlard-deep mb-1.5">
           Title
         </label>
         <input
@@ -61,8 +61,8 @@ export function QnaQuestionForm({ onSubmit, className }: QnaQuestionFormProps) {
           placeholder="What's your question about?"
           aria-invalid={!!errors.title}
           className={cn(
-            'w-full rounded-xl border px-3.5 py-2.5 text-sm text-hamplard-deep bg-white placeholder:text-gray-300 transition-colors',
-            'focus:outline-none focus:ring-2 focus:ring-hamplard-primary focus:border-hamplard-primary',
+            'w-full rounded-xl border px-3.5 py-2.5 text-sm text-sorobanlard-deep bg-white placeholder:text-gray-300 transition-colors',
+            'focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary focus:border-sorobanlard-primary',
             errors.title ? 'border-rose-400' : 'border-semantic-border',
           )}
         />
@@ -70,7 +70,7 @@ export function QnaQuestionForm({ onSubmit, className }: QnaQuestionFormProps) {
       </div>
 
       <div className="mb-4">
-        <label htmlFor="qna-body" className="block text-xs font-semibold text-hamplard-deep mb-1.5">
+        <label htmlFor="qna-body" className="block text-xs font-semibold text-sorobanlard-deep mb-1.5">
           Details
         </label>
         <textarea
@@ -82,8 +82,8 @@ export function QnaQuestionForm({ onSubmit, className }: QnaQuestionFormProps) {
           placeholder="Add any detail that will help others (or your instructor) answer well…"
           aria-invalid={!!errors.body}
           className={cn(
-            'w-full resize-y rounded-xl border px-3.5 py-2.5 text-sm text-hamplard-deep leading-relaxed bg-white placeholder:text-gray-300 transition-colors',
-            'focus:outline-none focus:ring-2 focus:ring-hamplard-primary focus:border-hamplard-primary',
+            'w-full resize-y rounded-xl border px-3.5 py-2.5 text-sm text-sorobanlard-deep leading-relaxed bg-white placeholder:text-gray-300 transition-colors',
+            'focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary focus:border-sorobanlard-primary',
             errors.body ? 'border-rose-400' : 'border-semantic-border',
           )}
         />
@@ -101,7 +101,7 @@ export function QnaQuestionForm({ onSubmit, className }: QnaQuestionFormProps) {
         className={cn(
           'inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all',
           isFilled && !loading
-            ? 'bg-hamplard-primary text-white hover:bg-hamplard-mid active:bg-hamplard-deep shadow-sm'
+            ? 'bg-sorobanlard-primary text-white hover:bg-sorobanlard-mid active:bg-sorobanlard-deep shadow-sm'
             : 'bg-gray-100 text-gray-400',
         )}
       >

@@ -485,11 +485,11 @@ export function AvatarUpload({ currentAvatarUrl, userName, onSaved }: Props) {
 
       {/* ── Avatar ring ── */}
       <div className="relative">
-        <div className="h-24 w-24 rounded-full overflow-hidden ring-4 ring-white shadow-md bg-hamplard-lilac flex items-center justify-center">
+        <div className="h-24 w-24 rounded-full overflow-hidden ring-4 ring-white shadow-md bg-sorobanlard-lilac flex items-center justify-center">
           {displayUrl ? (
             <img src={displayUrl} alt="Avatar preview" className="h-full w-full object-cover" />
           ) : (
-            <span className="text-3xl font-bold text-hamplard-primary">{initials}</span>
+            <span className="text-3xl font-bold text-sorobanlard-primary">{initials}</span>
           )}
         </div>
 
@@ -497,7 +497,7 @@ export function AvatarUpload({ currentAvatarUrl, userName, onSaved }: Props) {
           type="button"
           onClick={() => { setSaved(false); inputRef.current?.click(); }}
           aria-label="Change profile photo"
-          className="absolute bottom-0 right-0 flex h-7 w-7 items-center justify-center rounded-full bg-hamplard-primary text-white shadow ring-2 ring-white transition hover:bg-hamplard-mid"
+          className="absolute bottom-0 right-0 flex h-7 w-7 items-center justify-center rounded-full bg-sorobanlard-primary text-white shadow ring-2 ring-white transition hover:bg-sorobanlard-mid"
         >
           <Camera className="h-3.5 w-3.5" />
         </button>
@@ -531,7 +531,7 @@ export function AvatarUpload({ currentAvatarUrl, userName, onSaved }: Props) {
               height={CANVAS_SIZE}
               tabIndex={0}
               aria-label="Crop area. Drag or use arrow keys to reposition; pinch, scroll, or plus and minus keys to zoom."
-              className="aspect-square w-full cursor-grab touch-none active:cursor-grabbing focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+              className="aspect-square w-full cursor-grab touch-none active:cursor-grabbing focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
               style={{ maxWidth: CANVAS_SIZE }}
               onPointerDown={handlePointerDown}
               onPointerMove={handlePointerMove}
@@ -552,7 +552,7 @@ export function AvatarUpload({ currentAvatarUrl, userName, onSaved }: Props) {
               step={0.01}
               value={zoom}
               onChange={(e) => applyZoom(Number(e.target.value))}
-              className="flex-1 accent-hamplard-primary"
+              className="flex-1 accent-sorobanlard-primary"
               aria-label="Zoom"
               aria-valuetext={`${Math.round(zoom * 100)}%`}
             />
@@ -572,7 +572,7 @@ export function AvatarUpload({ currentAvatarUrl, userName, onSaved }: Props) {
             <button
               type="button"
               onClick={handleCrop}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-hamplard-primary px-4 py-1.5 text-xs font-semibold text-white hover:bg-hamplard-mid transition"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-sorobanlard-primary px-4 py-1.5 text-xs font-semibold text-white hover:bg-sorobanlard-mid transition"
             >
               <Check className="h-3.5 w-3.5" />
               Crop
@@ -589,7 +589,7 @@ export function AvatarUpload({ currentAvatarUrl, userName, onSaved }: Props) {
             <img
               src={previewSrc}
               alt="Cropped preview"
-              className="h-16 w-16 rounded-full object-cover ring-2 ring-hamplard-lilac shrink-0"
+              className="h-16 w-16 rounded-full object-cover ring-2 ring-sorobanlard-lilac shrink-0"
             />
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-ink-800">Looks good?</p>
@@ -605,7 +605,7 @@ export function AvatarUpload({ currentAvatarUrl, userName, onSaved }: Props) {
                   className="mt-2 h-1.5 w-full rounded-full bg-ink-100 overflow-hidden"
                 >
                   <div
-                    className="h-full rounded-full bg-hamplard-primary transition-all duration-150"
+                    className="h-full rounded-full bg-sorobanlard-primary transition-all duration-150"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
@@ -627,7 +627,7 @@ export function AvatarUpload({ currentAvatarUrl, userName, onSaved }: Props) {
               type="button"
               onClick={handleSave}
               disabled={uploading}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-hamplard-primary px-4 py-1.5 text-xs font-semibold text-white hover:bg-hamplard-mid transition disabled:opacity-60"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-sorobanlard-primary px-4 py-1.5 text-xs font-semibold text-white hover:bg-sorobanlard-mid transition disabled:opacity-60"
             >
               {uploading ? (
                 <>

@@ -1,5 +1,5 @@
 /**
- * Hamplard Design Tokens
+ * SorobanLard Design Tokens
  * Baseline: light mode
  * Extension hook: [data-theme='dark']
  */
@@ -358,7 +358,7 @@
   text-transform: var(--type-overline-transform);
 }
 
-/* Hamplard semantic UI text roles */
+/* SorobanLard semantic UI text roles */
 .type-course-title {
   font-family: var(--type-h4-family);
   font-size: var(--type-h4-size);

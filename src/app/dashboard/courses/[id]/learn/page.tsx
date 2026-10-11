@@ -15,7 +15,7 @@ import { AutoplayCountdown } from '@/components/learn/AutoplayCountdown';
 import type { Course, Enrollment, Lesson } from '@/types';
 
 // ── Constants ──────────────────────────────────────────────────────────────
-const AUTOPLAY_STORAGE_KEY = 'hamplard:autoplay';
+const AUTOPLAY_STORAGE_KEY = 'sorobanlard:autoplay';
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 

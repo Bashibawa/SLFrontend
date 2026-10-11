@@ -280,7 +280,7 @@ export function CurriculumAccordion({
         <button
           type="button"
           onClick={toggleAll}
-          className="text-sm font-medium text-hamplard-primary transition-colors hover:text-hamplard-mid"
+          className="text-sm font-medium text-sorobanlard-primary transition-colors hover:text-sorobanlard-mid"
         >
           {allExpanded ? 'Collapse All' : 'Expand All'}
         </button>
@@ -338,7 +338,7 @@ export function CurriculumAccordion({
                   aria-label={`${mod.title} progress`}
                 >
                   <div
-                    className="h-full rounded-full bg-hamplard-primary transition-all duration-300"
+                    className="h-full rounded-full bg-sorobanlard-primary transition-all duration-300"
                     style={{ width: `${progressPct}%` }}
                   />
                 </div>
@@ -355,7 +355,7 @@ export function CurriculumAccordion({
                       key={lesson.id}
                       className={cn(
                         'flex items-center gap-3 border-t border-ink-100 px-4 py-3',
-                        lesson.id === activeLessonId && 'bg-hamplard-primary/5',
+                        lesson.id === activeLessonId && 'bg-sorobanlard-primary/5',
                       )}
                     >
                       <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-ink-100 text-ink-500">
@@ -369,7 +369,7 @@ export function CurriculumAccordion({
                         {lesson.title}
                       </span>
                       {lesson.isFree && (
-                        <span className="rounded bg-hamplard-primary/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-hamplard-primary">
+                        <span className="rounded bg-sorobanlard-primary/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-sorobanlard-primary">
                           Free
                         </span>
                       )}

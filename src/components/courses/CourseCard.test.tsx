@@ -46,7 +46,7 @@ vi.mock('@/lib/utils', () => ({
   cn: (...args: string[]) => args.filter(Boolean).join(' '),
   courseTotalMins: vi.fn((mins: number) => Math.floor(mins / 60)),
   formatUsdc: vi.fn((price: number) => `$${price.toFixed(2)}`),
-  levelChip: vi.fn(() => 'bg-hamplard-lilac text-hamplard-deep px-2 py-1 text-xs rounded'),
+  levelChip: vi.fn(() => 'bg-sorobanlard-lilac text-sorobanlard-deep px-2 py-1 text-xs rounded'),
 }));
 
 const mockCourse: Course = {

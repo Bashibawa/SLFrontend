@@ -71,7 +71,7 @@ interface NotificationRowProps {
 function NotificationRow({ notification: n, onRead }: NotificationRowProps) {
   const router = useRouter();
   const href = notificationHref(n);
-  const avatarBg = TYPE_AVATAR_BG[n.type] ?? 'bg-hamplard-primary';
+  const avatarBg = TYPE_AVATAR_BG[n.type] ?? 'bg-sorobanlard-primary';
 
   function handleClick() {
     if (!n.read) onRead(n.id);
@@ -84,7 +84,7 @@ function NotificationRow({ notification: n, onRead }: NotificationRowProps) {
       onClick={handleClick}
       className={cn(
         'flex w-full items-start gap-3 px-4 py-3 text-left transition-colors',
-        'focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary focus-visible:ring-inset',
+        'focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-inset',
         n.read
           ? 'opacity-70 hover:bg-white/5'
           : 'hover:bg-white/10',
@@ -121,7 +121,7 @@ function NotificationRow({ notification: n, onRead }: NotificationRowProps) {
       {/* Unread dot */}
       {!n.read && (
         <span
-          className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-hamplard-primary"
+          className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-sorobanlard-primary"
           aria-hidden="true"
         />
       )}
@@ -188,7 +188,7 @@ export function NotificationDropdown() {
         ref={triggerRef}
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="relative rounded-lg p-2 text-white/80 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+        className="relative rounded-lg p-2 text-white/80 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
         aria-label={
           unreadCount > 0
             ? `Notifications — ${unreadCount} unread`
@@ -202,7 +202,7 @@ export function NotificationDropdown() {
         {/* Unread badge */}
         {unreadCount > 0 && (
           <span
-            className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-hamplard-primary text-[10px] font-bold text-white"
+            className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-sorobanlard-primary text-[10px] font-bold text-white"
             aria-hidden="true"
           >
             {unreadCount > 9 ? '9+' : unreadCount}
@@ -228,7 +228,7 @@ export function NotificationDropdown() {
               <button
                 type="button"
                 onClick={markAllRead}
-                className="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs text-white/70 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+                className="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs text-white/70 transition-colors hover:bg-white/10 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
               >
                 <CheckCheck className="h-3.5 w-3.5" />
                 Mark all read
@@ -241,7 +241,7 @@ export function NotificationDropdown() {
             {loading ? (
               /* Loading state */
               <div className="flex justify-center py-10">
-                <Loader2 className="h-5 w-5 animate-spin text-hamplard-primary" />
+                <Loader2 className="h-5 w-5 animate-spin text-sorobanlard-primary" />
               </div>
             ) : notifications.length === 0 ? (
               /* Empty state */
@@ -284,7 +284,7 @@ export function NotificationDropdown() {
             <Link
               href="/notifications"
               onClick={() => setOpen(false)}
-              className="block text-center text-xs font-medium text-hamplard-primary transition-colors hover:text-white focus:outline-none focus-visible:underline"
+              className="block text-center text-xs font-medium text-sorobanlard-primary transition-colors hover:text-white focus:outline-none focus-visible:underline"
             >
               View all notifications
             </Link>

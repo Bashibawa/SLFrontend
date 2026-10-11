@@ -5,10 +5,10 @@ import type { Metadata } from 'next';
  * so set NEXT_PUBLIC_SITE_URL per environment (preview deploys, staging) to stop
  * canonicals from pointing at production.
  */
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://hamplard.com').replace(/\/+$/, '');
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://sorobanlard.com').replace(/\/+$/, '');
 
 export const siteConfig = {
-  name: 'Hamplard',
+  name: 'SorobanLard',
   url: siteUrl,
   description:
     'Learn practical skills — tailoring, makeup, baking, photography and more. Africa\'s online vocational skills platform.',
@@ -45,7 +45,7 @@ export function absoluteUrl(path: string): string {
 }
 
 type PageSeo = {
-  /** Page-level title; the root layout appends " | Hamplard". */
+  /** Page-level title; the root layout appends " | SorobanLard". */
   title?: string;
   description?: string;
   /** Path this page is canonically served from, e.g. `/courses`. */
@@ -58,7 +58,7 @@ type PageSeo = {
 
 /**
  * Builds the per-page metadata block: canonical, Open Graph and Twitter Card.
- * Open Graph titles are spelled out in full because the `%s | Hamplard` template
+ * Open Graph titles are spelled out in full because the `%s | SorobanLard` template
  * only applies to the `<title>` tag, not to og:title / twitter:title.
  */
 export function buildMetadata({

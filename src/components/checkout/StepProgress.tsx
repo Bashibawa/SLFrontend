@@ -34,7 +34,7 @@ export function StepProgress({ currentStep, className }: StepProgressProps) {
                     isCompleted &&
                       'bg-leaf-600 text-white shadow-md shadow-leaf-600/20',
                     isCurrent &&
-                      'bg-hamplard-primary text-white shadow-md shadow-hamplard-primary/20 ring-2 ring-hamplard-primary/30',
+                      'bg-sorobanlard-primary text-white shadow-md shadow-sorobanlard-primary/20 ring-2 ring-sorobanlard-primary/30',
                     isFuture && 'bg-ink-100 text-ink-400',
                   )}
                   aria-current={isCurrent ? 'step' : undefined}
@@ -51,7 +51,7 @@ export function StepProgress({ currentStep, className }: StepProgressProps) {
                   className={cn(
                     'mt-1.5 text-[11px] font-medium uppercase tracking-[0.08em] transition-colors duration-300',
                     isCompleted && 'text-leaf-700',
-                    isCurrent && 'text-hamplard-primary font-semibold',
+                    isCurrent && 'text-sorobanlard-primary font-semibold',
                     isFuture && 'text-ink-400',
                   )}
                 >

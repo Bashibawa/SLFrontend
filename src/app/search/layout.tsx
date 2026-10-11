@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 // noindexed to avoid thin, near-duplicate URLs — links out of it are still followed.
 export const metadata: Metadata = buildMetadata({
   title: 'Search Courses',
-  description: 'Search Hamplard for courses by title, category, instructor or skill.',
+  description: 'Search SorobanLard for courses by title, category, instructor or skill.',
   path: '/search',
   noIndex: true,
 });

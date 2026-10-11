@@ -122,7 +122,7 @@ export default function InstructorStudentsPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-16">
-        <span className="h-2.5 w-2.5 rounded-full bg-hamplard-primary animate-pulse" />
+        <span className="h-2.5 w-2.5 rounded-full bg-sorobanlard-primary animate-pulse" />
         <span className="ml-3 text-sm text-ink-500">Loading students…</span>
       </div>
     );
@@ -156,8 +156,8 @@ export default function InstructorStudentsPage() {
           icon={Users}
           label="Total students"
           value={totalStudents}
-          color="text-hamplard-primary"
-          bg="bg-hamplard-lilac/40"
+          color="text-sorobanlard-primary"
+          bg="bg-sorobanlard-lilac/40"
         />
         <StatCard
           icon={TrendingUp}

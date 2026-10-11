@@ -5,16 +5,16 @@ import { Award, CheckCircle2, XCircle, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { SocialShare } from '@/components/ui/SocialShare';
 
-const DEFAULT_OG_IMAGE = '/hamplard-og.svg';
+const DEFAULT_OG_IMAGE = '/sorobanlard-og.svg';
 
-const DEFAULT_OG_IMAGE = '/hamplard-og.svg';
+const DEFAULT_OG_IMAGE = '/sorobanlard-og.svg';
 
 interface Props { params: { id: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const defaultTitle = 'Hamplard Certificate';
+  const defaultTitle = 'SorobanLard Certificate';
   const defaultDescription =
-    'Verify Hamplard certificate ownership and completion details for students and courses.';
+    'Verify SorobanLard certificate ownership and completion details for students and courses.';
 
   try {
     const result = await certificatesApi.verify(params.id);
@@ -22,9 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const studentName =
       cert?.student?.name ||
       (cert?.student?.stellarAddress ? shortAddress(cert.student.stellarAddress, 6) : 'Learner');
-    const courseTitle = cert?.courseTitle ?? cert?.course?.title ?? 'Hamplard course';
-    const title = `${studentName} • ${courseTitle} | Hamplard Certificate`;
-    const description = `${studentName} completed ${courseTitle} on Hamplard. Verify certificate ${params.id}.`;
+    const courseTitle = cert?.courseTitle ?? cert?.course?.title ?? 'SorobanLard course';
+    const title = `${studentName} • ${courseTitle} | SorobanLard Certificate`;
+    const description = `${studentName} completed ${courseTitle} on SorobanLard. Verify certificate ${params.id}.`;
 
     return {
       title,
@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title,
         description,
-        url: `https://hamplard.app/certificates/${params.id}`,
-        siteName: 'Hamplard',
+        url: `https://sorobanlard.app/certificates/${params.id}`,
+        siteName: 'SorobanLard',
         type: 'article',
         images: [{ url: DEFAULT_OG_IMAGE, alt: title }],
       },
@@ -51,10 +51,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: defaultTitle,
         description: defaultDescription,
-        url: `https://hamplard.app/certificates/${params.id}`,
-        siteName: 'Hamplard',
+        url: `https://sorobanlard.app/certificates/${params.id}`,
+        siteName: 'SorobanLard',
         type: 'article',
-        images: [{ url: DEFAULT_OG_IMAGE, alt: 'Hamplard Certificate' }],
+        images: [{ url: DEFAULT_OG_IMAGE, alt: 'SorobanLard Certificate' }],
       },
       twitter: {
         card: 'summary_large_image',
@@ -86,7 +86,7 @@ export default async function CertificateVerifyPage({ params }: Props) {
         {/* Header */}
         <div className="text-center mb-8">
           <Link href="/" className="font-display text-xl font-semibold text-ink-900">
-            Hamplard
+            SorobanLard
           </Link>
           <p className="text-sm text-ink-400 mt-1">Certificate Verification</p>
         </div>
@@ -142,7 +142,7 @@ export default async function CertificateVerifyPage({ params }: Props) {
                   {cert.courseTitle}
                 </h1>
                 <p className="text-sm text-ink-500 mt-1">
-                  taught by {cert.course?.instructor?.name ?? 'Hamplard Instructor'}
+                  taught by {cert.course?.instructor?.name ?? 'SorobanLard Instructor'}
                 </p>
               </div>
 
@@ -167,7 +167,7 @@ export default async function CertificateVerifyPage({ params }: Props) {
                 </p>
                 <Link href="/" className="text-xs text-saffron-600 hover:underline inline-flex items-center gap-1">
                   <ExternalLink className="w-3 h-3" />
-                  hamplard.com
+                  sorobanlard.com
                 </Link>
               </div>
             </div>

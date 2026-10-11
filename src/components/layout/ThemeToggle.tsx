@@ -70,7 +70,7 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
       title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       onClick={toggleTheme}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-current transition-colors hover:bg-hamplard-lilac dark:hover:bg-ink-700"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-current transition-colors hover:bg-sorobanlard-lilac dark:hover:bg-ink-700"
     >
       {theme === 'dark' ? (
         <Sun className="w-4 h-4 text-amber-400" />

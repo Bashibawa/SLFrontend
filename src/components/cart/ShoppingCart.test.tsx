@@ -611,7 +611,7 @@ describe('ShoppingCart Integration Tests', () => {
       
       const badge = screen.getByText('2');
       expect(badge).toBeVisible();
-      expect(badge.closest('span')).toHaveClass('bg-hamplard-primary');
+      expect(badge.closest('span')).toHaveClass('bg-sorobanlard-primary');
     });
 
     it('promo code input has proper label', () => {
@@ -658,7 +658,7 @@ describe('ShoppingCart Integration Tests', () => {
       rerender(<ShoppingCart />);
       
       // Should show fallback name
-      expect(screen.getByText('by Hamplard Instructor')).toBeInTheDocument();
+      expect(screen.getByText('by SorobanLard Instructor')).toBeInTheDocument();
     });
 
     it('handles API errors gracefully', async () => {

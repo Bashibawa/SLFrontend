@@ -17,7 +17,7 @@ type ConsentRecord = {
   version: string;
 };
 
-const STORAGE_KEY = 'hamplard-cookie-consent';
+const STORAGE_KEY = 'sorobanlard-cookie-consent';
 const CONSENT_VERSION = 'v1';
 
 const defaultPreferences: CookiePreferences = {
@@ -71,7 +71,7 @@ export function CookieConsentBanner() {
   const savePreferences = (
     nextPreferences: CookiePreferences,
     toastTitle = 'Cookie preferences saved',
-    toastDescription = 'Your cookie choices have been updated for Hamplard.',
+    toastDescription = 'Your cookie choices have been updated for SorobanLard.',
   ) => {
     writeConsent(nextPreferences);
     setPreferences(nextPreferences);

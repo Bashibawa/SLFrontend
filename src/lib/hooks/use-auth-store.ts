@@ -20,10 +20,10 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   setAuth: (address, token, user, rememberMe = false) => {
     if (typeof window !== 'undefined') {
-      localStorage.setItem('hamplard_token', token);
-      localStorage.setItem('hamplard_address', address);
+      localStorage.setItem('sorobanlard_token', token);
+      localStorage.setItem('sorobanlard_address', address);
       const maxAge = rememberMe ? 30 * 24 * 3600 : 24 * 3600;
-      document.cookie = `hamplard_token=${token}; path=/; max-age=${maxAge}; SameSite=Lax`;
+      document.cookie = `sorobanlard_token=${token}; path=/; max-age=${maxAge}; SameSite=Lax`;
     }
     set({ address, token, user, isConnected: true });
   },
@@ -36,26 +36,26 @@ export const useAuthStore = create<AuthState>((set) => ({
   deleteAccount: async (password) => {
     await usersApi.deleteAccount(password);
     if (typeof window !== 'undefined') {
-      localStorage.removeItem('hamplard_token');
-      localStorage.removeItem('hamplard_address');
-      document.cookie = 'hamplard_token=; path=/; max-age=0';
+      localStorage.removeItem('sorobanlard_token');
+      localStorage.removeItem('sorobanlard_address');
+      document.cookie = 'sorobanlard_token=; path=/; max-age=0';
     }
     set({ address: null, token: null, user: null, isConnected: false });
   },
 
   logout: () => {
     if (typeof window !== 'undefined') {
-      localStorage.removeItem('hamplard_token');
-      localStorage.removeItem('hamplard_address');
-      document.cookie = 'hamplard_token=; path=/; max-age=0';
+      localStorage.removeItem('sorobanlard_token');
+      localStorage.removeItem('sorobanlard_address');
+      document.cookie = 'sorobanlard_token=; path=/; max-age=0';
     }
     set({ address: null, token: null, user: null, isConnected: false });
   },
 
   rehydrate: () => {
     if (typeof window !== 'undefined') {
-      const token   = localStorage.getItem('hamplard_token');
-      const address = localStorage.getItem('hamplard_address');
+      const token   = localStorage.getItem('sorobanlard_token');
+      const address = localStorage.getItem('sorobanlard_address');
       if (token && address) set({ token, address, isConnected: true });
     }
   },

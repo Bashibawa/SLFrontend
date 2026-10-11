@@ -123,12 +123,12 @@ export function QnaSection({
   return (
     <section className={cn('space-y-6', className)} aria-label="Lesson Q&A">
       <div>
-        <h2 className="font-display text-lg font-semibold text-hamplard-deep">
+        <h2 className="font-display text-lg font-semibold text-sorobanlard-deep">
           Questions & Answers
         </h2>
         {lessonTitle && (
           <p className="mt-1 text-sm text-semantic-text-muted">
-            Ask about <span className="font-medium text-hamplard-deep">{lessonTitle}</span> — instructors and fellow students can help.
+            Ask about <span className="font-medium text-sorobanlard-deep">{lessonTitle}</span> — instructors and fellow students can help.
           </p>
         )}
       </div>
@@ -150,7 +150,7 @@ export function QnaSection({
       {questions.length === 0 ? (
         <div className="rounded-2xl border border-semantic-border bg-semantic-bg-surface p-10 text-center">
           <p className="text-2xl mb-3" aria-hidden="true">💬</p>
-          <p className="text-sm font-medium text-hamplard-deep mb-1">No questions yet</p>
+          <p className="text-sm font-medium text-sorobanlard-deep mb-1">No questions yet</p>
           <p className="text-xs text-semantic-text-muted">
             Be the first to ask something about this lesson.
           </p>
@@ -163,7 +163,7 @@ export function QnaSection({
             <button
               type="button"
               onClick={() => { setSearch(''); setFilterBy('all'); }}
-              className="text-hamplard-primary hover:underline underline-offset-2 font-medium"
+              className="text-sorobanlard-primary hover:underline underline-offset-2 font-medium"
             >
               Clear filters
             </button>

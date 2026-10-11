@@ -125,7 +125,7 @@ export function TopRatedCoursesContent() {
           <div className="flex items-center gap-3 mb-2">
             <Award className="w-8 h-8 text-saffron-600" />
             <h1 className="text-3xl sm:text-4xl font-bold text-ink-900">
-              Top Rated Courses on Hamplard
+              Top Rated Courses on SorobanLard
             </h1>
           </div>
           <p className="text-base text-ink-600 max-w-2xl">

@@ -16,8 +16,8 @@ export function BottomTabs() {
     if (!fetched) void fetchNotifications();
 
     const refreshNotifications = () => void fetchNotifications();
-    window.addEventListener('hamplard:notifications-updated', refreshNotifications);
-    return () => window.removeEventListener('hamplard:notifications-updated', refreshNotifications);
+    window.addEventListener('sorobanlard:notifications-updated', refreshNotifications);
+    return () => window.removeEventListener('sorobanlard:notifications-updated', refreshNotifications);
   }, [fetched, fetchNotifications]);
 
   return (
@@ -44,7 +44,7 @@ export function BottomTabs() {
           {unreadCount > 0 && (
             <span
               aria-hidden="true"
-              className="absolute -right-2 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-hamplard-primary px-1 text-[10px] font-bold leading-none text-white"
+              className="absolute -right-2 -top-1 flex h-4 min-w-4 items-center justify-center rounded-full bg-sorobanlard-primary px-1 text-[10px] font-bold leading-none text-white"
             >
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>

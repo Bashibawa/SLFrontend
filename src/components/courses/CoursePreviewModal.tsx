@@ -189,7 +189,7 @@ export function CoursePreviewModal({
               className={cn(
                 'ml-4 flex-shrink-0 rounded-lg p-2',
                 'text-ink-300 hover:text-white hover:bg-ink-800',
-                'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hamplard-primary',
+                'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sorobanlard-primary',
                 'transition-colors',
               )}
             >
@@ -231,9 +231,9 @@ export function CoursePreviewModal({
                   aria-label="Play preview video"
                   className={cn(
                     'relative z-10 flex items-center justify-center gap-2 rounded-full',
-                    'bg-hamplard-primary px-5 py-3 text-white font-medium',
-                    'hover:bg-hamplard-primary/90 transition-colors',
-                    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hamplard-primary',
+                    'bg-sorobanlard-primary px-5 py-3 text-white font-medium',
+                    'hover:bg-sorobanlard-primary/90 transition-colors',
+                    'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sorobanlard-primary',
                   )}
                 >
                   <Play className="w-5 h-5" aria-hidden="true" />
@@ -252,7 +252,7 @@ export function CoursePreviewModal({
                 className={cn(
                   'absolute bottom-4 right-4 z-10 flex items-center gap-2 rounded-lg px-3 py-2',
                   'bg-black/60 text-white hover:bg-black/80 transition-colors',
-                  'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hamplard-primary',
+                  'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sorobanlard-primary',
                 )}
               >
                 {isMuted ? (
@@ -270,7 +270,7 @@ export function CoursePreviewModal({
           {/* Info footer */}
           <div className="px-4 py-3 bg-ink-900 border-t border-ink-700">
             <p className="text-xs text-ink-300">
-              This is a preview lecture. <span className="text-hamplard-lilac font-medium">Enroll</span> to access the full course.
+              This is a preview lecture. <span className="text-sorobanlard-lilac font-medium">Enroll</span> to access the full course.
             </p>
           </div>
         </div>

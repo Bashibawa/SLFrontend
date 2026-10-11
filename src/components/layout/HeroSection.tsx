@@ -105,7 +105,7 @@ export function HeroSection() {
           <div className="w-full flex max-sm:flex-col sm:flex-row sm:gap-3 gap-2 mb-8">
             <Link
               href="/signup"
-              className="inline-flex items-center justify-center gap-1.5 text-white font-bold text-sm md:px-7 px-4 py-3 bg-hamplard-primary hover:bg-hamplard-primary/80 transition-all duration-150 active:scale-[0.98] rounded-full"
+              className="inline-flex items-center justify-center gap-1.5 text-white font-bold text-sm md:px-7 px-4 py-3 bg-sorobanlard-primary hover:bg-sorobanlard-primary/80 transition-all duration-150 active:scale-[0.98] rounded-full"
             >
               Get started free
               <svg

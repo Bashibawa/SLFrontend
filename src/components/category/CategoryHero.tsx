@@ -87,7 +87,7 @@ export function getCategoryMeta(slug: string): CategoryMeta {
     name,
     icon: '🎓',
     description: `Explore ${name} courses taught by expert instructors.`,
-    gradient: 'from-hamplard-lilac to-saffron-100',
+    gradient: 'from-sorobanlard-lilac to-saffron-100',
   };
 }
 
@@ -133,7 +133,7 @@ export function CategoryHero({ slug, courseCount }: CategoryHeroProps) {
 
             {/* Course count badge */}
             <div className="mt-4 inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-white/80 rounded-full px-4 py-1.5 shadow-sm">
-              <BookOpen className="w-3.5 h-3.5 text-hamplard-primary" aria-hidden="true" />
+              <BookOpen className="w-3.5 h-3.5 text-sorobanlard-primary" aria-hidden="true" />
               <span className="text-xs font-semibold text-ink-700">
                 {courseCount.toLocaleString()}{' '}
                 {courseCount === 1 ? 'course' : 'courses'} available

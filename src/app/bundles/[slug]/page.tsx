@@ -31,7 +31,7 @@ export default function BundlePage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[40vh]">
-        <span className="h-2.5 w-2.5 rounded-full bg-hamplard-primary animate-pulse" />
+        <span className="h-2.5 w-2.5 rounded-full bg-sorobanlard-primary animate-pulse" />
         <span className="ml-3 text-sm text-ink-500">Loading bundle…</span>
       </div>
     );
@@ -164,7 +164,7 @@ function RelatedBundleCard({ bundle }: { bundle: BundleSummary }) {
   return (
     <Link
       href={`/bundles/${bundle.slug}`}
-      className="group flex gap-3 rounded-2xl border border-ink-100 bg-white p-4 shadow-sm transition hover:border-hamplard-primary hover:shadow-md"
+      className="group flex gap-3 rounded-2xl border border-ink-100 bg-white p-4 shadow-sm transition hover:border-sorobanlard-primary hover:shadow-md"
     >
       {bundle.thumbnailUrl && (
         <img
@@ -174,7 +174,7 @@ function RelatedBundleCard({ bundle }: { bundle: BundleSummary }) {
         />
       )}
       <div className="min-w-0">
-        <p className="truncate text-sm font-semibold text-ink-900 group-hover:text-hamplard-primary">
+        <p className="truncate text-sm font-semibold text-ink-900 group-hover:text-sorobanlard-primary">
           {bundle.title}
         </p>
         <p className="mt-0.5 text-xs text-ink-400">{bundle.courseCount} courses</p>

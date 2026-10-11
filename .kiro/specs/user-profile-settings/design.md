@@ -2,7 +2,7 @@
 
 ## Overview
 
-A comprehensive user profile and account settings system for Hamplard students and instructors. Includes public profile viewing, role-specific settings pages with tabbed navigation, avatar upload, notification preferences, and account management.
+A comprehensive user profile and account settings system for SorobanLard students and instructors. Includes public profile viewing, role-specific settings pages with tabbed navigation, avatar upload, notification preferences, and account management.
 
 ---
 

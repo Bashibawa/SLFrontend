@@ -6,8 +6,8 @@ import { AnimatedCounter } from '@/components/about/AnimatedCounter';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About Hamplard',
-  description: 'Learn about Hamplard mission, team, and our commitment to bringing practical skills education to Africa.',
+  title: 'About SorobanLard',
+  description: 'Learn about SorobanLard mission, team, and our commitment to bringing practical skills education to Africa.',
   path: '/about',
 });
 
@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
     name: 'Chioma Ugwu',
     role: 'Head of Growth',
     image: 'https://images.unsplash.com/photo-1519235855830-efe32cf4d8ad?w=400&h=400&fit=crop',
-    bio: 'Growth strategist scaling Hamplard across Africa.',
+    bio: 'Growth strategist scaling SorobanLard across Africa.',
   },
 ];
 
@@ -86,7 +86,7 @@ export default function AboutPage() {
             Empowering Africa with practical skills
           </h1>
           <p className="mt-6 text-lg leading-8 text-[#EEEDFE]/90 max-w-2xl mx-auto">
-            Hamplard connects ambitious learners across Africa with world-class vocational training in tailoring, makeup artistry, baking, photography, and more. We believe practical skills are the foundation for economic opportunity.
+            SorobanLard connects ambitious learners across Africa with world-class vocational training in tailoring, makeup artistry, baking, photography, and more. We believe practical skills are the foundation for economic opportunity.
           </p>
         </div>
       </section>
@@ -102,13 +102,13 @@ export default function AboutPage() {
           </h2>
           <div className="mt-6 space-y-4 text-lg leading-8 text-[#5A5578]">
             <p>
-              Hamplard began with a simple observation: across Africa, there are thousands of skilled professionals eager to teach, and millions of young people ready to learn practical, income-generating skills. Yet the gap between them persisted.
+              SorobanLard began with a simple observation: across Africa, there are thousands of skilled professionals eager to teach, and millions of young people ready to learn practical, income-generating skills. Yet the gap between them persisted.
             </p>
             <p>
-              Our founders saw this challenge and built Hamplard as the bridge. We started by connecting a handful of talented instructors with curious learners in Lagos, Accra, and Nairobi. Today, we serve learners across 25+ African countries.
+              Our founders saw this challenge and built SorobanLard as the bridge. We started by connecting a handful of talented instructors with curious learners in Lagos, Accra, and Nairobi. Today, we serve learners across 25+ African countries.
             </p>
             <p>
-              We're committed to making quality vocational education accessible, affordable, and recognized globally through blockchain-verified certificates. Every course on Hamplard is designed to turn aspiration into action.
+              We're committed to making quality vocational education accessible, affordable, and recognized globally through blockchain-verified certificates. Every course on SorobanLard is designed to turn aspiration into action.
             </p>
           </div>
         </div>
@@ -213,7 +213,7 @@ export default function AboutPage() {
             Ready to join us?
           </h2>
           <p className="mt-4 text-lg leading-8 text-[#EEEDFE]">
-            Whether you're eager to learn new skills or ready to teach, we'd love to have you as part of the Hamplard community.
+            Whether you're eager to learn new skills or ready to teach, we'd love to have you as part of the SorobanLard community.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

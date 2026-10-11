@@ -780,7 +780,7 @@ function Step5({
           🎉 Ready to publish?
         </p>
         <p className="text-xs text-saffron-600 mt-1">
-          Clicking "Submit for review" will register your course on-chain and send it to the Hamplard team. Approval usually takes 24–48 hours.
+          Clicking "Submit for review" will register your course on-chain and send it to the SorobanLard team. Approval usually takes 24–48 hours.
         </p>
       </div>
     </div>
@@ -835,7 +835,7 @@ export default function NewCoursePage() {
     setDraftSaving(true);
     try {
       // Persist to localStorage as draft (real save would hit API)
-      localStorage.setItem('hamplard_course_draft', JSON.stringify({ step, data }));
+      localStorage.setItem('sorobanlard_course_draft', JSON.stringify({ step, data }));
       setSaved(step);
     } finally {
       setDraftSaving(false);
@@ -906,7 +906,7 @@ export default function NewCoursePage() {
       setTxStep('Submitting for review…');
       await coursesApi.submitForReview(courseId);
 
-      localStorage.removeItem('hamplard_course_draft');
+      localStorage.removeItem('sorobanlard_course_draft');
       router.push('/dashboard/instructor');
     } catch (err: any) {
       setError(err?.message ?? 'Something went wrong. Please try again.');
@@ -929,7 +929,7 @@ export default function NewCoursePage() {
 
       <h1 className="section-heading mb-1">Create a new course</h1>
       <p className="text-sm text-ink-500 mb-6">
-        Complete all 5 steps to publish your course on Hamplard.
+        Complete all 5 steps to publish your course on SorobanLard.
       </p>
 
       {/* Step indicator */}

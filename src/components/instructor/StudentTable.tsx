@@ -45,7 +45,7 @@ export function StudentTable({
             id="course-filter"
             value={selectedCourseId}
             onChange={(e) => onCourseFilter(e.target.value)}
-            className="ml-auto rounded-lg border border-ink-100 bg-white px-3 py-1.5 text-xs text-ink-800 focus:border-hamplard-primary focus:outline-none focus:ring-1 focus:ring-hamplard-primary"
+            className="ml-auto rounded-lg border border-ink-100 bg-white px-3 py-1.5 text-xs text-ink-800 focus:border-sorobanlard-primary focus:outline-none focus:ring-1 focus:ring-sorobanlard-primary"
           >
             <option value="">All courses</option>
             {courseOptions.map((c) => (
@@ -81,9 +81,9 @@ export function StudentTable({
                   key={`${row.studentId}-${row.courseId}`}
                   onClick={() => onRowClick(row.studentId)}
                   className={cn(
-                    'cursor-pointer border-b border-ink-50 transition-colors hover:bg-hamplard-lilac/30',
+                    'cursor-pointer border-b border-ink-50 transition-colors hover:bg-sorobanlard-lilac/30',
                     i % 2 === 0 ? 'bg-white' : 'bg-ink-50/40',
-                    detail?.studentId === row.studentId && 'bg-hamplard-lilac/50',
+                    detail?.studentId === row.studentId && 'bg-sorobanlard-lilac/50',
                   )}
                 >
                   {/* Avatar */}
@@ -131,7 +131,7 @@ export function StudentTable({
                             row.progressPercent >= 100
                               ? 'bg-leaf-500'
                               : row.progressPercent >= 50
-                              ? 'bg-hamplard-primary'
+                              ? 'bg-sorobanlard-primary'
                               : 'bg-saffron-400',
                           )}
                           style={{ width: `${row.progressPercent}%` }}
@@ -176,7 +176,7 @@ export function StudentTable({
 
           {detailLoading ? (
             <div className="flex items-center justify-center py-10">
-              <span className="h-2.5 w-2.5 rounded-full bg-hamplard-primary animate-pulse" />
+              <span className="h-2.5 w-2.5 rounded-full bg-sorobanlard-primary animate-pulse" />
               <span className="ml-2 text-xs text-ink-400">Loading…</span>
             </div>
           ) : detail && (
@@ -207,7 +207,7 @@ export function StudentTable({
                   <div className="mb-3 flex items-center gap-2">
                     <div className="h-1.5 flex-1 rounded-full bg-ink-100 overflow-hidden">
                       <div
-                        className="h-full rounded-full bg-hamplard-primary"
+                        className="h-full rounded-full bg-sorobanlard-primary"
                         style={{ width: `${enr.progressPercent}%` }}
                       />
                     </div>

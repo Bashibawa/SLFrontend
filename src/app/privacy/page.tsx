@@ -88,7 +88,7 @@ export default function PrivacyPage() {
             <section id="overview" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Overview</h2>
               <p className="text-[#5A5578]">
-                Hamplard respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+                SorobanLard respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
               </p>
               <p className="text-[#5A5578]">
                 Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our Service.
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
             <section id="how-we-use" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">How We Use Your Information</h2>
               <p className="text-[#5A5578]">
-                Hamplard uses collected information for:
+                SorobanLard uses collected information for:
               </p>
               <ul className="list-disc space-y-2 pl-6 text-[#5A5578]">
                 <li>Providing and personalizing your learning experience</li>
@@ -162,7 +162,7 @@ export default function PrivacyPage() {
             <section id="cookies" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Cookies and Tracking</h2>
               <p className="text-[#5A5578]">
-                Hamplard uses cookies to keep the platform secure, remember your preferences, and improve your experience. Cookies are small files stored on your device that contain information about your browsing activity.
+                SorobanLard uses cookies to keep the platform secure, remember your preferences, and improve your experience. Cookies are small files stored on your device that contain information about your browsing activity.
               </p>
               <p className="text-[#5A5578]">
                 You can review or change your cookie preferences at any time through your browser settings. Disabling cookies may limit certain functionality on our platform.
@@ -185,8 +185,8 @@ export default function PrivacyPage() {
               </ul>
               <p className="mt-4 text-[#5A5578]">
                 To exercise any of these rights, please contact us at{' '}
-                <Link href="mailto:support@hamplard.app" className="text-[#7F77DD] hover:underline">
-                  support@hamplard.app
+                <Link href="mailto:support@sorobanlard.app" className="text-[#7F77DD] hover:underline">
+                  support@sorobanlard.app
                 </Link>
                 .
               </p>
@@ -204,7 +204,7 @@ export default function PrivacyPage() {
             <section id="third-parties" className="scroll-mt-24">
               <h2 className="text-2xl font-semibold text-[#26215C]">Third-Party Services</h2>
               <p className="text-[#5A5578]">
-                Our website may contain links to third-party websites and services. This Privacy Policy applies only to Hamplard. We are not responsible for the privacy practices of third-party sites. We encourage you to review their privacy policies before providing personal information.
+                Our website may contain links to third-party websites and services. This Privacy Policy applies only to SorobanLard. We are not responsible for the privacy practices of third-party sites. We encourage you to review their privacy policies before providing personal information.
               </p>
             </section>
 
@@ -217,14 +217,14 @@ export default function PrivacyPage() {
               <div className="mt-4 space-y-2 text-[#5A5578]">
                 <p>
                   <span className="font-semibold">Email:</span>{' '}
-                  <Link href="mailto:support@hamplard.app" className="text-[#7F77DD] hover:underline">
-                    support@hamplard.app
+                  <Link href="mailto:support@sorobanlard.app" className="text-[#7F77DD] hover:underline">
+                    support@sorobanlard.app
                   </Link>
                 </p>
                 <p>
                   <span className="font-semibold">Website:</span>{' '}
-                  <Link href="https://hamplard.app" className="text-[#7F77DD] hover:underline">
-                    hamplard.app
+                  <Link href="https://sorobanlard.app" className="text-[#7F77DD] hover:underline">
+                    sorobanlard.app
                   </Link>
                 </p>
               </div>

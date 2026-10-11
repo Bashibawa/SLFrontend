@@ -22,8 +22,8 @@ interface ReminderSchedule {
   message: string;
 }
 
-const STORAGE_KEY = 'hamplard_study_reminder';
-const DEFAULT_MESSAGE = "Time to learn! Open Hamplard and continue your course.";
+const STORAGE_KEY = 'sorobanlard_study_reminder';
+const DEFAULT_MESSAGE = "Time to learn! Open SorobanLard and continue your course.";
 
 const DEFAULT_SCHEDULE: ReminderSchedule = {
   enabled: false,
@@ -98,9 +98,9 @@ export function StudyReminder() {
   const fireReminder = useCallback(
     (msg: string) => {
       if (notifPermission === 'granted' && 'Notification' in window) {
-        new Notification('Hamplard Study Reminder 🎓', {
+        new Notification('SorobanLard Study Reminder 🎓', {
           body: msg,
-          icon: '/hamplard-og.svg',
+          icon: '/sorobanlard-og.svg',
         });
       } else {
         toast.info({ title: 'Study Reminder 🎓', description: msg, duration: 8000 });

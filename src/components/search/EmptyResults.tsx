@@ -27,8 +27,8 @@ export function EmptyResults({
 }: EmptyResultsProps) {
   return (
     <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-ink-200 bg-white px-6 py-16 text-center">
-      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-hamplard-lilac">
-        <SearchX className="h-7 w-7 text-hamplard-primary" />
+      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-sorobanlard-lilac">
+        <SearchX className="h-7 w-7 text-sorobanlard-primary" />
       </div>
 
       <h3 className="mb-1 text-lg font-semibold text-ink-900">
@@ -60,7 +60,7 @@ export function EmptyResults({
               <Link
                 key={category}
                 href={`/search?category=${encodeURIComponent(category)}`}
-                className="rounded-pill bg-hamplard-lilac px-3 py-1.5 text-sm font-medium text-hamplard-deep transition-colors hover:bg-hamplard-primary hover:text-white"
+                className="rounded-pill bg-sorobanlard-lilac px-3 py-1.5 text-sm font-medium text-sorobanlard-deep transition-colors hover:bg-sorobanlard-primary hover:text-white"
               >
                 {category}
               </Link>

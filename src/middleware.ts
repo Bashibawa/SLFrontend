@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
   // Root and static
   if (pathname === '/') return NextResponse.next();
 
-  const token = request.cookies.get('hamplard_token')?.value;
+  const token = request.cookies.get('sorobanlard_token')?.value;
   if (!token && pathname.startsWith('/dashboard')) {
     const url = new URL('/login', request.url);
     url.searchParams.set('callbackUrl', pathname);

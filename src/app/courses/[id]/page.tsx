@@ -89,7 +89,7 @@ export default async function CoursePage({ params }: Props) {
               <h1 className="font-display text-4xl font-bold text-ink-900">{course.title}</h1>
               <p className="text-lg leading-relaxed text-ink-500">
                 {course.description ??
-                  'A practical Hamplard course with verified lessons and certification.'}
+                  'A practical SorobanLard course with verified lessons and certification.'}
               </p>
             </div>
 
@@ -114,7 +114,7 @@ export default async function CoursePage({ params }: Props) {
                 </p>
                 <p>
                   <span className="font-medium text-ink-900">Instructor:</span>{' '}
-                  {course.instructor?.name ?? 'Hamplard Instructor'}
+                  {course.instructor?.name ?? 'SorobanLard Instructor'}
                 </p>
               </div>
             </div>

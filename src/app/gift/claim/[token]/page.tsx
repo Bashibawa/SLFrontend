@@ -121,7 +121,7 @@ export default function GiftClaimPage() {
           </div>
           <h1 className="font-display text-3xl font-bold text-ink-900">You have a gift!</h1>
           <p className="mt-2 text-sm text-ink-500">
-            Someone gifted you a course on Hamplard. Claim it to start learning for free.
+            Someone gifted you a course on SorobanLard. Claim it to start learning for free.
           </p>
         </div>
 
@@ -143,7 +143,7 @@ export default function GiftClaimPage() {
               <div className="min-w-0">
                 <p className="truncate font-semibold text-ink-900">{gift.course.title}</p>
                 <p className="text-xs text-ink-500">
-                  by {gift.course.instructor?.name ?? 'Hamplard Instructor'}
+                  by {gift.course.instructor?.name ?? 'SorobanLard Instructor'}
                 </p>
               </div>
             </div>

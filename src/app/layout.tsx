@@ -8,7 +8,7 @@ import { WebVitalsReporter } from '@/components/WebVitalsReporter';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: 'Hamplard', template: '%s | Hamplard' },
+  title: { default: 'SorobanLard', template: '%s | SorobanLard' },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     'baking course',
     'photography course',
     'Africa e-learning',
-    'Hamplard',
+    'SorobanLard',
   ],
   description: 'Learn practical skills — tailoring, makeup, baking, photography and more. Africa\'s online vocational skills platform.',
-  metadataBase: new URL('https://hamplard.app'),
+  metadataBase: new URL('https://sorobanlard.app'),
   icons: { icon: '/favicon.svg' },
   alternates: { canonical: siteUrl },
   openGraph: {
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Skip navigation — first focusable element for keyboard users */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-hamplard-primary focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:outline-none"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-sorobanlard-primary focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:outline-none"
         >
           Skip to main content
         </a>

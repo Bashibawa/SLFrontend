@@ -186,7 +186,7 @@ export function CourseCarousel({
         </div>
         <Link
           href={seeAllHref}
-          className="shrink-0 inline-flex items-center gap-1 text-sm font-medium text-hamplard-primary hover:text-hamplard-deep transition-colors"
+          className="shrink-0 inline-flex items-center gap-1 text-sm font-medium text-sorobanlard-primary hover:text-sorobanlard-deep transition-colors"
         >
           See all
           <ChevronRight className="w-4 h-4" aria-hidden="true" />
@@ -210,11 +210,11 @@ export function CourseCarousel({
               className={cn(
                 'hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10',
                 'w-10 h-10 items-center justify-center rounded-full bg-white shadow-md border border-ink-100',
-                'transition-opacity hover:bg-hamplard-lilac focus:outline-none focus:ring-2 focus:ring-hamplard-primary',
+                'transition-opacity hover:bg-sorobanlard-lilac focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary',
                 !canScrollPrev && 'opacity-0 pointer-events-none',
               )}
             >
-              <ChevronLeft className="w-5 h-5 text-hamplard-deep" />
+              <ChevronLeft className="w-5 h-5 text-sorobanlard-deep" />
             </button>
             <button
               type="button"
@@ -224,11 +224,11 @@ export function CourseCarousel({
               className={cn(
                 'hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10',
                 'w-10 h-10 items-center justify-center rounded-full bg-white shadow-md border border-ink-100',
-                'transition-opacity hover:bg-hamplard-lilac focus:outline-none focus:ring-2 focus:ring-hamplard-primary',
+                'transition-opacity hover:bg-sorobanlard-lilac focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary',
                 !canScrollNext && 'opacity-0 pointer-events-none',
               )}
             >
-              <ChevronRight className="w-5 h-5 text-hamplard-deep" />
+              <ChevronRight className="w-5 h-5 text-sorobanlard-deep" />
             </button>
           </>
         )}
@@ -280,7 +280,7 @@ export function CourseCarousel({
                 onClick={() => handleDotClick(i)}
                 className={cn(
                   'h-1.5 rounded-full transition-all duration-200',
-                  i === activeDot ? 'w-5 bg-hamplard-primary' : 'w-1.5 bg-ink-200',
+                  i === activeDot ? 'w-5 bg-sorobanlard-primary' : 'w-1.5 bg-ink-200',
                 )}
               />
             ))}

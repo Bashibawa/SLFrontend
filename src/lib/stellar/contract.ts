@@ -1,6 +1,6 @@
 /**
  * lib/stellar/contract.ts
- * Soroban contract calls for Hamplard.
+ * Soroban contract calls for SorobanLard.
  * Students call enroll() to pay and get access.
  * Instructors call register_course() when submitting for review.
  */

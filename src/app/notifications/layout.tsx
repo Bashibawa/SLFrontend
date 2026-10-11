@@ -3,7 +3,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Notifications',
-  description: 'Your Hamplard notifications.',
+  description: 'Your SorobanLard notifications.',
   path: '/notifications',
   noIndex: true,
 });

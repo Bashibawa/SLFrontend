@@ -47,7 +47,7 @@ function CustomTooltip(props: TooltipProps<number, string>) {
   return (
     <div className="bg-white rounded-lg shadow-lg border border-ink-100 p-3">
       <p className="text-sm font-semibold text-ink-900">{data.month}</p>
-      <p className="text-base font-bold text-hamplard-primary">
+      <p className="text-base font-bold text-sorobanlard-primary">
         {formatUsdc(data.revenue)}
       </p>
     </div>

@@ -100,7 +100,7 @@ export default function ComponentsDemoPage() {
             onClick={() => setShowCart(!showCart)}
             className="relative p-2 hover:bg-ink-50 rounded-lg transition-colors"
           >
-            <CartIcon className="w-6 h-6 text-hamplard-primary" />
+            <CartIcon className="w-6 h-6 text-sorobanlard-primary" />
             {cartCount > 0 && (
               <span className="absolute top-1 right-1 bg-rose-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                 {cartCount}
@@ -196,7 +196,7 @@ export default function ComponentsDemoPage() {
                     <div>
                       <h3 className="font-semibold text-ink-900">{course.title}</h3>
                       <p className="text-sm text-ink-500">
-                        {course.instructor?.name || 'Hamplard Instructor'} • ${course.price}
+                        {course.instructor?.name || 'SorobanLard Instructor'} • ${course.price}
                       </p>
                     </div>
                     <Button

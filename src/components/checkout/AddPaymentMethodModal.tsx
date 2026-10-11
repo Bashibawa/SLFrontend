@@ -21,7 +21,7 @@ export interface AddPaymentMethodModalProps {
 }
 
 const FIELD_CLASS =
-  'w-full rounded-lg border border-ink-200 bg-white px-3 py-2.5 text-sm text-ink-900 placeholder:text-ink-500 focus:border-hamplard-primary focus:outline-none focus:ring-2 focus:ring-hamplard-primary/30 disabled:bg-ink-50';
+  'w-full rounded-lg border border-ink-200 bg-white px-3 py-2.5 text-sm text-ink-900 placeholder:text-ink-500 focus:border-sorobanlard-primary focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary/30 disabled:bg-ink-50';
 
 /** Modal wrapper — mounts Stripe Elements only while it is open. */
 export function AddPaymentMethodModal({ open, onClose, onAdd }: AddPaymentMethodModalProps) {
@@ -186,7 +186,7 @@ function AddCardForm({ onAdd, onCancel, onSubmittingChange }: AddCardFormProps) 
           <span className="mb-1.5 block text-sm text-ink-700">Card details</span>
           <div
             className={cn(
-              'rounded-lg border border-ink-200 bg-white px-3 py-3 focus-within:border-hamplard-primary focus-within:ring-2 focus-within:ring-hamplard-primary/30',
+              'rounded-lg border border-ink-200 bg-white px-3 py-3 focus-within:border-sorobanlard-primary focus-within:ring-2 focus-within:ring-sorobanlard-primary/30',
               cardError && 'border-rose-500',
             )}
           >

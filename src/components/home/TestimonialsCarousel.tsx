@@ -112,7 +112,7 @@ export function TestimonialsCarousel({
   testimonials,
   autoAdvanceInterval = 5000,
   heading = 'What Our Students Say',
-  subtitle = 'Real stories from learners who transformed their skills on Hamplard',
+  subtitle = 'Real stories from learners who transformed their skills on SorobanLard',
 }: TestimonialsCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -220,11 +220,11 @@ export function TestimonialsCarousel({
               'hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10',
               'w-10 h-10 sm:w-12 sm:h-12 items-center justify-center rounded-full',
               'bg-white shadow-md border border-ink-100',
-              'transition-all hover:bg-hamplard-lilac hover:scale-110',
-              'focus:outline-none focus:ring-2 focus:ring-hamplard-primary focus:ring-offset-2'
+              'transition-all hover:bg-sorobanlard-lilac hover:scale-110',
+              'focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary focus:ring-offset-2'
             )}
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-hamplard-deep" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-sorobanlard-deep" />
           </button>
 
           {/* Next Button */}
@@ -236,11 +236,11 @@ export function TestimonialsCarousel({
               'hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10',
               'w-10 h-10 sm:w-12 sm:h-12 items-center justify-center rounded-full',
               'bg-white shadow-md border border-ink-100',
-              'transition-all hover:bg-hamplard-lilac hover:scale-110',
-              'focus:outline-none focus:ring-2 focus:ring-hamplard-primary focus:ring-offset-2'
+              'transition-all hover:bg-sorobanlard-lilac hover:scale-110',
+              'focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary focus:ring-offset-2'
             )}
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-hamplard-deep" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-sorobanlard-deep" />
           </button>
 
           {/* Mobile Arrows */}
@@ -249,17 +249,17 @@ export function TestimonialsCarousel({
               type="button"
               onClick={goToPrevious}
               aria-label="Previous testimonial"
-              className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-sm border border-ink-200 hover:bg-hamplard-lilac transition-colors focus:outline-none focus:ring-2 focus:ring-hamplard-primary"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-sm border border-ink-200 hover:bg-sorobanlard-lilac transition-colors focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary"
             >
-              <ChevronLeft className="w-5 h-5 text-hamplard-deep" />
+              <ChevronLeft className="w-5 h-5 text-sorobanlard-deep" />
             </button>
             <button
               type="button"
               onClick={goToNext}
               aria-label="Next testimonial"
-              className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-sm border border-ink-200 hover:bg-hamplard-lilac transition-colors focus:outline-none focus:ring-2 focus:ring-hamplard-primary"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-sm border border-ink-200 hover:bg-sorobanlard-lilac transition-colors focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary"
             >
-              <ChevronRight className="w-5 h-5 text-hamplard-deep" />
+              <ChevronRight className="w-5 h-5 text-sorobanlard-deep" />
             </button>
           </div>
 
@@ -299,9 +299,9 @@ export function TestimonialsCarousel({
                   onClick={() => goToIndex(index)}
                   className={cn(
                     'rounded-full transition-all duration-300',
-                    'focus:outline-none focus:ring-2 focus:ring-hamplard-primary focus:ring-offset-2',
+                    'focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary focus:ring-offset-2',
                     index === activeIndex
-                      ? 'w-8 h-2 bg-hamplard-primary'
+                      ? 'w-8 h-2 bg-sorobanlard-primary'
                       : 'w-2 h-2 bg-ink-200 hover:bg-ink-300'
                   )}
                 />

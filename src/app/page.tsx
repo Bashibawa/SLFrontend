@@ -6,24 +6,24 @@ import type { Metadata } from "next";
 import { HomepageCarousels, RecentlyViewed, TestimonialsCarousel } from "@/components/home";
 import type { Testimonial } from "@/components/home";
 
-const DEFAULT_OG_IMAGE = "/hamplard-og.svg";
+const DEFAULT_OG_IMAGE = "/sorobanlard-og.svg";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Hamplard",
+  title: "SorobanLard",
   description:
     "Learn practical skills — tailoring, makeup, baking, photography and more. Africa's online vocational skills platform.",
   openGraph: {
-    title: "Hamplard",
+    title: "SorobanLard",
     description:
       "Learn practical skills — tailoring, makeup, baking, photography and more. Africa's online vocational skills platform.",
     url: "/",
-    siteName: "Hamplard",
+    siteName: "SorobanLard",
     type: "website",
-    images: [{ url: DEFAULT_OG_IMAGE, alt: "Hamplard brand preview" }],
+    images: [{ url: DEFAULT_OG_IMAGE, alt: "SorobanLard brand preview" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hamplard",
+    title: "SorobanLard",
     description:
       "Learn practical skills — tailoring, makeup, baking, photography and more. Africa's online vocational skills platform.",
     images: [DEFAULT_OG_IMAGE],
@@ -98,7 +98,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Student Testimonials ── */}
-      <section className="bg-gradient-to-br from-hamplard-lilac/30 via-saffron-50/20 to-leaf-50/30">
+      <section className="bg-gradient-to-br from-sorobanlard-lilac/30 via-saffron-50/20 to-leaf-50/30">
         <TestimonialsCarousel testimonials={SAMPLE_TESTIMONIALS} />
       </section>
 

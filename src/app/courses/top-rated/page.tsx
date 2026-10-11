@@ -3,17 +3,17 @@ import { Suspense } from 'react';
 import { TopRatedCoursesContent } from './TopRatedCoursesContent';
 
 export const metadata: Metadata = {
-  title: 'Top Rated Courses on Hamplard | 4.5+ Star Learning Excellence',
-  description: 'Explore the highest-rated courses on Hamplard with 4.5+ star ratings. Learn from expert instructors across Africa in tailoring, baking, photography, makeup artistry, hairstyling, and more. Start your learning journey today.',
+  title: 'Top Rated Courses on SorobanLard | 4.5+ Star Learning Excellence',
+  description: 'Explore the highest-rated courses on SorobanLard with 4.5+ star ratings. Learn from expert instructors across Africa in tailoring, baking, photography, makeup artistry, hairstyling, and more. Start your learning journey today.',
   openGraph: {
-    title: 'Top Rated Courses on Hamplard',
+    title: 'Top Rated Courses on SorobanLard',
     description: 'Discover the best courses with 4.5+ star ratings from expert instructors across Africa and beyond.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top Rated Courses on Hamplard',
-    description: 'Explore the highest-rated courses with 4.5+ star ratings on Hamplard.',
+    title: 'Top Rated Courses on SorobanLard',
+    description: 'Explore the highest-rated courses with 4.5+ star ratings on SorobanLard.',
   },
 };
 

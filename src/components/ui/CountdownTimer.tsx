@@ -97,7 +97,7 @@ interface TimeUnitProps {
 
 const TimeUnit = ({ value, label }: TimeUnitProps) => (
   <div className="flex flex-col items-center">
-    <span className="text-2xl md:text-3xl font-bold text-hamplard-primary">
+    <span className="text-2xl md:text-3xl font-bold text-sorobanlard-primary">
       {String(value).padStart(2, '0')}
     </span>
     <span className="text-xs md:text-sm font-medium text-ink-500 uppercase">{label}</span>

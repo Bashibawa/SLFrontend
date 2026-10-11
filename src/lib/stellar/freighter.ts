@@ -32,7 +32,7 @@ export async function signNonce(nonce: string, networkPassphrase: string): Promi
   } as any;
 
   const tx = new TransactionBuilder(dummy, { fee: BASE_FEE, networkPassphrase })
-    .addOperation(Operation.manageData({ name: 'hamplard_nonce', value: Buffer.from(nonce) }))
+    .addOperation(Operation.manageData({ name: 'sorobanlard_nonce', value: Buffer.from(nonce) }))
     .setTimeout(30)
     .build();
 

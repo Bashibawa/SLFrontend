@@ -16,12 +16,12 @@ export default function Error({ error, reset }: ErrorBoundaryProps) {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#1E1B4B] px-6 py-12 text-center text-white">
-      {/* Hamplard Logo */}
+      {/* SorobanLard Logo */}
       <Link
         href="/"
         className="font-display text-2xl font-bold tracking-tight text-white mb-8 hover:text-saffron-300 transition-colors"
       >
-        Hamplard
+        SorobanLard
       </Link>
 
       <div className="card max-w-lg w-full bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-2xl flex flex-col items-center">

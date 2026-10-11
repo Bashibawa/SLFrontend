@@ -11,7 +11,7 @@ vi.mock('next/link', () => ({
 
 // The absoluteUrl helper reads NEXT_PUBLIC_SITE_URL; pin it for deterministic JSON-LD assertions
 vi.mock('@/lib/seo', () => ({
-  absoluteUrl: (path: string) => `https://hamplard.com${path}`,
+  absoluteUrl: (path: string) => `https://sorobanlard.com${path}`,
 }));
 
 const items = [
@@ -136,8 +136,8 @@ describe('Breadcrumb', () => {
       const data = JSON.parse(script.textContent ?? '{}');
 
       // Home and Courses have hrefs — they must be absolute
-      expect(data.itemListElement[0].item).toBe('https://hamplard.com/');
-      expect(data.itemListElement[1].item).toBe('https://hamplard.com/courses');
+      expect(data.itemListElement[0].item).toBe('https://sorobanlard.com/');
+      expect(data.itemListElement[1].item).toBe('https://sorobanlard.com/courses');
     });
 
     it('JSON-LD omits `item` property for the last breadcrumb (no href)', () => {
@@ -181,10 +181,10 @@ describe('Breadcrumb', () => {
 
     it('passes already-absolute hrefs through unchanged', () => {
       const { container } = render(
-        <Breadcrumb items={[{ label: 'Docs', href: 'https://docs.hamplard.com/guide' }, { label: 'Page' }]} />,
+        <Breadcrumb items={[{ label: 'Docs', href: 'https://docs.sorobanlard.com/guide' }, { label: 'Page' }]} />,
       );
       const data = JSON.parse(getJsonLd(container)[0].textContent ?? '{}');
-      expect(data.itemListElement[0].item).toBe('https://docs.hamplard.com/guide');
+      expect(data.itemListElement[0].item).toBe('https://docs.sorobanlard.com/guide');
     });
 
     it('escapes labels that would otherwise close the script tag', () => {

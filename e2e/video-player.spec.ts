@@ -244,14 +244,14 @@ test.describe("Video player", () => {
   test.beforeEach(async ({ page }) => {
     await page.context().addCookies([
       {
-        name: "hamplard_token",
+        name: "sorobanlard_token",
         value: "video-player-e2e-token",
         url: "http://localhost:3001",
       },
     ]);
     await page.addInitScript(() => {
-      window.localStorage.setItem("hamplard_token", "video-player-e2e-token");
-      window.localStorage.setItem("hamplard_address", "GTESTSTUDENT");
+      window.localStorage.setItem("sorobanlard_token", "video-player-e2e-token");
+      window.localStorage.setItem("sorobanlard_address", "GTESTSTUDENT");
       window.localStorage.setItem("cookie-consent", "accepted");
     });
     await installDeterministicMedia(page);

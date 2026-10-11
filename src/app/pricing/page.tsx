@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Pricing',
-  description: 'Choose the right plan for your learning journey on Hamplard.',
+  description: 'Choose the right plan for your learning journey on SorobanLard.',
   path: '/pricing',
 });
 
@@ -19,7 +19,7 @@ export default function PricingPage() {
       <main className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-12 xl:px-10">
         <section className="overflow-hidden rounded-[32px] border border-[#D5D2F6] bg-gradient-to-br from-[#26215C] via-[#3C3489] to-[#7F77DD] px-8 py-12 text-white shadow-[0_24px_100px_rgba(38,33,92,0.2)] sm:px-10 lg:px-12">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#E8E5FF]">Hamplard pricing</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#E8E5FF]">SorobanLard pricing</p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               Learn faster with a plan that grows with you.
             </h1>

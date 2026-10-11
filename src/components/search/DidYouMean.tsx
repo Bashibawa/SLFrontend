@@ -70,7 +70,7 @@ export function DidYouMean({ query, dictionary, onSelect }: DidYouMeanProps) {
       <button
         type="button"
         onClick={() => onSelect(suggestion)}
-        className="font-semibold text-hamplard-mid underline underline-offset-2 hover:text-hamplard-primary"
+        className="font-semibold text-sorobanlard-mid underline underline-offset-2 hover:text-sorobanlard-primary"
       >
         {suggestion}
       </button>

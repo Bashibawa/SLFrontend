@@ -6,7 +6,7 @@ import confetti from 'canvas-confetti';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 
-const ONBOARDING_KEY = 'hamplard_onboarding_completed';
+const ONBOARDING_KEY = 'sorobanlard_onboarding_completed';
 
 const CATEGORIES = [
   'Tailoring',
@@ -29,7 +29,7 @@ interface OnboardingStep {
 const STEPS: OnboardingStep[] = [
   {
     id: 1,
-    title: 'Welcome to Hamplard',
+    title: 'Welcome to SorobanLard',
     description: "Let's get started on your learning journey",
   },
   {
@@ -145,7 +145,7 @@ export function OnboardingModal({ onClose }: OnboardingModalProps) {
             <div className="text-center space-y-6">
               <div className="text-6xl mb-4">🎓</div>
               <h1 className="font-display text-3xl font-bold text-ink-900">
-                Welcome to Hamplard
+                Welcome to SorobanLard
               </h1>
               <p className="text-lg text-ink-600">
                 Let's get started on your learning journey
@@ -176,7 +176,7 @@ export function OnboardingModal({ onClose }: OnboardingModalProps) {
                     className={cn(
                       'px-3 py-2 rounded-lg font-medium text-sm transition-all',
                       selectedCategories.includes(category)
-                        ? 'bg-hamplard-primary text-white'
+                        ? 'bg-sorobanlard-primary text-white'
                         : 'bg-ink-100 text-ink-700 hover:bg-ink-200',
                     )}
                   >
@@ -207,7 +207,7 @@ export function OnboardingModal({ onClose }: OnboardingModalProps) {
                 value={learningGoal}
                 onChange={(e) => setLearningGoal(e.target.value)}
                 placeholder="E.g., I want to learn tailoring to start my own business"
-                className="w-full px-4 py-3 border border-ink-200 rounded-lg focus:ring-2 focus:ring-hamplard-primary focus:border-transparent resize-none text-sm"
+                className="w-full px-4 py-3 border border-ink-200 rounded-lg focus:ring-2 focus:ring-sorobanlard-primary focus:border-transparent resize-none text-sm"
                 rows={4}
               />
 
@@ -227,8 +227,8 @@ export function OnboardingModal({ onClose }: OnboardingModalProps) {
               <p className="text-lg text-ink-600">
                 Get ready to discover amazing courses
               </p>
-              <div className="bg-hamplard-lilac p-4 rounded-lg">
-                <p className="text-sm text-hamplard-deep">
+              <div className="bg-sorobanlard-lilac p-4 rounded-lg">
+                <p className="text-sm text-sorobanlard-deep">
                   ✨ Your personalized dashboard is ready
                 </p>
               </div>
@@ -244,7 +244,7 @@ export function OnboardingModal({ onClose }: OnboardingModalProps) {
                 className={cn(
                   'w-2 h-2 rounded-full transition-all',
                   currentStep === step.id
-                    ? 'bg-hamplard-primary w-8'
+                    ? 'bg-sorobanlard-primary w-8'
                     : 'bg-ink-200 hover:bg-ink-300',
                 )}
                 aria-label={`Go to step ${step.id}`}

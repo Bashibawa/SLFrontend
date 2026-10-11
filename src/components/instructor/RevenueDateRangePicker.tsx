@@ -90,7 +90,7 @@ export function RevenueDateRangePicker({ value, onChange }: RevenueDateRangePick
           className={cn(
             'px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
             value.preset === preset.value
-              ? 'bg-hamplard-primary text-white'
+              ? 'bg-sorobanlard-primary text-white'
               : 'bg-ink-100 text-ink-700 hover:bg-ink-200',
           )}
         >
@@ -106,7 +106,7 @@ export function RevenueDateRangePicker({ value, onChange }: RevenueDateRangePick
           className={cn(
             'flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
             value.preset === 'custom'
-              ? 'bg-hamplard-primary text-white'
+              ? 'bg-sorobanlard-primary text-white'
               : 'bg-ink-100 text-ink-700 hover:bg-ink-200',
           )}
         >
@@ -128,7 +128,7 @@ export function RevenueDateRangePicker({ value, onChange }: RevenueDateRangePick
                 value={draftFrom}
                 max={draftTo || today}
                 onChange={(e) => setDraftFrom(e.target.value)}
-                className="w-full text-sm border border-ink-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-hamplard-primary"
+                className="w-full text-sm border border-ink-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary"
               />
             </label>
             <label className="block">
@@ -139,7 +139,7 @@ export function RevenueDateRangePicker({ value, onChange }: RevenueDateRangePick
                 min={draftFrom}
                 max={today}
                 onChange={(e) => setDraftTo(e.target.value)}
-                className="w-full text-sm border border-ink-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-hamplard-primary"
+                className="w-full text-sm border border-ink-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary"
               />
             </label>
             {draftFrom && draftTo && draftFrom > draftTo && (
@@ -155,7 +155,7 @@ export function RevenueDateRangePicker({ value, onChange }: RevenueDateRangePick
               <button
                 onClick={applyCustom}
                 disabled={draftInvalid}
-                className="px-3 py-1.5 text-xs font-medium rounded-lg bg-hamplard-primary text-white disabled:opacity-40 disabled:cursor-not-allowed"
+                className="px-3 py-1.5 text-xs font-medium rounded-lg bg-sorobanlard-primary text-white disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 Apply
               </button>

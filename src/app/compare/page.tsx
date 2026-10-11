@@ -270,7 +270,7 @@ export default function ComparePage() {
                           </div>
                         )}
                         <span className="text-sm text-ink-700">
-                          {course.instructor?.name ?? 'Hamplard Instructor'}
+                          {course.instructor?.name ?? 'SorobanLard Instructor'}
                         </span>
                       </div>
                     </td>

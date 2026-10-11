@@ -1,14 +1,14 @@
-# Hamplard — Frontend Repo
+# SorobanLard — Frontend Repo
 
 > **Next.js 14 frontend for Africa's practical skills online learning platform**
 
-This is **Repo 3 of 3** in the Hamplard project:
+This is **Repo 3 of 3** in the SorobanLard project:
 
 | Repo | Description |
 |------|-------------|
-| `hamplard-contract` | Soroban smart contract — course payments + certificates |
-| `hamplard-backend` | NestJS API — content, progress, users |
-| `hamplard-frontend` ← you are here | Next.js 14 — student and instructor portal |
+| `sorobanlard-contract` | Soroban smart contract — course payments + certificates |
+| `sorobanlard-backend` | NestJS API — content, progress, users |
+| `sorobanlard-frontend` ← you are here | Next.js 14 — student and instructor portal |
 
 ---
 
@@ -31,7 +31,7 @@ This is **Repo 3 of 3** in the Hamplard project:
 
 ## Design System
 
-Hamplard's foundational token system is documented in:
+SorobanLard's foundational token system is documented in:
 
 - `src/styles/tokens.css` (source of truth for CSS variables)
 - `design-system-tokens.md` (hex/RGB usage notes + WCAG checks)
@@ -46,7 +46,7 @@ Hamplard's foundational token system is documented in:
 
 ## Key Features
 
-**Public course marketplace** (`/`) — browse, search, and filter active courses by category and level without signing in. The homepage shows a category pill bar with all eight Hamplard skill areas.
+**Public course marketplace** (`/`) — browse, search, and filter active courses by category and level without signing in. The homepage shows a category pill bar with all eight SorobanLard skill areas.
 
 **Role-aware login** (`/auth/login`) — the login page has a student/instructor toggle. First-time users pick their role here and it is set on their account.
 
@@ -300,10 +300,10 @@ TODO: Add and Configure robots.txt
 6. Sitemap Configuration
 
 151. [ ] Add the sitemap URL to the robots configuration.
-152. [ ] Use "https://hamplard.com/sitemap.xml".
+152. [ ] Use "https://sorobanlard.com/sitemap.xml".
 153. [ ] Ensure the sitemap URL is absolute.
 154. [ ] Ensure the URL uses HTTPS.
-155. [ ] Ensure the hostname is exactly "hamplard.com".
+155. [ ] Ensure the hostname is exactly "sorobanlard.com".
 156. [ ] Ensure the path is exactly "/sitemap.xml".
 157. [ ] Ensure the sitemap directive is generated.
 158. [ ] Ensure the sitemap appears in "/robots.txt".
@@ -465,5 +465,5 @@ TODO: Add and Configure robots.txt
 296. [ ] Authentication routes are disallowed.
 297. [ ] Checkout is disallowed.
 298. [ ] Public pages are allowed.
-299. [ ] "https://hamplard.com/sitemap.xml" is included.
+299. [ ] "https://sorobanlard.com/sitemap.xml" is included.
 300. [ ] PR description contains "Closes #[issue_id]" and the task is ready for review.

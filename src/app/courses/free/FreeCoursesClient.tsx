@@ -94,7 +94,7 @@ export function FreeCoursesClient() {
   return (
     <main className="mx-auto max-w-[1280px] px-6 py-12 xl:px-10">
       <div className="max-w-2xl">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-hamplard-primary">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-sorobanlard-primary">
           Free learning
         </p>
 
@@ -116,8 +116,8 @@ export function FreeCoursesClient() {
               onClick={() => selectCategory(item)}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                 category === item
-                  ? 'border-hamplard-primary bg-hamplard-primary text-white'
-                  : 'border-ink-200 bg-white text-ink-700 hover:border-hamplard-primary'
+                  ? 'border-sorobanlard-primary bg-sorobanlard-primary text-white'
+                  : 'border-ink-200 bg-white text-ink-700 hover:border-sorobanlard-primary'
               }`}
             >
               {item}

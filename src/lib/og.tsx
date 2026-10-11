@@ -54,7 +54,7 @@ export function renderOgImage({
           >
             H
           </div>
-          <div style={{ fontSize: '30px', fontWeight: 600, letterSpacing: '-0.5px' }}>Hamplard</div>
+          <div style={{ fontSize: '30px', fontWeight: 600, letterSpacing: '-0.5px' }}>SorobanLard</div>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -115,8 +115,8 @@ function truncate(value: string, max: number): string {
 // declare their own `runtime`/`alt`/`size` exports. Re-exporting those from a sibling
 // route file does not work — Next only picks up statically declared route config.
 
-export const SITE_OG_ALT = 'Hamplard — learn practical vocational skills online';
-export const COURSE_OG_ALT = 'Course on Hamplard';
+export const SITE_OG_ALT = 'SorobanLard — learn practical vocational skills online';
+export const COURSE_OG_ALT = 'Course on SorobanLard';
 
 export function renderSiteOgImage() {
   return renderOgImage({

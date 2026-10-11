@@ -176,7 +176,7 @@ export function LearnSidebar({
           <button
             type="button"
             onClick={toggleAll}
-            className="text-xs font-medium text-hamplard-primary transition-colors hover:text-hamplard-mid"
+            className="text-xs font-medium text-sorobanlard-primary transition-colors hover:text-sorobanlard-mid"
           >
             {allExpanded ? 'Collapse All' : 'Expand All'}
           </button>
@@ -189,13 +189,13 @@ export function LearnSidebar({
             onChange={(event) => setSearchQuery(event.target.value)}
             placeholder="Search lessons"
             aria-label="Search lessons"
-            className="w-full rounded-lg border border-ink-200 bg-white py-2 pl-9 pr-8 text-sm text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-hamplard-primary focus:ring-offset-1"
+            className="w-full rounded-lg border border-ink-200 bg-white py-2 pl-9 pr-8 text-sm text-ink-900 placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary focus:ring-offset-1"
           />
           {searchQuery && (
             <button
               type="button"
               onClick={() => setSearchQuery('')}
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-1 text-ink-500 hover:bg-ink-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hamplard-primary"
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-1 text-ink-500 hover:bg-ink-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary"
               aria-label="Clear lesson search"
             >
               <X className="h-3.5 w-3.5" />
@@ -229,7 +229,7 @@ export function LearnSidebar({
                 type="button"
                 onClick={() => toggleSection(mod.id)}
                 aria-expanded={isOpen}
-                className="flex w-full items-center gap-2 bg-ink-50 px-4 py-3 text-left transition-colors hover:bg-ink-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-hamplard-primary"
+                className="flex w-full items-center gap-2 bg-ink-50 px-4 py-3 text-left transition-colors hover:bg-ink-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sorobanlard-primary"
               >
                 <ChevronDown
                   className={cn(
@@ -271,9 +271,9 @@ export function LearnSidebar({
                           aria-selected={isCurrent}
                           aria-current={isCurrent ? 'true' : undefined}
                           className={cn(
-                            'flex w-full items-center gap-2 px-4 py-2.5 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-hamplard-primary',
+                            'flex w-full items-center gap-2 px-4 py-2.5 text-left text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sorobanlard-primary',
                             isCurrent
-                              ? 'bg-hamplard-lilac/60 border-l-2 border-hamplard-primary'
+                              ? 'bg-sorobanlard-lilac/60 border-l-2 border-sorobanlard-primary'
                               : 'border-l-2 border-transparent hover:bg-ink-50',
                           )}
                         >
@@ -283,7 +283,7 @@ export function LearnSidebar({
                             <Play
                               className={cn(
                                 'h-4 w-4 flex-shrink-0',
-                                isCurrent ? 'text-hamplard-primary' : 'text-ink-400',
+                                isCurrent ? 'text-sorobanlard-primary' : 'text-ink-400',
                               )}
                             />
                           )}
@@ -291,7 +291,7 @@ export function LearnSidebar({
                             className={cn(
                               'flex-1 truncate',
                               isCurrent
-                                ? 'font-semibold text-hamplard-deep'
+                                ? 'font-semibold text-sorobanlard-deep'
                                 : isCompleted
                                   ? 'text-ink-600'
                                   : 'text-ink-700',
@@ -331,7 +331,7 @@ export function LearnSidebar({
         <button
           type="button"
           onClick={() => setDrawerOpen(true)}
-          className="fixed bottom-4 left-4 z-40 flex items-center gap-2 rounded-full bg-hamplard-primary px-4 py-2.5 text-sm font-medium text-white shadow-lg transition-transform hover:bg-hamplard-mid active:scale-95"
+          className="fixed bottom-4 left-4 z-40 flex items-center gap-2 rounded-full bg-sorobanlard-primary px-4 py-2.5 text-sm font-medium text-white shadow-lg transition-transform hover:bg-sorobanlard-mid active:scale-95"
           aria-label="Open curriculum"
         >
           <Play className="h-4 w-4" />

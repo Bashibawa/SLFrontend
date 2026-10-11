@@ -161,7 +161,7 @@ export function FileUpload({
       xhr.open('POST', uploadUrl);
 
       if (typeof window !== 'undefined') {
-        const token = localStorage.getItem('hamplard_token');
+        const token = localStorage.getItem('sorobanlard_token');
         if (token) xhr.setRequestHeader('Authorization', `Bearer ${token}`);
       }
 

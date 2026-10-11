@@ -19,7 +19,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'Master Fashion Designer & Tailor',
     courseCategory: 'Tailoring & Garment Design',
     quote:
-      'Teaching on Hamplard transformed my business. I went from training 5 apprentices locally in Lagos to reaching over 2,500 students across 12 countries.',
+      'Teaching on SorobanLard transformed my business. I went from training 5 apprentices locally in Lagos to reaching over 2,500 students across 12 countries.',
     rating: 5,
   },
   {

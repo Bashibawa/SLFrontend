@@ -10,7 +10,7 @@ export const apiClient = axios.create({
 // ─── Request interceptor: attach auth token ───────────────────────────────
 apiClient.interceptors.request.use((config) => {
   if (typeof window !== 'undefined') {
-    const token = localStorage.getItem('hamplard_token');
+    const token = localStorage.getItem('sorobanlard_token');
     if (token) config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
@@ -64,7 +64,7 @@ apiClient.interceptors.response.use(
 
     // Redirect to login on 401 (only after retries are exhausted / not retryable)
     if (err.response?.status === 401 && typeof window !== 'undefined') {
-      localStorage.removeItem('hamplard_token');
+      localStorage.removeItem('sorobanlard_token');
       window.location.href = '/login';
     }
 

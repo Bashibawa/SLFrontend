@@ -81,10 +81,10 @@ const ELEMENT_STYLE: StripeElementStyle = {
 };
 
 const FIELD_CLASS =
-  'w-full rounded-lg border border-ink-200 bg-white px-3 py-2.5 text-sm text-ink-900 placeholder:text-ink-500 focus:border-hamplard-primary focus:outline-none focus:ring-2 focus:ring-hamplard-primary/30 disabled:bg-ink-50 disabled:text-ink-500';
+  'w-full rounded-lg border border-ink-200 bg-white px-3 py-2.5 text-sm text-ink-900 placeholder:text-ink-500 focus:border-sorobanlard-primary focus:outline-none focus:ring-2 focus:ring-sorobanlard-primary/30 disabled:bg-ink-50 disabled:text-ink-500';
 
 const ELEMENT_WRAPPER_CLASS =
-  'rounded-lg border border-ink-200 bg-white px-3 py-3 transition-colors focus-within:border-hamplard-primary focus-within:ring-2 focus-within:ring-hamplard-primary/30';
+  'rounded-lg border border-ink-200 bg-white px-3 py-3 transition-colors focus-within:border-sorobanlard-primary focus-within:ring-2 focus-within:ring-sorobanlard-primary/30';
 
 const EMPTY_BILLING: BillingDetails = {
   name: '',
@@ -276,7 +276,7 @@ export function PaymentForm({
               className={cn(
                 'flex cursor-pointer items-start gap-3 rounded-xl border p-4 transition-colors',
                 method === option.value
-                  ? 'border-hamplard-primary bg-hamplard-lilac/50'
+                  ? 'border-sorobanlard-primary bg-sorobanlard-lilac/50'
                   : 'border-ink-200 hover:bg-ink-50',
               )}
             >
@@ -290,7 +290,7 @@ export function PaymentForm({
                   setFormError(null);
                   setPayPalNotice(null);
                 }}
-                className="mt-1 h-4 w-4 accent-hamplard-primary"
+                className="mt-1 h-4 w-4 accent-sorobanlard-primary"
               />
               <span>
                 <span className="block text-sm font-semibold text-ink-900">{option.label}</span>
@@ -571,7 +571,7 @@ export function PaymentForm({
 
           <p className="flex items-center justify-center gap-2 text-xs text-ink-500">
             <ShieldCheck className="h-4 w-4 text-leaf-600" aria-hidden="true" />
-            Secured by Stripe. Card details are encrypted and never touch Hamplard&apos;s servers.
+            Secured by Stripe. Card details are encrypted and never touch SorobanLard&apos;s servers.
           </p>
         </div>
       )}

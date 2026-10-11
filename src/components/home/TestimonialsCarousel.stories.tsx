@@ -78,7 +78,7 @@ export const Default: Story = {
     testimonials: SAMPLE_TESTIMONIALS,
     autoAdvanceInterval: 5000,
     heading: 'What Our Students Say',
-    subtitle: 'Real stories from learners who transformed their skills on Hamplard',
+    subtitle: 'Real stories from learners who transformed their skills on SorobanLard',
   },
 };
 

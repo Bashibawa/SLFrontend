@@ -5,7 +5,7 @@ import { NewReleasesClient } from "./NewReleasesClient";
 export const metadata: Metadata = buildMetadata({
   title: "New Releases",
   description:
-    "Discover the latest Hamplard courses published in the last 90 days.",
+    "Discover the latest SorobanLard courses published in the last 90 days.",
   path: "/courses/new",
 });
 

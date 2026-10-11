@@ -85,7 +85,7 @@ function LoginForm() {
   return (
     <div className="w-full max-w-md">
       <Link href="/" className="mb-8 inline-block font-display text-3xl font-bold text-[#26215C]">
-        Hamplard
+        SorobanLard
       </Link>
       <h1 className="mb-2 text-3xl font-bold text-[#26215C]">Welcome back</h1>
       <p className="mb-6 text-sm text-[#554F99]">
@@ -210,7 +210,7 @@ function LoginForm() {
       </form>
 
       <p className="mt-6 text-sm text-[#554F99]">
-        New to Hamplard?{' '}
+        New to SorobanLard?{' '}
         <Link href="/signup" className="font-semibold text-[#3C3489] hover:underline">
           Create an account
         </Link>
@@ -251,7 +251,7 @@ export default function LoginPage() {
               Build practical skills that move your career forward.
             </h2>
             <p className="text-sm leading-relaxed text-[#EEEDFE]">
-              Access guided courses, track progress, and earn trusted certificates with Hamplard.
+              Access guided courses, track progress, and earn trusted certificates with SorobanLard.
             </p>
             <div className="mt-6 grid grid-cols-3 gap-3 text-center">
               {[

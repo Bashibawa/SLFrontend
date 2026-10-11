@@ -176,7 +176,7 @@ export default function ReviewsList({ reviews }: ReviewsListProps) {
                     onClick={() => handleVote(review.id, "up")}
                     className={
                       vote === "up"
-                        ? "flex items-center gap-1 rounded-lg border border-hamplard-primary bg-hamplard-primary/10 px-3 py-1 text-sm font-medium text-hamplard-primary"
+                        ? "flex items-center gap-1 rounded-lg border border-sorobanlard-primary bg-sorobanlard-primary/10 px-3 py-1 text-sm font-medium text-sorobanlard-primary"
                         : "flex items-center gap-1 rounded-lg border border-ink-200 px-3 py-1 text-sm font-medium text-ink-600 hover:bg-gray-50"
                     }
                   >

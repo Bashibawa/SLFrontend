@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const STORAGE_KEY = 'hamplard_reduced_motion';
+const STORAGE_KEY = 'sorobanlard_reduced_motion';
 
 /**
  * Hook to detect and manage reduced motion preferences
@@ -56,7 +56,7 @@ export function useReducedMotion() {
     // Dispatch custom event so other parts of the app can react
     if (typeof window !== 'undefined') {
       window.dispatchEvent(
-        new CustomEvent('hamplard:reduced-motion-changed', {
+        new CustomEvent('sorobanlard:reduced-motion-changed', {
           detail: { prefersReducedMotion: enabled },
         }),
       );
@@ -73,7 +73,7 @@ export function useReducedMotion() {
 
     if (typeof window !== 'undefined') {
       window.dispatchEvent(
-        new CustomEvent('hamplard:reduced-motion-changed', {
+        new CustomEvent('sorobanlard:reduced-motion-changed', {
           detail: { prefersReducedMotion: mediaQuery.matches },
         }),
       );
