@@ -74,3 +74,73 @@ describe('DataTable Component (Issue #181)', () => {
     expect(onSortMock).toHaveBeenCalledWith('name');
   });
 });
+
+describe('DataTable stable sort (Issue #133)', () => {
+  type RevenueRow = { id: string; name: string; revenue: number };
+
+  const revenueColumns: Column<RevenueRow>[] = [
+    { key: 'name', label: 'Name', sortable: true },
+    { key: 'revenue', label: 'Revenue', sortable: true },
+  ];
+
+  const revenueData: RevenueRow[] = [
+    { id: '1', name: 'Alice', revenue: 100 },
+    { id: '2', name: 'Bob', revenue: 100 },
+    { id: '3', name: 'Charlie', revenue: 200 },
+    { id: '4', name: 'Diana', revenue: 100 },
+  ];
+
+  it('preserves original row order for rows with equal sort values (stable sort)', () => {
+    const { getAllByRole } = render(
+      <DataTable
+        columns={revenueColumns}
+        data={revenueData}
+        sortColumn="revenue"
+        sortDirection="asc"
+      />
+    );
+    const rows = getAllByRole('row').slice(1); // skip header
+    const names = rows.map((row) => row.cells[0].textContent);
+    // Alice, Bob, Diana all have revenue=100 — they must stay in original order
+    expect(names).toEqual(['Alice', 'Bob', 'Diana', 'Charlie']);
+  });
+
+  it('stable sort descending: rows with equal values keep original relative order', () => {
+    const { getAllByRole } = render(
+      <DataTable
+        columns={revenueColumns}
+        data={revenueData}
+        sortColumn="revenue"
+        sortDirection="desc"
+      />
+    );
+    const rows = getAllByRole('row').slice(1);
+    const names = rows.map((row) => row.cells[0].textContent);
+    // Charlie (200) first, then Alice, Bob, Diana (all 100, in original order)
+    expect(names).toEqual(['Charlie', 'Alice', 'Bob', 'Diana']);
+  });
+
+  it('does not reshuffle rows between re-renders when sort values are equal', () => {
+    const { getAllByRole, rerender } = render(
+      <DataTable
+        columns={revenueColumns}
+        data={revenueData}
+        sortColumn="revenue"
+        sortDirection="asc"
+      />
+    );
+    const firstRender = getAllByRole('row').slice(1).map((r) => r.cells[0].textContent);
+
+    rerender(
+      <DataTable
+        columns={revenueColumns}
+        data={revenueData}
+        sortColumn="revenue"
+        sortDirection="asc"
+      />
+    );
+    const secondRender = getAllByRole('row').slice(1).map((r) => r.cells[0].textContent);
+
+    expect(firstRender).toEqual(secondRender);
+  });
+});
