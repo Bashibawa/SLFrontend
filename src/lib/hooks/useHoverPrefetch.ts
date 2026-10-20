@@ -38,6 +38,10 @@ interface UseHoverPrefetchResult {
  * never trigger a network request. Prefetching is limited to devices with
  * an accurate pointer (not touch).
  *
+ * On touch-primary devices (phones, tablets) the `(hover: hover) and (pointer: fine)`
+ * media-query evaluates to `false`, so `hasFinePointerRef` stays `false` and no
+ * prefetch is ever scheduled — even when a tap synthesises a `mouseenter` event.
+ *
  * @example
  * const { onMouseEnter, onMouseLeave } = useHoverPrefetch(`/courses/${course.id}`);
  * return <Link href={`/courses/${course.id}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>…</Link>;
