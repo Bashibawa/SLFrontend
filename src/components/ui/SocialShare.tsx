@@ -72,6 +72,28 @@ function LinkPreview({ url, title, thumbnailUrl }: LinkPreviewProps) {
   );
 }
 
+// ── URL helpers ──────────────────────────────────────────────────────────────
+
+/**
+ * Resolves `href` to an absolute URL.
+ * - If `href` is already absolute, returns it unchanged.
+ * - If `href` is a relative path, resolves it against the current origin.
+ * - Falls back to `window.location.href` when no `href` is supplied.
+ * - Returns `''` during SSR (no `window`) so the component renders safely.
+ */
+function toAbsoluteUrl(href: string | undefined): string {
+  if (typeof window === 'undefined') {
+    // SSR: no DOM — return the prop as-is if it looks absolute, otherwise empty
+    if (href && /^https?:\/\//i.test(href)) return href;
+    return '';
+  }
+  if (!href) return window.location.href;
+  // Already absolute?
+  if (/^https?:\/\//i.test(href)) return href;
+  // Relative path — resolve against the current origin
+  return new URL(href, window.location.origin).href;
+}
+
 // ── Main component ───────────────────────────────────────────────────────────
 
 export function SocialShare({
@@ -85,7 +107,7 @@ export function SocialShare({
 }: SocialShareProps) {
   const [copied, setCopied] = useState(false);
 
-  const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
+  const shareUrl = toAbsoluteUrl(url);
   const encodedUrl = encodeURIComponent(shareUrl);
 
   const achievementText = shareText ?? `I just completed ${courseTitle} on SorobanLard! #SorobanLard`;
