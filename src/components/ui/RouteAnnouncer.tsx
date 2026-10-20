@@ -8,11 +8,21 @@ export function RouteAnnouncer() {
   const [announcement, setAnnouncement] = useState('');
 
   useEffect(() => {
-    setAnnouncement(`Navigated to ${document.title}`);
+    if (!pathname) return;
+    const pageTitle =
+      document.title?.trim() ||
+      document.querySelector('h1')?.textContent?.trim() ||
+      pathname;
+    setAnnouncement(`Navigated to ${pageTitle}`);
   }, [pathname]);
 
   return (
-    <div aria-live="assertive" className="sr-only">
+    <div
+      role="status"
+      aria-live="assertive"
+      aria-atomic="true"
+      className="sr-only"
+    >
       {announcement}
     </div>
   );

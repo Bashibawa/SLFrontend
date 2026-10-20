@@ -27,6 +27,38 @@ export type DataTableProps<T> = {
   className?: string;
 };
 
+/**
+ * Stably sorts an array by a key extracted by `getValue`.
+ * Rows with equal values preserve their original relative order.
+ * Uses the index as a tiebreaker to guarantee stability regardless of the
+ * JS engine version or sort algorithm.
+ */
+function stableSort<T>(
+  items: T[],
+  getValue: (item: T) => unknown,
+  direction: SortDirection,
+): T[] {
+  const indexed = items.map((item, originalIndex) => ({ item, originalIndex }));
+  indexed.sort((a, b) => {
+    const aVal = getValue(a.item);
+    const bVal = getValue(b.item);
+
+    let cmp = 0;
+    if (aVal === null || aVal === undefined) cmp = 1;
+    else if (bVal === null || bVal === undefined) cmp = -1;
+    else if (typeof aVal === 'number' && typeof bVal === 'number') {
+      cmp = aVal - bVal;
+    } else {
+      cmp = String(aVal).localeCompare(String(bVal), undefined, { numeric: true, sensitivity: 'base' });
+    }
+
+    if (cmp !== 0) return direction === 'asc' ? cmp : -cmp;
+    // Equal values: preserve original order (stability tiebreaker)
+    return a.originalIndex - b.originalIndex;
+  });
+  return indexed.map(({ item }) => item);
+}
+
 export function DataTable<T>({
   columns,
   data,
@@ -44,6 +76,18 @@ export function DataTable<T>({
       onSort(col.key);
     }
   };
+
+  // Apply a stable client-side sort when a sort column is active.
+  // Using a tiebreaker on the original index guarantees rows with equal
+  // values never reshuffle between renders (#133).
+  const sortedData = React.useMemo(() => {
+    if (!sortColumn) return data;
+    return stableSort(
+      data,
+      (item) => (item as Record<string, unknown>)[sortColumn],
+      sortDirection,
+    );
+  }, [data, sortColumn, sortDirection]);
 
   return (
     <div className={cn('w-full overflow-hidden rounded-2xl border border-[#D5D2F6] bg-white shadow-sm', className)}>
@@ -93,7 +137,7 @@ export function DataTable<T>({
                   ))}
                 </tr>
               ))
-            ) : data.length === 0 ? (
+            ) : sortedData.length === 0 ? (
               // Empty State
               <tr>
                 <td colSpan={columns.length} className="px-6 py-12 text-center">
@@ -108,7 +152,7 @@ export function DataTable<T>({
               </tr>
             ) : (
               // Data Rows with #EEEDFE hover highlight
-              data.map((item, rIdx) => {
+              sortedData.map((item, rIdx) => {
                 const key = rowKey ? rowKey(item, rIdx) : (item as Record<string, unknown>).id ? String((item as Record<string, unknown>).id) : rIdx;
                 return (
                   <tr

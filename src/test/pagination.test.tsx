@@ -72,4 +72,26 @@ describe('Pagination Component', () => {
     expect(handlePageChange).toHaveBeenCalledWith(2);
     expect(mockPush).toHaveBeenCalledWith('/courses?page=2', { scroll: false });
   });
+
+  it('hides itself (renders null) when there is only one page of results (totalPages <= 1)', () => {
+    const { container } = render(<Pagination currentPage={1} totalPages={1} updateUrl={false} />);
+    expect(container.firstChild).toBeNull();
+  });
+
+  it('hides itself (renders null) when totalItems fits on a single page (totalItems <= itemsPerPage)', () => {
+    const { container } = render(
+      <Pagination currentPage={1} totalItems={7} itemsPerPage={10} updateUrl={false} />,
+    );
+    expect(container.firstChild).toBeNull();
+  });
+
+  it('hides itself (renders null) when totalPages is 0 or totalItems is 0', () => {
+    const { container: c1 } = render(<Pagination currentPage={1} totalPages={0} updateUrl={false} />);
+    expect(c1.firstChild).toBeNull();
+
+    const { container: c2 } = render(
+      <Pagination currentPage={1} totalItems={0} itemsPerPage={10} updateUrl={false} />,
+    );
+    expect(c2.firstChild).toBeNull();
+  });
 });
