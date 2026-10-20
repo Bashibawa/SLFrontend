@@ -34,7 +34,7 @@ This is **Repo 3 of 3** in the SorobanLard project:
 SorobanLard's foundational token system is documented in:
 
 - `src/styles/tokens.css` (source of truth for CSS variables)
-- `design-system-tokens.md` (hex/RGB usage notes + WCAG checks)
+- [`design-system-tokens.md`](design-system-tokens.md) (token layers, adding new tokens, WCAG checks)
 - `typography-system.md` (modular type scale and semantic text roles)
 
 **Typography:**
@@ -124,6 +124,13 @@ Then commit the updated files in `e2e/screenshots/` to the repository.
 Visual regression tests run automatically in GitHub Actions on every push and pull request. If a visual diff is detected, the CI job will fail and upload:
 - The Playwright HTML report (with side-by-side diffs)
 - Test traces for debugging
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local setup, branch and commit conventions, running
+Storybook, and the PR checklist.
 
 ---
 
