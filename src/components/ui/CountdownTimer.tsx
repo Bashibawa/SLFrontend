@@ -24,13 +24,20 @@ const CountdownTimer = React.forwardRef<HTMLDivElement, CountdownTimerProps>(
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+      let isMounted = true;
+      let interval: ReturnType<typeof setInterval> | null = null;
       setMounted(true);
 
       const calculateTimeRemaining = () => {
+        if (!isMounted) return;
         const now = new Date();
         const difference = expiresAt.getTime() - now.getTime();
 
         if (difference <= 0) {
+          if (interval !== null) {
+            clearInterval(interval);
+            interval = null;
+          }
           setIsExpired(true);
           setTime({ days: 0, hours: 0, minutes: 0, seconds: 0 });
           onExpire?.();
@@ -49,10 +56,19 @@ const CountdownTimer = React.forwardRef<HTMLDivElement, CountdownTimerProps>(
       // Calculate immediately on mount
       calculateTimeRemaining();
 
-      // Set up interval to update every second
-      const interval = setInterval(calculateTimeRemaining, 1000);
+      // Set up interval only if not already expired
+      const initialRemaining = expiresAt.getTime() - new Date().getTime();
+      if (initialRemaining > 0) {
+        interval = setInterval(calculateTimeRemaining, 1000);
+      }
 
-      return () => clearInterval(interval);
+      return () => {
+        isMounted = false;
+        if (interval !== null) {
+          clearInterval(interval);
+          interval = null;
+        }
+      };
     }, [expiresAt, onExpire]);
 
     if (!mounted) {

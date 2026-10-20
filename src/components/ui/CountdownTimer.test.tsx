@@ -111,6 +111,42 @@ describe('CountdownTimer', () => {
       clearIntervalSpy.mockRestore();
     });
 
+    it('cleans up interval on unmount mid-countdown and does not fire callbacks after unmount', () => {
+      const onExpire = vi.fn();
+      const futureDate = new Date(Date.now() + 5000);
+      const { unmount } = render(<CountdownTimer expiresAt={futureDate} onExpire={onExpire} />);
+
+      // Advance 2 seconds mid-countdown
+      vi.advanceTimersByTime(2000);
+
+      // Unmount component
+      unmount();
+
+      // Advance past expiration time
+      vi.advanceTimersByTime(5000);
+
+      // onExpire must not be called after unmount
+      expect(onExpire).not.toHaveBeenCalled();
+    });
+
+    it('clears interval once the timer expires to prevent repeated intervals', () => {
+      const clearIntervalSpy = vi.spyOn(global, 'clearInterval');
+      const onExpire = vi.fn();
+      const futureDate = new Date(Date.now() + 2000);
+      render(<CountdownTimer expiresAt={futureDate} onExpire={onExpire} />);
+
+      // Advance past expiration
+      vi.advanceTimersByTime(2500);
+      expect(onExpire).toHaveBeenCalledTimes(1);
+      expect(clearIntervalSpy).toHaveBeenCalled();
+
+      // Advance further and verify onExpire is not called again
+      vi.advanceTimersByTime(3000);
+      expect(onExpire).toHaveBeenCalledTimes(1);
+
+      clearIntervalSpy.mockRestore();
+    });
+
     it('does not leak intervals on prop changes', () => {
       const clearIntervalSpy = vi.spyOn(global, 'clearInterval');
       let futureDate = new Date(Date.now() + 10000);

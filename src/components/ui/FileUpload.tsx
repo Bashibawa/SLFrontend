@@ -63,6 +63,13 @@ function formatBytes(bytes: number): string {
   return `${(bytes / 1024 ** i).toFixed(i === 0 ? 0 : 1)} ${units[i]}`;
 }
 
+function formatDuration(seconds?: number): string {
+  if (!seconds) return '';
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${mins}:${String(secs).padStart(2, '0')}`;
+}
+
 function matchesAccept(file: File, accept?: string[]): boolean {
   if (!accept || accept.length === 0) return true;
   return accept.some((pattern) => {
@@ -326,12 +333,6 @@ export function FileUpload({
     [startUpload],
   );
 
-  useEffect(() => {
-    return () => {
-      Object.values(xhrRefs.current).forEach((xhr) => xhr.abort());
-      xhrRefs.current = {};
-    };
-  }, []);
   function handleDragLeave(e: React.DragEvent<HTMLDivElement>) {
     // Ignore dragleave fired when the pointer moves onto a child element
     if (e.relatedTarget instanceof Node && e.currentTarget.contains(e.relatedTarget)) return;
@@ -357,7 +358,7 @@ export function FileUpload({
     e.target.value = '';
   };
 
-  const handleDrop = (e: React.DragEvent<HTMLLabelElement>) => {
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     setDragActive(false);
     if (e.dataTransfer.files?.length) void addFiles(e.dataTransfer.files);
@@ -369,8 +370,6 @@ export function FileUpload({
 
   return (
     <div className={cn('w-full', className)}>
-      <label
-        htmlFor={inputId}
       {/* ── Drop zone ── */}
       <div
         role="button"
@@ -391,30 +390,36 @@ export function FileUpload({
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
         className={cn(
-          'flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed p-6 text-center transition-colors',
+          'flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed px-6 py-10 text-center cursor-pointer transition-colors duration-150',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-sorobanlard-primary focus-visible:ring-offset-2',
           dragActive
-            ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/30'
-            : 'border-slate-300 hover:border-indigo-400 dark:border-slate-700',
+            ? 'border-sorobanlard-primary bg-sorobanlard-lilac'
+            : 'border-ink-200 bg-ink-50 hover:border-sorobanlard-primary/60 hover:bg-sorobanlard-lilac/40',
         )}
       >
-        <UploadCloud className="h-8 w-8 text-indigo-500" aria-hidden="true" />
-        <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{label}</span>
-        <span className="text-xs text-slate-500 dark:text-slate-400">
-          {hint ?? `Drag & drop or click to browse · ${describeAccept(accept)} · up to ${formatBytes(maxSizeBytes)}`}
-        </span>
+        <UploadCloud
+          className={cn('w-8 h-8', dragActive ? 'text-sorobanlard-primary' : 'text-ink-400')}
+          aria-hidden="true"
+        />
+        <p className="text-sm font-medium text-ink-700">
+          <span className="text-sorobanlard-primary font-semibold">Click to upload</span> or drag
+          and drop
+        </p>
+        <p className="text-xs text-ink-400">
+          {hint ?? `${describeAccept(accept)} · up to ${formatBytes(maxSizeBytes)}`}
+        </p>
         <input
-          id={inputId}
           ref={inputRef}
+          id={inputId}
           type="file"
-          accept={accept?.join(',')}
           multiple={multiple}
+          accept={accept?.join(',')}
           onChange={handleInputChange}
           className="sr-only"
         />
-      </label>
+      </div>
 
       {items.length > 0 && (
-        <ul className="mt-4 space-y-3">
         <div
           className="mt-4 flex items-center justify-between gap-2 text-xs text-ink-500"
           aria-live="polite"
@@ -431,74 +436,80 @@ export function FileUpload({
       )}
 
       {items.length > 0 && (
-        <ul className="mt-2 space-y-3" aria-label="Uploads">
+        <ul className="mt-4 space-y-3" aria-label="Uploads">
           {items.map((item) => (
             <li
               key={item.id}
-              className="flex items-center gap-3 rounded-lg border border-slate-200 p-3 dark:border-slate-700"
+              className="flex items-start gap-3 rounded-xl border border-ink-100 bg-white p-3"
             >
-              <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-md bg-slate-100 dark:bg-slate-800">
-                {item.previewUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={item.previewUrl} alt={item.file.name} className="h-full w-full object-cover" />
-                ) : item.file.type.startsWith('video/') ? (
-                  <span className="flex h-full w-full items-center justify-center">
-                    <Play className="h-5 w-5 text-indigo-500" aria-hidden="true" />
-                  </span>
-                ) : (
-                  <span className="flex h-full w-full items-center justify-center">
-                    <FileText className="h-5 w-5 text-slate-400" aria-hidden="true" />
-                  </span>
-                )}
-              </div>
+              {/* Thumbnail / file icon / video preview */}
+              {item.previewUrl ? (
+                <div className="relative w-11 h-11 rounded-lg overflow-hidden shrink-0 border border-ink-100">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.previewUrl}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : item.file.type.startsWith('video/') ? (
+                <div className="w-11 h-11 rounded-lg bg-ink-50 flex items-center justify-center shrink-0 border border-ink-100">
+                  <Play className="w-5 h-5 text-ink-400" aria-hidden="true" />
+                </div>
+              ) : (
+                <div className="w-11 h-11 rounded-lg bg-ink-50 flex items-center justify-center shrink-0 border border-ink-100">
+                  <FileText className="w-5 h-5 text-ink-400" aria-hidden="true" />
+                </div>
+              )}
 
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-slate-700 dark:text-slate-200">
-                  {item.file.name}
-                </p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  {formatBytes(item.file.size)}
-                  {item.videoDuration != null && ` · ${item.videoDuration}s`}
-                </p>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-sm font-medium text-ink-900 truncate">{item.file.name}</p>
+                  {item.status === 'success' && (
+                    <CheckCircle2
+                      className="w-4 h-4 text-leaf-500 shrink-0"
+                      aria-label="Upload complete"
+                    />
+                  )}
+                </div>
+                <div className="flex items-center gap-1.5 text-xs text-ink-400">
+                  <span>{formatBytes(item.file.size)}</span>
+                  {item.videoDuration && (
+                    <>
+                      <span>·</span>
+                      <span>{formatDuration(item.videoDuration)}</span>
+                    </>
+                  )}
+                </div>
 
+                {/* Progress bar */}
                 {item.status === 'uploading' && (
-                  <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
+                  <div
+                    className="mt-2 h-2 w-full rounded-full bg-ink-100 overflow-hidden"
+                    role="progressbar"
+                    aria-valuenow={item.progress}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-label={`Upload progress: ${item.progress}%`}
+                  >
                     <div
-                      className="h-full rounded-full bg-indigo-500 transition-all"
+                      className="h-full rounded-full transition-all duration-200 bg-sorobanlard-primary"
                       style={{ width: `${item.progress}%` }}
-                      role="progressbar"
-                      aria-valuenow={item.progress}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
                     />
                   </div>
                 )}
 
-                {item.status === 'error' && item.errorMessage && (
-                  <p className="mt-1 flex items-center gap-1 text-xs text-red-600 dark:text-red-400">
-                    <AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />
-                    {item.errorMessage}
-                  </p>
+                {/* Progress percentage for uploading */}
+                {item.status === 'uploading' && (
+                  <p className="mt-1 text-xs font-medium text-ink-500">{item.progress}%</p>
                 )}
-              </div>
 
-              <div className="flex shrink-0 items-center gap-1">
-                {item.status === 'success' && (
-                  <CheckCircle2 className="h-5 w-5 text-emerald-500" aria-hidden="true" />
-                )}
+                {/* Error message */}
                 {item.status === 'error' && (
-                  <button
-                    type="button"
-                    onClick={() => retryItem(item.id)}
-                    className="rounded-md p-1.5 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800"
-                    aria-label={`Retry ${item.file.name}`}
-                  >
-                    <RotateCcw className="h-4 w-4" aria-hidden="true" />
-                  </button>
                   <div className="mt-1.5 flex items-center gap-1.5 text-xs text-rose-600">
                     <AlertCircle className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
                     <span className="flex-1">{item.errorMessage}</span>
-                    {item.retryable && (
+                    {item.retryable !== false && (
                       <button
                         type="button"
                         onClick={() => handleRetry(item)}
@@ -511,15 +522,16 @@ export function FileUpload({
                     )}
                   </div>
                 )}
-                <button
-                  type="button"
-                  onClick={() => removeItem(item.id)}
-                  className="rounded-md p-1.5 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800"
-                  aria-label={`Remove ${item.file.name}`}
-                >
-                  <X className="h-4 w-4" aria-hidden="true" />
-                </button>
               </div>
+
+              <button
+                type="button"
+                onClick={() => handleCancel(item)}
+                aria-label={`${item.status === 'uploading' ? 'Cancel' : 'Remove'} ${item.file.name}`}
+                className="text-ink-300 hover:text-ink-600 transition-colors shrink-0"
+              >
+                <X className="w-4 h-4" />
+              </button>
             </li>
           ))}
         </ul>

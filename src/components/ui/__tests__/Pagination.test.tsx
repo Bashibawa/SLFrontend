@@ -91,4 +91,30 @@ describe('Pagination jump-to-page', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Page 1' }));
     expect(onPageChange).toHaveBeenLastCalledWith(1);
   });
+
+  describe('Single page of results edge case', () => {
+    it('renders null when totalPages is 1', () => {
+      const { container } = render(<Pagination currentPage={1} totalPages={1} updateUrl={false} />);
+      expect(container.firstChild).toBeNull();
+    });
+
+    it('renders null when totalItems fits on a single page', () => {
+      const { container } = render(
+        <Pagination currentPage={1} totalItems={8} itemsPerPage={10} updateUrl={false} />,
+      );
+      expect(container.firstChild).toBeNull();
+    });
+
+    it('renders null when totalPages is 0 or negative', () => {
+      const { container } = render(<Pagination currentPage={1} totalPages={0} updateUrl={false} />);
+      expect(container.firstChild).toBeNull();
+    });
+
+    it('renders null when totalItems is 0', () => {
+      const { container } = render(
+        <Pagination currentPage={1} totalItems={0} itemsPerPage={10} updateUrl={false} />,
+      );
+      expect(container.firstChild).toBeNull();
+    });
+  });
 });
