@@ -127,6 +127,20 @@ Visual regression tests run automatically in GitHub Actions on every push and pu
 
 ---
 
+## Feature Specs (`.kiro/`)
+
+`.kiro/specs/` contains feature design documents written with the [Kiro](https://kiro.dev) spec workflow. Each folder holds the design for one feature:
+
+- `cart-checkout/`
+- `notification-system/`
+- `responsive-breakpoints/`
+- `user-profile-settings/`
+- `video-player/` (includes `bugfix.md` and `tasks.md`)
+
+These are reference documents for contributors. The build, tests, and tooling do not read them. Task checklists in `tasks.md` may not match the current code, so verify against `src/` before relying on them. Update a spec when its feature design changes.
+
+---
+
 ## License
 
 MIT
