@@ -9,3 +9,6 @@ export { CountdownTimer } from './CountdownTimer';
 export type { CountdownTimerProps } from './CountdownTimer';
 export { ConfirmDialog } from './ConfirmDialog';
 export type { ConfirmDialogProps } from './ConfirmDialog';
+export { RouteAnnouncer } from './RouteAnnouncer';
+export { FileUpload } from './FileUpload';
+export type { UploadedFileResult } from './FileUpload';

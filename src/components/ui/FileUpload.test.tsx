@@ -158,6 +158,34 @@ describe('FileUpload', () => {
       await waitFor(() => expect(screen.getByText(/too large/)).toBeInTheDocument());
       expect(screen.queryByRole('button', { name: /retry/i })).not.toBeInTheDocument();
     });
+
+    it('shows clear error feedback when dropping a file with an invalid file type', async () => {
+      const onUploadError = vi.fn();
+      render(
+        <FileUpload uploadUrl={uploadUrl} accept={['image/*']} onUploadError={onUploadError} />,
+      );
+
+      dropFiles([makeFile('doc.pdf', 10, 'application/pdf')]);
+
+      await waitFor(() => expect(screen.getByText(/isn't an accepted file type/)).toBeInTheDocument());
+      expect(onUploadError).toHaveBeenCalledWith('doc.pdf', expect.stringContaining('accepted file type'));
+      expect(screen.queryByRole('button', { name: /retry/i })).not.toBeInTheDocument();
+      expect(MockXHR.instances).toHaveLength(0);
+    });
+
+    it('shows clear error feedback when dropping an oversized file', async () => {
+      const onUploadError = vi.fn();
+      render(
+        <FileUpload uploadUrl={uploadUrl} maxSizeBytes={5} onUploadError={onUploadError} />,
+      );
+
+      dropFiles([makeFile('big.jpg', 50)]);
+
+      await waitFor(() => expect(screen.getByText(/too large/)).toBeInTheDocument());
+      expect(onUploadError).toHaveBeenCalledWith('big.jpg', expect.stringContaining('too large'));
+      expect(screen.queryByRole('button', { name: /retry/i })).not.toBeInTheDocument();
+      expect(MockXHR.instances).toHaveLength(0);
+    });
   });
 
   describe('Per-file progress', () => {
